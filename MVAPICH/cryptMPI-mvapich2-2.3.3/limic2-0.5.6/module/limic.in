@@ -1,0 +1,84 @@
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides: LiMIC2 Kernel Module
+# Required-Start: $local_fs $syslog
+# Required-Stop: $local_fs $syslog
+# Default-Start: 3 4 5
+# Default-Stop: 0 1 2 6
+# Short-Description: Manages loading of LiMIC2 Kernel Module
+# Description: LiMIC is the Linux kernel module developed by System Software
+#   Laboratory (SSLab) of Konkuk University. It enables high-performance MPI
+#   intra-node communication over multi-core systems.
+### END INIT INFO
+
+. /lib/lsb/init-functions
+
+LIMIC_MODULE=@KERNEL_MOD@/limic.ko
+
+load_module () {
+    if /sbin/insmod $LIMIC_MODULE; then
+        log_success_msg Loading LiMIC2
+    else
+        log_failure_msg Loading LiMIC2
+    fi
+}
+
+unload_module () {
+    if /sbin/rmmod $LIMIC_MODULE; then
+        log_success_msg Unloading LiMIC2
+    else
+        log_failure_msg Unloading LiMIC2
+    fi
+}
+
+check_module () {
+    /sbin/lsmod | /bin/grep limic >&/dev/null
+}
+
+case "$1" in
+    start|reload|force-reload)
+        if load_module; then
+            exit 0
+        else 
+            exit 1
+        fi
+    ;;
+    stop)
+        if unload_module; then
+            exit 0
+        else
+            exit 1
+        fi
+    ;;
+    restart)
+        check_module && unload_module
+        if load_module; then
+            exit 0
+        else 
+            exit 1
+        fi
+    ;;
+    try-restart)
+        if check_module; then
+            if load_module; then
+                exit 0
+            else 
+                exit 1
+            fi
+        fi
+    ;;
+    status)
+        if check_module; then
+            echo LiMIC2 is loaded
+            exit 0
+        else
+            echo LiMIC2 is not loaded
+            exit 3
+        fi
+    ;;
+    *)
+        echo "Usage: $0 start|stop|restart|try-restart|reload|force-reload|status"
+        exit 2
+    ;;
+esac

@@ -1,0 +1,2 @@
+# limic device
+KERNEL=="limic", MODE="0644", OPTIONS="last_rule"

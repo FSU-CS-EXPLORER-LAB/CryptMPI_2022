@@ -1,0 +1,13 @@
+src/mpi/init/lib_libmpi_la-initinfo.lo: src/mpi/init/initinfo.c \
+ /usr/include/stdc-predef.h src/include/mpi.h src/include/mpio.h \
+ src/include/mpi.h src/include/mpichinfo.h
+
+/usr/include/stdc-predef.h:
+
+src/include/mpi.h:
+
+src/include/mpio.h:
+
+src/include/mpi.h:
+
+src/include/mpichinfo.h:

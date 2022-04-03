@@ -1,0 +1,1297 @@
+Making clean in /home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/mpl
+make[1]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/mpl'
+ rm -f strsep
+rm -rf .libs _libs
+rm -rf src/.libs src/_libs
+test -z "libmpl.la" || rm -f libmpl.la
+rm -f ./so_locations
+rm -f *.o
+rm -f src/*.o
+rm -f src/*.lo
+rm -f test/*.o
+test -z "strsep.log" || rm -f strsep.log
+test -z "strsep.trs" || rm -f strsep.trs
+test -z "test-suite.log" || rm -f test-suite.log
+rm -f *.lo
+make[1]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/mpl'
+Making clean in /home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/openpa
+make[1]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/openpa'
+Making clean in src
+make[2]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/openpa/src'
+rm -rf .libs _libs
+test -z "libopa.la" || rm -f libopa.la
+rm -f ./so_locations
+rm -f *.o
+rm -f *.lo
+make[2]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/openpa/src'
+Making clean in test
+make[2]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/openpa/test'
+ rm -f sanity test_primitives test_barriers test_queue
+rm -rf .libs _libs
+rm -f *.o
+test -z "sanity.log test_primitives.log test_barriers.log test_queue.log" || rm -f sanity.log test_primitives.log test_barriers.log test_queue.log
+test -z "sanity.trs test_primitives.trs test_barriers.trs test_queue.trs" || rm -f sanity.trs test_primitives.trs test_barriers.trs test_queue.trs
+test -z "test-suite.log" || rm -f test-suite.log
+rm -f *.lo
+make[2]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/openpa/test'
+make[2]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/openpa'
+rm -rf .libs _libs
+rm -f *.lo
+make[2]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/openpa'
+make[1]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/openpa'
+Making clean in src/mpi/romio
+make[1]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/mpi/romio'
+make[2]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/mpi/romio'
+test -z "" || rm -f 
+rm -rf .libs _libs
+rm -rf adio/ad_gpfs/.libs adio/ad_gpfs/_libs
+rm -rf adio/ad_gpfs/bg/.libs adio/ad_gpfs/bg/_libs
+rm -rf adio/ad_gpfs/pe/.libs adio/ad_gpfs/pe/_libs
+rm -rf adio/ad_gridftp/.libs adio/ad_gridftp/_libs
+rm -rf adio/ad_hfs/.libs adio/ad_hfs/_libs
+rm -rf adio/ad_ime/.libs adio/ad_ime/_libs
+rm -rf adio/ad_lustre/.libs adio/ad_lustre/_libs
+rm -rf adio/ad_nfs/.libs adio/ad_nfs/_libs
+rm -rf adio/ad_panfs/.libs adio/ad_panfs/_libs
+rm -rf adio/ad_pfs/.libs adio/ad_pfs/_libs
+rm -rf adio/ad_piofs/.libs adio/ad_piofs/_libs
+rm -rf adio/ad_pvfs/.libs adio/ad_pvfs/_libs
+rm -rf adio/ad_pvfs2/.libs adio/ad_pvfs2/_libs
+rm -rf adio/ad_sfs/.libs adio/ad_sfs/_libs
+rm -rf adio/ad_testfs/.libs adio/ad_testfs/_libs
+rm -rf adio/ad_ufs/.libs adio/ad_ufs/_libs
+rm -rf adio/ad_xfs/.libs adio/ad_xfs/_libs
+rm -rf adio/ad_zoidfs/.libs adio/ad_zoidfs/_libs
+rm -rf adio/common/.libs adio/common/_libs
+rm -rf mpi-io/.libs mpi-io/_libs
+rm -rf mpi-io/fortran/.libs mpi-io/fortran/_libs
+rm -rf mpi-io/glue/.libs mpi-io/glue/_libs
+rm -rf mpi-io/glue/default/.libs mpi-io/glue/default/_libs
+rm -rf mpi-io/glue/mpich/.libs mpi-io/glue/mpich/_libs
+test -z "libromio.la " || rm -f libromio.la 
+rm -f ./so_locations
+rm -f *.o
+rm -f adio/ad_gpfs/*.o
+rm -f adio/ad_gpfs/*.lo
+rm -f adio/ad_gpfs/bg/*.o
+rm -f adio/ad_gpfs/bg/*.lo
+rm -f adio/ad_gpfs/pe/*.o
+rm -f adio/ad_gpfs/pe/*.lo
+rm -f adio/ad_gridftp/*.o
+rm -f adio/ad_gridftp/*.lo
+rm -f adio/ad_hfs/*.o
+rm -f adio/ad_hfs/*.lo
+rm -f adio/ad_ime/*.o
+rm -f adio/ad_ime/*.lo
+rm -f adio/ad_lustre/*.o
+rm -f adio/ad_lustre/*.lo
+rm -f adio/ad_nfs/*.o
+rm -f adio/ad_nfs/*.lo
+rm -f adio/ad_panfs/*.o
+rm -f adio/ad_panfs/*.lo
+rm -f adio/ad_pfs/*.o
+rm -f adio/ad_pfs/*.lo
+rm -f adio/ad_piofs/*.o
+rm -f adio/ad_piofs/*.lo
+rm -f adio/ad_pvfs/*.o
+rm -f adio/ad_pvfs/*.lo
+rm -f adio/ad_pvfs2/*.o
+rm -f adio/ad_pvfs2/*.lo
+rm -f adio/ad_sfs/*.o
+rm -f adio/ad_sfs/*.lo
+rm -f adio/ad_testfs/*.o
+rm -f adio/ad_testfs/*.lo
+rm -f adio/ad_ufs/*.o
+rm -f adio/ad_ufs/*.lo
+rm -f adio/ad_xfs/*.o
+rm -f adio/ad_xfs/*.lo
+rm -f adio/ad_zoidfs/*.o
+rm -f adio/ad_zoidfs/*.lo
+rm -f adio/common/*.o
+rm -f adio/common/*.lo
+rm -f mpi-io/*.o
+rm -f mpi-io/*.lo
+rm -f mpi-io/fortran/*.o
+rm -f mpi-io/fortran/*.lo
+rm -f mpi-io/glue/*.o
+rm -f mpi-io/glue/*.lo
+rm -f mpi-io/glue/default/*.o
+rm -f mpi-io/glue/default/*.lo
+rm -f mpi-io/glue/mpich/*.o
+rm -f mpi-io/glue/mpich/*.lo
+rm -f *.lo
+make[2]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/mpi/romio'
+make[1]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/mpi/romio'
+Making clean in src/pm/hydra
+make[1]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/pm/hydra'
+Making clean in mpl
+make[2]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/pm/hydra/mpl'
+ rm -f strsep
+rm -rf .libs _libs
+rm -rf src/.libs src/_libs
+test -z "libmpl.la" || rm -f libmpl.la
+rm -f ./so_locations
+rm -f *.o
+rm -f src/*.o
+rm -f src/*.lo
+rm -f test/*.o
+test -z "strsep.log" || rm -f strsep.log
+test -z "strsep.trs" || rm -f strsep.trs
+test -z "test-suite.log" || rm -f test-suite.log
+rm -f *.lo
+make[2]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/pm/hydra/mpl'
+Making clean in tools/topo/hwloc/hwloc
+make[2]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/pm/hydra/tools/topo/hwloc/hwloc'
+Making clean in src
+make[3]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/pm/hydra/tools/topo/hwloc/hwloc/src'
+test -z "" || rm -f 
+test -z "" || rm -f 
+rm -rf .libs _libs
+test -z "libhwloc_embedded.la" || rm -f libhwloc_embedded.la
+rm -f ./so_locations
+test -z "     " || rm -f      
+rm -f *.o
+rm -f *.lo
+make[3]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/pm/hydra/tools/topo/hwloc/hwloc/src'
+Making clean in include
+make[3]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/pm/hydra/tools/topo/hwloc/hwloc/include'
+rm -rf .libs _libs
+rm -f *.lo
+make[3]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/pm/hydra/tools/topo/hwloc/hwloc/include'
+make[3]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/pm/hydra/tools/topo/hwloc/hwloc'
+rm -rf .libs _libs
+rm -f *.lo
+make[3]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/pm/hydra/tools/topo/hwloc/hwloc'
+make[2]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/pm/hydra/tools/topo/hwloc/hwloc'
+Making clean in .
+make[2]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/pm/hydra'
+ rm -f hydra_persist hydra_nameserver hydra_pmi_proxy mpiexec.hydra
+rm -rf .libs _libs
+rm -rf pm/pmiserv/.libs pm/pmiserv/_libs
+rm -rf tools/bootstrap/external/.libs tools/bootstrap/external/_libs
+rm -rf tools/bootstrap/persist/.libs tools/bootstrap/persist/_libs
+rm -rf tools/bootstrap/src/.libs tools/bootstrap/src/_libs
+rm -rf tools/bootstrap/utils/.libs tools/bootstrap/utils/_libs
+rm -rf tools/ckpoint/.libs tools/ckpoint/_libs
+rm -rf tools/ckpoint/blcr/.libs tools/ckpoint/blcr/_libs
+rm -rf tools/debugger/.libs tools/debugger/_libs
+rm -rf tools/demux/.libs tools/demux/_libs
+rm -rf tools/topo/.libs tools/topo/_libs
+rm -rf tools/topo/hwloc/.libs tools/topo/hwloc/_libs
+rm -rf ui/utils/.libs ui/utils/_libs
+rm -rf utils/alloc/.libs utils/alloc/_libs
+rm -rf utils/args/.libs utils/args/_libs
+rm -rf utils/dbg/.libs utils/dbg/_libs
+rm -rf utils/env/.libs utils/env/_libs
+rm -rf utils/launch/.libs utils/launch/_libs
+rm -rf utils/others/.libs utils/others/_libs
+rm -rf utils/signals/.libs utils/signals/_libs
+rm -rf utils/sock/.libs utils/sock/_libs
+rm -rf utils/string/.libs utils/string/_libs
+test -z "libhydra.la libpm.la" || rm -f libhydra.la libpm.la
+rm -f ./so_locations
+rm -f *.o
+rm -f pm/pmiserv/*.o
+rm -f pm/pmiserv/*.lo
+rm -f tools/bootstrap/external/*.o
+rm -f tools/bootstrap/external/*.lo
+rm -f tools/bootstrap/persist/*.o
+rm -f tools/bootstrap/persist/*.lo
+rm -f tools/bootstrap/src/*.o
+rm -f tools/bootstrap/src/*.lo
+rm -f tools/bootstrap/utils/*.o
+rm -f tools/bootstrap/utils/*.lo
+rm -f tools/ckpoint/*.o
+rm -f tools/ckpoint/*.lo
+rm -f tools/ckpoint/blcr/*.o
+rm -f tools/ckpoint/blcr/*.lo
+rm -f tools/debugger/*.o
+rm -f tools/debugger/*.lo
+rm -f tools/demux/*.o
+rm -f tools/demux/*.lo
+rm -f tools/nameserver/*.o
+rm -f tools/topo/*.o
+rm -f tools/topo/*.lo
+rm -f tools/topo/hwloc/*.o
+rm -f tools/topo/hwloc/*.lo
+rm -f ui/mpich/*.o
+rm -f ui/utils/*.o
+rm -f ui/utils/*.lo
+rm -f utils/alloc/*.o
+rm -f utils/alloc/*.lo
+rm -f utils/args/*.o
+rm -f utils/args/*.lo
+rm -f utils/dbg/*.o
+rm -f utils/dbg/*.lo
+rm -f utils/env/*.o
+rm -f utils/env/*.lo
+rm -f utils/launch/*.o
+rm -f utils/launch/*.lo
+rm -f utils/others/*.o
+rm -f utils/others/*.lo
+rm -f utils/signals/*.o
+rm -f utils/signals/*.lo
+rm -f utils/sock/*.o
+rm -f utils/sock/*.lo
+rm -f utils/string/*.o
+rm -f utils/string/*.lo
+rm -f *.lo
+make[2]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/pm/hydra'
+make[1]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/pm/hydra'
+Making clean in contrib/hwloc
+make[1]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/contrib/hwloc'
+Making clean in src
+make[2]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/contrib/hwloc/src'
+test -z "" || rm -f 
+test -z "" || rm -f 
+rm -rf .libs _libs
+test -z "libhwloc_embedded.la" || rm -f libhwloc_embedded.la
+rm -f ./so_locations
+test -z "     " || rm -f      
+rm -f *.o
+rm -f *.lo
+make[2]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/contrib/hwloc/src'
+Making clean in include
+make[2]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/contrib/hwloc/include'
+rm -rf .libs _libs
+rm -f *.lo
+make[2]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/contrib/hwloc/include'
+make[2]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/contrib/hwloc'
+rm -rf .libs _libs
+rm -f *.lo
+make[2]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/contrib/hwloc'
+make[1]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/contrib/hwloc'
+Making clean in .
+make[1]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3'
+ rm -f src/env/mpichversion src/env/mpivars src/pm/mpirun/mpirun_rsh src/pm/mpirun/mpiexec.mpirun_rsh src/pm/mpirun/mpispawn
+test -z "src/binding/fortran/use_mpi/mpi.mod-stamp src/binding/fortran/use_mpi/mpi.mod src/binding/fortran/use_mpi/mpi.lo src/binding/fortran/use_mpi/mpi-tmp src/binding/fortran/use_mpi/mpi_constants.mod-stamp src/binding/fortran/use_mpi/mpi_constants.mod src/binding/fortran/use_mpi/mpi_constants.lo src/binding/fortran/use_mpi/mpi_constants-tmp src/binding/fortran/use_mpi/mpi_sizeofs.mod-stamp src/binding/fortran/use_mpi/mpi_sizeofs.mod src/binding/fortran/use_mpi/mpi_sizeofs.lo src/binding/fortran/use_mpi/mpi_sizeofs-tmp src/binding/fortran/use_mpi/mpi_base.mod-stamp src/binding/fortran/use_mpi/mpi_base.mod src/binding/fortran/use_mpi/mpi_base.lo src/binding/fortran/use_mpi/mpi_base-tmp src/binding/fortran/use_mpi/mpifnoext.h src/binding/fortran/use_mpi/mpi.mod src/binding/fortran/use_mpi/mpi_sizeofs.mod src/binding/fortran/use_mpi/mpi_constants.mod src/binding/fortran/use_mpi/mpi_base.mod    " || rm -f src/binding/fortran/use_mpi/mpi.mod-stamp src/binding/fortran/use_mpi/mpi.mod src/binding/fortran/use_mpi/mpi.lo src/binding/fortran/use_mpi/mpi-tmp src/binding/fortran/use_mpi/mpi_constants.mod-stamp src/binding/fortran/use_mpi/mpi_constants.mod src/binding/fortran/use_mpi/mpi_constants.lo src/binding/fortran/use_mpi/mpi_constants-tmp src/binding/fortran/use_mpi/mpi_sizeofs.mod-stamp src/binding/fortran/use_mpi/mpi_sizeofs.mod src/binding/fortran/use_mpi/mpi_sizeofs.lo src/binding/fortran/use_mpi/mpi_sizeofs-tmp src/binding/fortran/use_mpi/mpi_base.mod-stamp src/binding/fortran/use_mpi/mpi_base.mod src/binding/fortran/use_mpi/mpi_base.lo src/binding/fortran/use_mpi/mpi_base-tmp src/binding/fortran/use_mpi/mpifnoext.h src/binding/fortran/use_mpi/mpi.mod src/binding/fortran/use_mpi/mpi_sizeofs.mod src/binding/fortran/use_mpi/mpi_constants.mod src/binding/fortran/use_mpi/mpi_base.mod    
+test -z "   lib/libmpi.la lib/libmpifort.la lib/libmpicxx.la" || rm -f    lib/libmpi.la lib/libmpifort.la lib/libmpicxx.la
+rm -f lib/so_locations
+rm -rf .libs _libs
+rm -rf lib/.libs lib/_libs
+rm -rf src/binding/cxx/.libs src/binding/cxx/_libs
+rm -rf src/binding/fortran/mpif_h/.libs src/binding/fortran/mpif_h/_libs
+rm -rf src/binding/fortran/use_mpi/.libs src/binding/fortran/use_mpi/_libs
+rm -rf src/binding/fortran/use_mpi_f08/.libs src/binding/fortran/use_mpi_f08/_libs
+rm -rf src/binding/fortran/use_mpi_f08/wrappers_c/.libs src/binding/fortran/use_mpi_f08/wrappers_c/_libs
+rm -rf src/binding/fortran/use_mpi_f08/wrappers_f/.libs src/binding/fortran/use_mpi_f08/wrappers_f/_libs
+rm -rf src/binding/fortran/use_mpi_f08/wrappers_f/profiling/.libs src/binding/fortran/use_mpi_f08/wrappers_f/profiling/_libs
+rm -rf src/env/.libs src/env/_libs
+rm -rf src/glue/romio/.libs src/glue/romio/_libs
+rm -rf src/mpi/attr/.libs src/mpi/attr/_libs
+rm -rf src/mpi/coll/.libs src/mpi/coll/_libs
+rm -rf src/mpi/comm/.libs src/mpi/comm/_libs
+rm -rf src/mpi/datatype/.libs src/mpi/datatype/_libs
+rm -rf src/mpi/debugger/.libs src/mpi/debugger/_libs
+rm -rf src/mpi/errhan/.libs src/mpi/errhan/_libs
+rm -rf src/mpi/group/.libs src/mpi/group/_libs
+rm -rf src/mpi/info/.libs src/mpi/info/_libs
+rm -rf src/mpi/init/.libs src/mpi/init/_libs
+rm -rf src/mpi/misc/.libs src/mpi/misc/_libs
+rm -rf src/mpi/pt2pt/.libs src/mpi/pt2pt/_libs
+rm -rf src/mpi/rma/.libs src/mpi/rma/_libs
+rm -rf src/mpi/spawn/.libs src/mpi/spawn/_libs
+rm -rf src/mpi/timer/.libs src/mpi/timer/_libs
+rm -rf src/mpi/topo/.libs src/mpi/topo/_libs
+rm -rf src/mpi_t/.libs src/mpi_t/_libs
+rm -rf src/mpid/ch3/channels/common/src/affinity/.libs src/mpid/ch3/channels/common/src/affinity/_libs
+rm -rf src/mpid/ch3/channels/common/src/cm/.libs src/mpid/ch3/channels/common/src/cm/_libs
+rm -rf src/mpid/ch3/channels/common/src/detect/arch/.libs src/mpid/ch3/channels/common/src/detect/arch/_libs
+rm -rf src/mpid/ch3/channels/common/src/detect/hca/.libs src/mpid/ch3/channels/common/src/detect/hca/_libs
+rm -rf src/mpid/ch3/channels/common/src/ft/.libs src/mpid/ch3/channels/common/src/ft/_libs
+rm -rf src/mpid/ch3/channels/common/src/mcast/.libs src/mpid/ch3/channels/common/src/mcast/_libs
+rm -rf src/mpid/ch3/channels/common/src/memory/.libs src/mpid/ch3/channels/common/src/memory/_libs
+rm -rf src/mpid/ch3/channels/common/src/memory/ptmalloc2/.libs src/mpid/ch3/channels/common/src/memory/ptmalloc2/_libs
+rm -rf src/mpid/ch3/channels/common/src/qos/.libs src/mpid/ch3/channels/common/src/qos/_libs
+rm -rf src/mpid/ch3/channels/common/src/rdma_cm/.libs src/mpid/ch3/channels/common/src/rdma_cm/_libs
+rm -rf src/mpid/ch3/channels/common/src/reg_cache/.libs src/mpid/ch3/channels/common/src/reg_cache/_libs
+rm -rf src/mpid/ch3/channels/common/src/scr/.libs src/mpid/ch3/channels/common/src/scr/_libs
+rm -rf src/mpid/ch3/channels/common/src/ud-hybrid/.libs src/mpid/ch3/channels/common/src/ud-hybrid/_libs
+rm -rf src/mpid/ch3/channels/common/src/util/.libs src/mpid/ch3/channels/common/src/util/_libs
+rm -rf src/mpid/ch3/channels/mrail/src/cuda/.libs src/mpid/ch3/channels/mrail/src/cuda/_libs
+rm -rf src/mpid/ch3/channels/mrail/src/gen2/.libs src/mpid/ch3/channels/mrail/src/gen2/_libs
+rm -rf src/mpid/ch3/channels/mrail/src/rdma/.libs src/mpid/ch3/channels/mrail/src/rdma/_libs
+rm -rf src/mpid/ch3/channels/nemesis/netmod/ib/.libs src/mpid/ch3/channels/nemesis/netmod/ib/_libs
+rm -rf src/mpid/ch3/channels/nemesis/netmod/llc/.libs src/mpid/ch3/channels/nemesis/netmod/llc/_libs
+rm -rf src/mpid/ch3/channels/nemesis/netmod/mxm/.libs src/mpid/ch3/channels/nemesis/netmod/mxm/_libs
+rm -rf src/mpid/ch3/channels/nemesis/netmod/none/.libs src/mpid/ch3/channels/nemesis/netmod/none/_libs
+rm -rf src/mpid/ch3/channels/nemesis/netmod/ofi/.libs src/mpid/ch3/channels/nemesis/netmod/ofi/_libs
+rm -rf src/mpid/ch3/channels/nemesis/netmod/portals4/.libs src/mpid/ch3/channels/nemesis/netmod/portals4/_libs
+rm -rf src/mpid/ch3/channels/nemesis/netmod/tcp/.libs src/mpid/ch3/channels/nemesis/netmod/tcp/_libs
+rm -rf src/mpid/ch3/channels/nemesis/src/.libs src/mpid/ch3/channels/nemesis/src/_libs
+rm -rf src/mpid/ch3/channels/nemesis/utils/monitor/.libs src/mpid/ch3/channels/nemesis/utils/monitor/_libs
+rm -rf src/mpid/ch3/channels/nemesis/utils/replacements/.libs src/mpid/ch3/channels/nemesis/utils/replacements/_libs
+rm -rf src/mpid/ch3/channels/psm/src/.libs src/mpid/ch3/channels/psm/src/_libs
+rm -rf src/mpid/ch3/channels/sock/src/.libs src/mpid/ch3/channels/sock/src/_libs
+rm -rf src/mpid/ch3/src/.libs src/mpid/ch3/src/_libs
+rm -rf src/mpid/ch3/util/ftb/.libs src/mpid/ch3/util/ftb/_libs
+rm -rf src/mpid/ch3/util/sock/.libs src/mpid/ch3/util/sock/_libs
+rm -rf src/mpid/common/datatype/.libs src/mpid/common/datatype/_libs
+rm -rf src/mpid/common/datatype/dataloop/.libs src/mpid/common/datatype/dataloop/_libs
+rm -rf src/mpid/common/hcoll/.libs src/mpid/common/hcoll/_libs
+rm -rf src/mpid/common/sched/.libs src/mpid/common/sched/_libs
+rm -rf src/mpid/common/sock/poll/.libs src/mpid/common/sock/poll/_libs
+rm -rf src/mpid/pamid/src/.libs src/mpid/pamid/src/_libs
+rm -rf src/mpid/pamid/src/coll/.libs src/mpid/pamid/src/coll/_libs
+rm -rf src/mpid/pamid/src/coll/allgather/.libs src/mpid/pamid/src/coll/allgather/_libs
+rm -rf src/mpid/pamid/src/coll/allgatherv/.libs src/mpid/pamid/src/coll/allgatherv/_libs
+rm -rf src/mpid/pamid/src/coll/allreduce/.libs src/mpid/pamid/src/coll/allreduce/_libs
+rm -rf src/mpid/pamid/src/coll/alltoall/.libs src/mpid/pamid/src/coll/alltoall/_libs
+rm -rf src/mpid/pamid/src/coll/alltoallv/.libs src/mpid/pamid/src/coll/alltoallv/_libs
+rm -rf src/mpid/pamid/src/coll/alltoallw/.libs src/mpid/pamid/src/coll/alltoallw/_libs
+rm -rf src/mpid/pamid/src/coll/barrier/.libs src/mpid/pamid/src/coll/barrier/_libs
+rm -rf src/mpid/pamid/src/coll/bcast/.libs src/mpid/pamid/src/coll/bcast/_libs
+rm -rf src/mpid/pamid/src/coll/exscan/.libs src/mpid/pamid/src/coll/exscan/_libs
+rm -rf src/mpid/pamid/src/coll/gather/.libs src/mpid/pamid/src/coll/gather/_libs
+rm -rf src/mpid/pamid/src/coll/gatherv/.libs src/mpid/pamid/src/coll/gatherv/_libs
+rm -rf src/mpid/pamid/src/coll/ired_scat/.libs src/mpid/pamid/src/coll/ired_scat/_libs
+rm -rf src/mpid/pamid/src/coll/ired_scat_block/.libs src/mpid/pamid/src/coll/ired_scat_block/_libs
+rm -rf src/mpid/pamid/src/coll/red_scat/.libs src/mpid/pamid/src/coll/red_scat/_libs
+rm -rf src/mpid/pamid/src/coll/reduce/.libs src/mpid/pamid/src/coll/reduce/_libs
+rm -rf src/mpid/pamid/src/coll/scan/.libs src/mpid/pamid/src/coll/scan/_libs
+rm -rf src/mpid/pamid/src/coll/scatter/.libs src/mpid/pamid/src/coll/scatter/_libs
+rm -rf src/mpid/pamid/src/coll/scatterv/.libs src/mpid/pamid/src/coll/scatterv/_libs
+rm -rf src/mpid/pamid/src/comm/.libs src/mpid/pamid/src/comm/_libs
+rm -rf src/mpid/pamid/src/dyntask/.libs src/mpid/pamid/src/dyntask/_libs
+rm -rf src/mpid/pamid/src/misc/.libs src/mpid/pamid/src/misc/_libs
+rm -rf src/mpid/pamid/src/mpix/.libs src/mpid/pamid/src/mpix/_libs
+rm -rf src/mpid/pamid/src/onesided/.libs src/mpid/pamid/src/onesided/_libs
+rm -rf src/mpid/pamid/src/pamix/.libs src/mpid/pamid/src/pamix/_libs
+rm -rf src/mpid/pamid/src/pt2pt/.libs src/mpid/pamid/src/pt2pt/_libs
+rm -rf src/mpid/pamid/src/pt2pt/persistent/.libs src/mpid/pamid/src/pt2pt/persistent/_libs
+rm -rf src/mutex/.libs src/mutex/_libs
+rm -rf src/nameserv/file/.libs src/nameserv/file/_libs
+rm -rf src/nameserv/pmi/.libs src/nameserv/pmi/_libs
+rm -rf src/pm/gforker/.libs src/pm/gforker/_libs
+rm -rf src/pm/mpirun/.libs src/pm/mpirun/_libs
+rm -rf src/pm/remshell/.libs src/pm/remshell/_libs
+rm -rf src/pm/util/.libs src/pm/util/_libs
+rm -rf src/pmi/pmi2/poe/.libs src/pmi/pmi2/poe/_libs
+rm -rf src/pmi/pmi2/simple/.libs src/pmi/pmi2/simple/_libs
+rm -rf src/pmi/simple/.libs src/pmi/simple/_libs
+rm -rf src/pmi/upmi/.libs src/pmi/upmi/_libs
+rm -rf src/util/cvar/.libs src/util/cvar/_libs
+rm -rf src/util/dbg/.libs src/util/dbg/_libs
+rm -rf src/util/instrm/.libs src/util/instrm/_libs
+rm -rf src/util/logging/rlog/.libs src/util/logging/rlog/_libs
+rm -rf src/util/mem/.libs src/util/mem/_libs
+rm -rf src/util/other/.libs src/util/other/_libs
+rm -rf src/util/procmap/.libs src/util/procmap/_libs
+rm -rf src/util/thread/.libs src/util/thread/_libs
+rm -rf src/util/timers/.libs src/util/timers/_libs
+( cd test && make  clean )
+make[2]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test'
+Making clean in mpi
+make[3]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi'
+Making clean in util
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/util'
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/util'
+Making clean in attr
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/attr'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "attrt attrend attrend2 attric attrerr attrerrcomm attrerrtype attrdeleteget attr2type attrorder attrordercomm attrordertype baseattr2 baseattrcomm fkeyval fkeyvalcomm fkeyvaltype keyval_double_free keyval_double_free_comm keyval_double_free_type keyval_double_free_win" || rm -f attrt attrend attrend2 attric attrerr attrerrcomm attrerrtype attrdeleteget attr2type attrorder attrordercomm attrordertype baseattr2 baseattrcomm fkeyval fkeyvalcomm fkeyvaltype keyval_double_free keyval_double_free_comm keyval_double_free_type keyval_double_free_win
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/attr'
+Making clean in basic
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/basic'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "self simple sendrecv srtest wtime netpipe patterns adapt" || rm -f self simple sendrecv srtest wtime netpipe patterns adapt
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/basic'
+Making clean in datatype
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/datatype'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "blockindexed-misc blockindexed-zero-count contents contig-zero-count contigstruct cxx-types dataalign darray-pack darray-cyclic gaddress get-elements get-elements-pairtype getpartelm hindexed-zeros hindexed_block hindexed_block_contents hvecblklen indexed-misc large-count large_type large_type_sendrec large_vec lbub localpack longdouble lots-of-types pairtype-pack pairtype-size-extent sendrecvt2 sendrecvt4 simple-commit simple-pack simple-pack-external simple-resized simple-size-extent sizedtypes slice-pack slice-pack-external struct-derived-zeros struct-empty-el struct-ezhov struct-no-real-types struct-pack structpack2 struct-verydeep struct-zero-count subarray subarray-pack tfree tmatchsize transpose-pack tresized tresized2 triangular-pack typecommit typefree typelb typename unpack unusual-noncontigs vecblklen zeroblks zeroparms" || rm -f blockindexed-misc blockindexed-zero-count contents contig-zero-count contigstruct cxx-types dataalign darray-pack darray-cyclic gaddress get-elements get-elements-pairtype getpartelm hindexed-zeros hindexed_block hindexed_block_contents hvecblklen indexed-misc large-count large_type large_type_sendrec large_vec lbub localpack longdouble lots-of-types pairtype-pack pairtype-size-extent sendrecvt2 sendrecvt4 simple-commit simple-pack simple-pack-external simple-resized simple-size-extent sizedtypes slice-pack slice-pack-external struct-derived-zeros struct-empty-el struct-ezhov struct-no-real-types struct-pack structpack2 struct-verydeep struct-zero-count subarray subarray-pack tfree tmatchsize transpose-pack tresized tresized2 triangular-pack typecommit typefree typelb typename unpack unusual-noncontigs vecblklen zeroblks zeroparms
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/datatype'
+Making clean in coll
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/coll'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "allgather2 allgather3 allgatherv2 allgatherv3 allgatherv4 allgather_struct allred allred2 allred3 allred4 allred5 allred6 allredmany alltoall1 alltoallv alltoallv0 alltoallw1 alltoallw2 alltoallw_zeros bcast_full bcast_min_datatypes bcast_comm_world bcasttest bcastzerotype coll2 coll3 coll4 coll5 coll6 coll7 coll8 coll9 coll10 coll11 coll12 coll13 exscan exscan2 gather gather2 gather_big iallred ibarrier icallgather icallgatherv icallreduce icalltoall icalltoallv icalltoallw icbarrier icbcast icgather icgatherv icreduce icscatter icscatterv longuser nonblocking nonblocking2 nonblocking3 op_commutative opband opbor opbxor opland oplor oplxor opmax opmaxloc opmin opminloc opprod opsum red3 red4 red_scat_block red_scat_block2 redscat redscat2 redscat3 redscatblk3 redscatinter redscatbkinter reduce reduce_local scantst scatter2 scatter3 scattern scatterv uoplong nballtoall1 nbredscat nbredscat3 nbredscatinter nbcoll2 nbicbarrier nbicallgather nbicallgatherv nbicallreduce nbicbcast nbicalltoall nbicalltoallw nbicalltoallv nbicgather nbicgatherv nbicreduce nbicscatter nbicscatterv" || rm -f allgather2 allgather3 allgatherv2 allgatherv3 allgatherv4 allgather_struct allred allred2 allred3 allred4 allred5 allred6 allredmany alltoall1 alltoallv alltoallv0 alltoallw1 alltoallw2 alltoallw_zeros bcast_full bcast_min_datatypes bcast_comm_world bcasttest bcastzerotype coll2 coll3 coll4 coll5 coll6 coll7 coll8 coll9 coll10 coll11 coll12 coll13 exscan exscan2 gather gather2 gather_big iallred ibarrier icallgather icallgatherv icallreduce icalltoall icalltoallv icalltoallw icbarrier icbcast icgather icgatherv icreduce icscatter icscatterv longuser nonblocking nonblocking2 nonblocking3 op_commutative opband opbor opbxor opland oplor oplxor opmax opmaxloc opmin opminloc opprod opsum red3 red4 red_scat_block red_scat_block2 redscat redscat2 redscat3 redscatblk3 redscatinter redscatbkinter reduce reduce_local scantst scatter2 scatter3 scattern scatterv uoplong nballtoall1 nbredscat nbredscat3 nbredscatinter nbcoll2 nbicbarrier nbicallgather nbicallgatherv nbicallreduce nbicbcast nbicalltoall nbicalltoallw nbicalltoallv nbicgather nbicgatherv nbicreduce nbicscatter nbicscatterv
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/coll'
+Making clean in comm
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/comm'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "commcreate1 dup dupic dup_with_info ic1 ic2 commname ctxalloc ctxsplit icgroup icsplit iccreate cmfree icm cmsplit cmsplit2 cmsplit_type comm_create_group comm_group_half comm_group_rand probe-intercomm comm_idup comm_idup_mul comm_idup_overlap comm_idup_isend comm_idup_nb comm_idup_iallreduce comm_idup_comm comm_idup_comm2 comm_create_group_idup comm_info" || rm -f commcreate1 dup dupic dup_with_info ic1 ic2 commname ctxalloc ctxsplit icgroup icsplit iccreate cmfree icm cmsplit cmsplit2 cmsplit_type comm_create_group comm_group_half comm_group_rand probe-intercomm comm_idup comm_idup_mul comm_idup_overlap comm_idup_isend comm_idup_nb comm_idup_iallreduce comm_idup_comm comm_idup_comm2 comm_create_group_idup comm_info
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/comm'
+Making clean in errhan
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errhan'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "adderr commcall errfatal predef_eh errstring2 dynamic_errcode_predefined_errclass" || rm -f adderr commcall errfatal predef_eh errstring2 dynamic_errcode_predefined_errclass
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errhan'
+Making clean in group
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/group'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "grouptest grouptest2 groupcreate gtranks groupnullincl gtranksperf" || rm -f grouptest grouptest2 groupcreate gtranks groupnullincl gtranksperf
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/group'
+Making clean in info
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/info'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "infodup infodel infovallen infoorder infomany infomany2 infotest infoget infoenv" || rm -f infodup infodel infovallen infoorder infomany infomany2 infotest infoget infoenv
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/info'
+Making clean in init
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/init'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "attrself exitst1 exitst2 exitst3 initstat version library_version timeout finalized" || rm -f attrself exitst1 exitst2 exitst3 initstat version library_version timeout finalized
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/init'
+Making clean in pt2pt
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/pt2pt'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "anyall bottom bsend1 bsend2 bsend3 bsend4 bsend5 bsendalign cancelrecv cancelanysrc isendself issendselfcancel isendirecv sendself eagerdt isendselfprobe bsendfrag bsendpending icsend rqstatus rqfreeb greq1 scancel scancel2 rcancel pscancel scancel_unmatch sendflood sendrecv1 sendrecv2 sendrecv3 waitany-null pingping probe-unexp probenull inactivereq waittestnull sendall large_message mprobe big_count_status many_isend" || rm -f anyall bottom bsend1 bsend2 bsend3 bsend4 bsend5 bsendalign cancelrecv cancelanysrc isendself issendselfcancel isendirecv sendself eagerdt isendselfprobe bsendfrag bsendpending icsend rqstatus rqfreeb greq1 scancel scancel2 rcancel pscancel scancel_unmatch sendflood sendrecv1 sendrecv2 sendrecv3 waitany-null pingping probe-unexp probenull inactivereq waittestnull sendall large_message mprobe big_count_status many_isend
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/pt2pt'
+Making clean in rma
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/rma'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "allocmem test1 test2 test2_shm test3 test3_shm test4 test5 lockcontention lockcontention2 lockcontention3 lockopts lock_dt lock_dt_flush lock_dt_flushlocal lockall_dt lockall_dt_flush lockall_dt_flushall lockall_dt_flushlocal lockall_dt_flushlocalall lock_contention_dt contention_put contention_putget put_base put_bottom locknull wintest wintest_shm transpose1 transpose2 transpose3 transpose3_shm transpose4 transpose5 transpose6 transpose7 fetchandadd fetchandadd_tree winname putfence1 putfidx epochtest getfence1 accfence1 accfence2 adlb_mimic1 putpscw1 accpscw1 getgroup contig_displ test1_am test2_am test2_am_shm test3_am test3_am_shm test4_am test5_am fetchandadd_am fetchandadd_tree_am accfence2_am test1_dt attrorderwin wincall fkeyvalwin baseattrwin nullpscw nullpscw_shm rmanull rmazero mixedsync manyrma2 manyrma2_shm manyrma3 selfrma strided_acc_onelock strided_putget_indexed strided_putget_indexed_shared strided_acc_indexed strided_acc_subarray strided_get_indexed strided_getacc_indexed strided_getacc_indexed_shared window_creation win_flavors win_shared win_shared_noncontig win_shared_noncontig_put win_shared_zerobyte win_shared_create_allocshm win_shared_create_no_allocshm win_zero win_large_shm win_dynamic_acc get_acc_local compare_and_swap linked_list linked_list_fop linked_list_lockall linked_list_bench_lock_all linked_list_bench_lock_excl linked_list_bench_lock_shr linked_list_bench_lock_shr_nocheck fetch_and_op_char fetch_and_op_short fetch_and_op_int fetch_and_op_long fetch_and_op_double fetch_and_op_long_double get_accumulate_short get_accumulate_long get_accumulate_double get_accumulate_int get_accumulate_short_derived get_accumulate_long_derived get_accumulate_double_derived get_accumulate_int_derived flush win_shared_put_flush_get reqops req_example req_example_shm win_info pscw_ordering pscw_ordering_shm mutex_bench mutex_bench_shared mutex_bench_shm mutex_bench_shm_ordered rma-contig badrma nb_test acc-loc fence_shm get-struct rput_local_comp racc_local_comp at_complete atomic_rmw_fop atomic_rmw_cas atomic_rmw_gacc atomic_get acc-pairtype manyget derived-acc-flush_local large-acc-flush_local large-small-acc put_flush_get acc_flush_get gacc_flush_get fop_flush_get cas_flush_get win_shared_put_flush_load win_shared_acc_flush_load win_shared_gacc_flush_load win_shared_fop_flush_load win_shared_cas_flush_load aint" || rm -f allocmem test1 test2 test2_shm test3 test3_shm test4 test5 lockcontention lockcontention2 lockcontention3 lockopts lock_dt lock_dt_flush lock_dt_flushlocal lockall_dt lockall_dt_flush lockall_dt_flushall lockall_dt_flushlocal lockall_dt_flushlocalall lock_contention_dt contention_put contention_putget put_base put_bottom locknull wintest wintest_shm transpose1 transpose2 transpose3 transpose3_shm transpose4 transpose5 transpose6 transpose7 fetchandadd fetchandadd_tree winname putfence1 putfidx epochtest getfence1 accfence1 accfence2 adlb_mimic1 putpscw1 accpscw1 getgroup contig_displ test1_am test2_am test2_am_shm test3_am test3_am_shm test4_am test5_am fetchandadd_am fetchandadd_tree_am accfence2_am test1_dt attrorderwin wincall fkeyvalwin baseattrwin nullpscw nullpscw_shm rmanull rmazero mixedsync manyrma2 manyrma2_shm manyrma3 selfrma strided_acc_onelock strided_putget_indexed strided_putget_indexed_shared strided_acc_indexed strided_acc_subarray strided_get_indexed strided_getacc_indexed strided_getacc_indexed_shared window_creation win_flavors win_shared win_shared_noncontig win_shared_noncontig_put win_shared_zerobyte win_shared_create_allocshm win_shared_create_no_allocshm win_zero win_large_shm win_dynamic_acc get_acc_local compare_and_swap linked_list linked_list_fop linked_list_lockall linked_list_bench_lock_all linked_list_bench_lock_excl linked_list_bench_lock_shr linked_list_bench_lock_shr_nocheck fetch_and_op_char fetch_and_op_short fetch_and_op_int fetch_and_op_long fetch_and_op_double fetch_and_op_long_double get_accumulate_short get_accumulate_long get_accumulate_double get_accumulate_int get_accumulate_short_derived get_accumulate_long_derived get_accumulate_double_derived get_accumulate_int_derived flush win_shared_put_flush_get reqops req_example req_example_shm win_info pscw_ordering pscw_ordering_shm mutex_bench mutex_bench_shared mutex_bench_shm mutex_bench_shm_ordered rma-contig badrma nb_test acc-loc fence_shm get-struct rput_local_comp racc_local_comp at_complete atomic_rmw_fop atomic_rmw_cas atomic_rmw_gacc atomic_get acc-pairtype manyget derived-acc-flush_local large-acc-flush_local large-small-acc put_flush_get acc_flush_get gacc_flush_get fop_flush_get cas_flush_get win_shared_put_flush_load win_shared_acc_flush_load win_shared_gacc_flush_load win_shared_fop_flush_load win_shared_cas_flush_load aint
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/rma'
+Making clean in topo
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/topo'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "cartmap1 cartzero cartshift1 cartsuball cartcreates dims1 dims2 dims3 dims4 graphmap1 topotest topodup graphcr graphcr2 distgraph1 dgraph_unwgt neighb_coll" || rm -f cartmap1 cartzero cartshift1 cartsuball cartcreates dims1 dims2 dims3 dims4 graphmap1 topotest topodup graphcr graphcr2 distgraph1 dgraph_unwgt neighb_coll
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/topo'
+Making clean in errors
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors'
+Making clean in attr
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/attr'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "keyvalmis" || rm -f keyvalmis
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/attr'
+Making clean in coll
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/coll'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "noalias noalias2 noalias3 rerr bcastlength reduce_local nb_noalias nb_rerr ibcastlength" || rm -f noalias noalias2 noalias3 rerr bcastlength reduce_local nb_noalias nb_rerr ibcastlength
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/coll'
+Making clean in comm
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/comm'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "cfree ccreate1 manysplit userdup too_many_comms too_many_comms2 too_many_comms3 too_many_icomms too_many_icomms2" || rm -f cfree ccreate1 manysplit userdup too_many_comms too_many_comms2 too_many_comms3 too_many_icomms too_many_icomms2
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/comm'
+Making clean in datatype
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/datatype'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "getcnterr" || rm -f getcnterr
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/datatype'
+Making clean in group
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/group'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "gerr" || rm -f gerr
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/group'
+Making clean in pt2pt
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/pt2pt'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "proberank truncmsg1 truncmsg2 errinstatts errinstatta errinstatws errinstatwa" || rm -f proberank truncmsg1 truncmsg2 errinstatts errinstatta errinstatws errinstatwa
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/pt2pt'
+Making clean in rma
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/rma'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "winerr winerr2 cas_type_check win_sync_unlock win_sync_free_pt win_sync_free_at win_sync_complete win_sync_lock_at win_sync_lock_pt win_sync_lock_fence win_sync_nested win_sync_op" || rm -f winerr winerr2 cas_type_check win_sync_unlock win_sync_free_pt win_sync_free_at win_sync_complete win_sync_lock_at win_sync_lock_pt win_sync_lock_fence win_sync_nested win_sync_op
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/rma'
+Making clean in topo
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/topo'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "cartsmall" || rm -f cartsmall
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/topo'
+Making clean in basic
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/basic'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "lefthandles debabort" || rm -f lefthandles debabort
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/basic'
+Making clean in faults
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/faults'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "pt2ptf1 pt2ptf2 collf1 collf2" || rm -f pt2ptf1 pt2ptf2 collf1 collf2
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/faults'
+Making clean in io
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/io'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "fileerrret openerr file_errhdl" || rm -f fileerrret openerr file_errhdl
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/io'
+Making clean in f77
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/f77'
+Making clean in io
+make[6]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/f77/io'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "uerrhandf" || rm -f uerrhandf
+rm -f *.o
+make[6]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/f77/io'
+make[6]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/f77'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+make[6]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/f77'
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/f77'
+Making clean in f90
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/f90'
+Making clean in io
+make[6]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/f90/io'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "uerrhandf90" || rm -f uerrhandf90
+rm -f *.o
+make[6]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/f90/io'
+make[6]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/f90'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+make[6]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/f90'
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/f90'
+Making clean in cxx
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/cxx'
+Making clean in io
+make[6]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/cxx/io'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "fileerrretx errgetfilex throwtestfilex" || rm -f fileerrretx errgetfilex throwtestfilex
+rm -f *.o
+make[6]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/cxx/io'
+Making clean in errhan
+make[6]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/cxx/errhan'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "commerrx errgetx errsetx throwtest" || rm -f commerrx errgetx errsetx throwtest
+rm -f *.o
+make[6]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/cxx/errhan'
+make[6]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/cxx'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+make[6]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/cxx'
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/cxx'
+Making clean in spawn
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/spawn'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "badport unpub lookup_name" || rm -f badport unpub lookup_name
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors/spawn'
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors'
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/errors'
+Making clean in manual
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/manual'
+Making clean in mpi_t
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/manual/mpi_t'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "mpit_test mpit_test2 nem_fbox_fallback_to_queue_count unexpected_recvq_buffer_size" || rm -f mpit_test mpit_test2 nem_fbox_fallback_to_queue_count unexpected_recvq_buffer_size
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/manual/mpi_t'
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/manual'
+test -z "summary.xml summary.tap summary.junit.xml test-port" || rm -f summary.xml summary.tap summary.junit.xml test-port
+test -z "singjoin testconnect testconnectserial dimsbalanced spawntest_master spawntest_child segfault" || rm -f singjoin testconnect testconnectserial dimsbalanced spawntest_master spawntest_child segfault
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/manual'
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/manual'
+Making clean in perf
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/perf'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "transp-datatype non_zero_root sendrecvl twovec dtpack allredtrace commcreatep allredtrace commcreatep timer manyrma nestvec nestvec2 indexperf" || rm -f transp-datatype non_zero_root sendrecvl twovec dtpack allredtrace commcreatep allredtrace commcreatep timer manyrma nestvec nestvec2 indexperf
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/perf'
+Making clean in mpi_t
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/mpi_t'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "mpi_t_str mpit_vars cvarwrite getindex" || rm -f mpi_t_str mpit_vars cvarwrite getindex
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/mpi_t'
+Making clean in impls
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/impls'
+Making clean in mpich
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/impls/mpich'
+Making clean in mpi_t
+make[6]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/impls/mpich/mpi_t'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "collparmt" || rm -f collparmt
+rm -f *.o
+make[6]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/impls/mpich/mpi_t'
+make[6]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/impls/mpich'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+make[6]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/impls/mpich'
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/impls/mpich'
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/impls'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/impls'
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/impls'
+Making clean in ckpoint
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/ckpoint'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "write_ckpoint" || rm -f write_ckpoint
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/ckpoint'
+Making clean in ft
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/ft'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "die abort sendalive isendalive senddead recvdead isenddead irecvdead barrier gather reduce bcast scatter failure_ack anysource revoke_nofail shrink agree multi_isendalive agree_shrink revoke_shrink nbccoll" || rm -f die abort sendalive isendalive senddead recvdead isenddead irecvdead barrier gather reduce bcast scatter failure_ack anysource revoke_nofail shrink agree multi_isendalive agree_shrink revoke_shrink nbccoll
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/ft'
+Making clean in io
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/io'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+rm -f testfile testfile.*
+test -z "rdwrord rdwrzero getextent setinfo setviewcur i_noncontig async async_any userioerr resized resized2 bigtype hindexed_io simple_collective external32-derived-dtype i_bigtype i_hindexed_io i_rdwrord i_setviewcur i_aggregation1 i_aggregation2 i_coll_test i_darray_read i_hindexed i_noncontig_coll i_noncontig_coll2 i_types_with_zeros" || rm -f rdwrord rdwrzero getextent setinfo setviewcur i_noncontig async async_any userioerr resized resized2 bigtype hindexed_io simple_collective external32-derived-dtype i_bigtype i_hindexed_io i_rdwrord i_setviewcur i_aggregation1 i_aggregation2 i_coll_test i_darray_read i_hindexed i_noncontig_coll i_noncontig_coll2 i_types_with_zeros
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/io'
+Making clean in f77
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77'
+Making clean in util
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/util'
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/util'
+Making clean in attr
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/attr'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "attrmpi1f baseattrf baseattr2f commattrf commattr2f commattr3f commattr4f typeattrf typeattr2f typeattr3f" || rm -f attrmpi1f baseattrf baseattr2f commattrf commattr2f commattr3f commattr4f typeattrf typeattr2f typeattr3f
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/attr'
+Making clean in datatype
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/datatype'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "typenamef typesnamef typecntsf typesubf typem2f gaddressf packef allctypesf hindex1f hindexed_blockf typename3f bottom" || rm -f typenamef typesnamef typecntsf typesubf typem2f gaddressf packef allctypesf hindex1f hindexed_blockf typename3f bottom
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/datatype'
+Making clean in coll
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/coll'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "uallreducef exscanf alltoallwf inplacef allredint8f allredopttf reducelocalf alltoallvf redscatf split_typef nonblockingf vw_inplacef red_scat_blockf nonblocking_inpf" || rm -f uallreducef exscanf alltoallwf inplacef allredint8f allredopttf reducelocalf alltoallvf redscatf split_typef nonblockingf vw_inplacef red_scat_blockf nonblocking_inpf
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/coll'
+Making clean in pt2pt
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/pt2pt'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "allpairf statusesf greqf mprobef" || rm -f allpairf statusesf greqf mprobef
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/pt2pt'
+Making clean in info
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/info'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "infotestf infotest2f" || rm -f infotestf infotest2f
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/info'
+Making clean in init
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/init'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "baseenvf" || rm -f baseenvf
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/init'
+Making clean in comm
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/comm'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "commnamef commerrf" || rm -f commnamef commerrf
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/comm'
+Making clean in topo
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/topo'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "cartcrf dgraph_wgtf dgraph_unwgtf" || rm -f cartcrf dgraph_wgtf dgraph_unwgtf
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/topo'
+Making clean in ext
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/ext'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "c2f2cf ctypesinf c2fmult" || rm -f c2f2cf ctypesinf c2fmult
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/ext'
+Making clean in profile
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/profile'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "profile1f" || rm -f profile1f
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/profile'
+Making clean in spawn
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/spawn'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "namepubf spawnf spawnargvf spawnmultf spawnmult2f connaccf" || rm -f namepubf spawnf spawnargvf spawnmultf spawnmult2f connaccf
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/spawn'
+Making clean in io
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/io'
+test -z "summary.xml summary.tap gen-src-tmp gen-src-stamp" || rm -f summary.xml summary.tap gen-src-tmp gen-src-stamp
+rm -f .iotest.txt.*
+test -z "iwriteatf iwritef iwriteshf writef writeatf writeallf writeallbef writeordf writeordbef writeshf writeatallf writeatallbef fileerrf fileinfof shpositionf atomicityf miscfilef setviewcurf c2fmultio c2f2ciof i_setviewcurf iwriteatallf" || rm -f iwriteatf iwritef iwriteshf writef writeatf writeallf writeallbef writeordf writeordbef writeshf writeatallf writeatallbef fileerrf fileinfof shpositionf atomicityf miscfilef setviewcurf c2fmultio c2f2ciof i_setviewcurf iwriteatallf
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/io'
+Making clean in rma
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/rma'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "winscale1f winscale2f winfencef wingetf winerrf winnamef wingroupf winaccf winaccf c2f2cwinf baseattrwinf winattrf winattr2f aintf" || rm -f winscale1f winscale2f winfencef wingetf winerrf winnamef wingroupf winaccf winaccf c2f2cwinf baseattrwinf winattrf winattr2f aintf
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77/rma'
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77'
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f77'
+Making clean in f90
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90'
+Making clean in util
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/util'
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/util'
+Making clean in timer
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/timer'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "wtimef90" || rm -f wtimef90
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/timer'
+Making clean in attr
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/attr'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+if [ "mod" != "" ] ; then rm -f *.mod ; fi
+test -z "attrmpi1f90 baseattrf90 baseattr2f90 commattrf90 commattr2f90 commattr3f90 commattr4f90 typeattrf90 typeattr2f90 typeattr3f90 fandcattrf90 baseattr3f90 attrlangf90" || rm -f attrmpi1f90 baseattrf90 baseattr2f90 commattrf90 commattr2f90 commattr3f90 commattr4f90 typeattrf90 typeattr2f90 typeattr3f90 fandcattrf90 baseattr3f90 attrlangf90
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/attr'
+Making clean in coll
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/coll'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "uallreducef90 exscanf90 alltoallwf90 inplacef90 allredint8f90 allredopttf90 reducelocalf90 alltoallvf90 redscatf90 split_typef90 nonblockingf90 vw_inplacef90 red_scat_blockf90 nonblocking_inpf90" || rm -f uallreducef90 exscanf90 alltoallwf90 inplacef90 allredint8f90 allredopttf90 reducelocalf90 alltoallvf90 redscatf90 split_typef90 nonblockingf90 vw_inplacef90 red_scat_blockf90 nonblocking_inpf90
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/coll'
+Making clean in datatype
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/datatype'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "typenamef90 typesnamef90 typecntsf90 typesubf90 typem2f90 gaddressf90 packef90 allctypesf90 hindex1f90 hindexed_blockf90 typename3f90 bottom structf indtype createf90 sizeof kinds trf90 get_elem_d get_elem_u" || rm -f typenamef90 typesnamef90 typecntsf90 typesubf90 typem2f90 gaddressf90 packef90 allctypesf90 hindex1f90 hindexed_blockf90 typename3f90 bottom structf indtype createf90 sizeof kinds trf90 get_elem_d get_elem_u
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/datatype'
+Making clean in pt2pt
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/pt2pt'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "allpairf90 statusesf90 greqf90 mprobef90" || rm -f allpairf90 statusesf90 greqf90 mprobef90
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/pt2pt'
+Making clean in info
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/info'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "infotestf90 infotest2f90" || rm -f infotestf90 infotest2f90
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/info'
+Making clean in comm
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/comm'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "commnamef90 commerrf90" || rm -f commnamef90 commerrf90
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/comm'
+Making clean in topo
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/topo'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "cartcrf90 dgraph_wgtf90 dgraph_unwgtf90" || rm -f cartcrf90 dgraph_wgtf90 dgraph_unwgtf90
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/topo'
+Making clean in ext
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/ext'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "c2f2cf90 ctypesinf90 c2f90mult" || rm -f c2f2cf90 ctypesinf90 c2f90mult
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/ext'
+Making clean in init
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/init'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "baseenvf90" || rm -f baseenvf90
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/init'
+Making clean in misc
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/misc'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "sizeof2" || rm -f sizeof2
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/misc'
+Making clean in f90types
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/f90types'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "createf90types" || rm -f createf90types
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/f90types'
+Making clean in profile
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/profile'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "profile1f90" || rm -f profile1f90
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/profile'
+Making clean in rma
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/rma'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "winscale1f90 winscale2f90 winfencef90 wingetf90 winerrf90 winnamef90 wingroupf90 winaccf90 winaccf90 c2f2cwinf90 baseattrwinf90 winattrf90 winattr2f90 aintf90" || rm -f winscale1f90 winscale2f90 winfencef90 wingetf90 winerrf90 winnamef90 wingroupf90 winaccf90 winaccf90 c2f2cwinf90 baseattrwinf90 winattrf90 winattr2f90 aintf90
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/rma'
+Making clean in spawn
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/spawn'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "namepubf90 spawnf90 spawnargvf90 spawnmultf90 spawnmult2f90 connaccf90" || rm -f namepubf90 spawnf90 spawnargvf90 spawnmultf90 spawnmult2f90 connaccf90
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/spawn'
+Making clean in io
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/io'
+test -z "summary.xml summary.tap gen-src-tmp gen-src-stamp" || rm -f summary.xml summary.tap gen-src-tmp gen-src-stamp
+rm -f .iotest.txt.*
+test -z "iwriteatf90 iwritef90 iwriteshf90 writef90 writeatf90 writeallf90 writeallbef90 writeordf90 writeordbef90 writeshf90 writeatallf90 writeatallbef90 fileerrf90 fileinfof90 shpositionf90 atomicityf90 miscfilef90 setviewcurf90 c2f90multio c2f2ciof90 i_setviewcurf90 iwriteatallf90" || rm -f iwriteatf90 iwritef90 iwriteshf90 writef90 writeatf90 writeallf90 writeallbef90 writeordf90 writeordbef90 writeshf90 writeatallf90 writeatallbef90 fileerrf90 fileinfof90 shpositionf90 atomicityf90 miscfilef90 setviewcurf90 c2f90multio c2f2ciof90 i_setviewcurf90 iwriteatallf90
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90/io'
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90'
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/f90'
+Making clean in cxx
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx'
+Making clean in util
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/util'
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/util'
+Making clean in attr
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/attr'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "attrtx attricx baseattrcommx fkeyvalcommx fkeyvaltypex" || rm -f attrtx attricx baseattrcommx fkeyvalcommx fkeyvaltypex
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/attr'
+Making clean in pt2pt
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/pt2pt'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "bsend1cxx sendrecvx" || rm -f bsend1cxx sendrecvx
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/pt2pt'
+Making clean in init
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/init'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "baseenv initstatx initstat2x" || rm -f baseenv initstatx initstat2x
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/init'
+Making clean in info
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/info'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "infodupx infodelx infovallenx infoorderx" || rm -f infodupx infodelx infovallenx infoorderx
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/info'
+Making clean in comm
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/comm'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "commname2" || rm -f commname2
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/comm'
+Making clean in coll
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/coll'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "arcomplex uallredx uallreduce ureduce ureducelocal uscan uexscan icbcastx icbarrierx icgatherx icgathervx icscatterx icscattervx icallgatherx icallgathervx icallreducex icreducex icalltoallx alltoallw2x reduceboolx redscatblk" || rm -f arcomplex uallredx uallreduce ureduce ureducelocal uscan uexscan icbcastx icbarrierx icgatherx icgathervx icscatterx icscattervx icallgatherx icallgathervx icallreducex icreducex icalltoallx alltoallw2x reduceboolx redscatblk
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/coll'
+Making clean in datatype
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/datatype'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "packsizex typecntsx typenamex typemiscx" || rm -f packsizex typecntsx typenamex typemiscx
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/datatype'
+Making clean in errhan
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/errhan'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "commcallx" || rm -f commcallx
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/errhan'
+Making clean in topo
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/topo'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/topo'
+Making clean in io
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/io'
+test -z "summary.xml summary.tap gen-src-tmp gen-src-stamp" || rm -f summary.xml summary.tap gen-src-tmp gen-src-stamp
+rm -f .iotest.txt.*
+test -z "iwriteatx iwritex iwriteshx writex writeatx writeallx writeatallx writeallbex writeordx writeordbex writeshx writeatallbex iwriteatnosx iwritenosx iwriteshnosx writenosx writeatnosx writeallnosx writeatallnosx writeallbenosx writeordnosx writeordbenosx writeshnosx writeatallbenosx fileerrx fileinfox shpositionx setinfox filemiscx seekavail" || rm -f iwriteatx iwritex iwriteshx writex writeatx writeallx writeatallx writeallbex writeordx writeordbex writeshx writeatallbex iwriteatnosx iwritenosx iwriteshnosx writenosx writeatnosx writeallnosx writeatallnosx writeallbenosx writeordnosx writeordbenosx writeshnosx writeatallbenosx fileerrx fileinfox shpositionx setinfox filemiscx seekavail
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/io'
+Making clean in rma
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/rma'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "winnamex wincallx getgroupx winfencex winscale1x winscale2x fkeyvalwinx" || rm -f winnamex wincallx getgroupx winfencex winscale1x winscale2x fkeyvalwinx
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/rma'
+Making clean in spawn
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/spawn'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+test -z "spawnargvx spawnintrax namepubx selfconaccx" || rm -f spawnargvx spawnintrax namepubx selfconaccx
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx/spawn'
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx'
+test -z "summary.xml summary.tap" || rm -f summary.xml summary.tap
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx'
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/cxx'
+Making clean in threads
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads'
+Making clean in util
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/util'
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/util'
+Making clean in pt2pt
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/pt2pt'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "threads threaded_sr alltoall sendselfth greq_wait greq_test multisend multisend2 multisend3 multisend4 ibsend" || rm -f threads threaded_sr alltoall sendselfth greq_wait greq_test multisend multisend2 multisend3 multisend4 ibsend
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/pt2pt'
+Making clean in comm
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/comm'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "ctxdup dup_leak_test comm_dup_deadlock comm_create_threads comm_create_group_threads comm_create_group_threads2 comm_idup idup_deadlock ctxidup idup_nb idup_comm_gen" || rm -f ctxdup dup_leak_test comm_dup_deadlock comm_create_threads comm_create_group_threads comm_create_group_threads2 comm_idup idup_deadlock ctxidup idup_nb idup_comm_gen
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/comm'
+Making clean in init
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/init'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "initth" || rm -f initth
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/init'
+Making clean in mpi_t
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/mpi_t'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "mpit_threading" || rm -f mpit_threading
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/mpi_t'
+Making clean in spawn
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/spawn'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "multispawn th_taskmaster" || rm -f multispawn th_taskmaster
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/spawn'
+Making clean in rma
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/rma'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "multirma multiget" || rm -f multirma multiget
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/rma'
+Making clean in coll
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/coll'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "iallred allred" || rm -f iallred allred
+rm -f *.o
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads/coll'
+make[5]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+make[5]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads'
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/threads'
+Making clean in spawn
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/spawn'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "namepub spawn1 spawninfo1 spawnminfo1 spawn2 spawnintra spawnargv spawnmanyarg spaconacc spaconacc2 selfconacc spawnmult2 taskmaster join disconnect_reconnect disconnect_reconnect2 disconnect_reconnect3 multiple_ports multiple_ports2 spaiccreate spaiccreate2 disconnect disconnect2 disconnect3 pgroup_connect_test pgroup_intercomm_test concurrent_spawns spawn-rootargs" || rm -f namepub spawn1 spawninfo1 spawnminfo1 spawn2 spawnintra spawnargv spawnmanyarg spaconacc spaconacc2 selfconacc spawnmult2 taskmaster join disconnect_reconnect disconnect_reconnect2 disconnect_reconnect3 multiple_ports multiple_ports2 spaiccreate spaiccreate2 disconnect disconnect2 disconnect3 pgroup_connect_test pgroup_intercomm_test concurrent_spawns spawn-rootargs
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/spawn'
+Making clean in ft
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/ft'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+test -z "die abort sendalive isendalive senddead recvdead isenddead irecvdead barrier gather reduce bcast scatter failure_ack anysource revoke_nofail shrink agree multi_isendalive agree_shrink revoke_shrink nbccoll" || rm -f die abort sendalive isendalive senddead recvdead isenddead irecvdead barrier gather reduce bcast scatter failure_ack anysource revoke_nofail shrink agree multi_isendalive agree_shrink revoke_shrink nbccoll
+rm -f *.o
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi/ft'
+Making clean in .
+make[4]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi'
+test -z "summary.xml summary.tap summary.junit.xml" || rm -f summary.xml summary.tap summary.junit.xml
+make[4]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi'
+make[3]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/mpi'
+Making clean in commands
+make[3]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/commands'
+test -z "err.txt out.log out.txt a.out" || rm -f err.txt out.log out.txt a.out
+rm -rf .libs _libs
+ rm -f stdiotest stdintest stdintest2 checkenv1 rtest rtestf rtestx testout
+rm -f *.o
+rm -f *.lo
+make[3]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test/commands'
+Making clean in .
+make[3]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test'
+rm -rf .libs _libs
+rm -f *.lo
+make[3]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test'
+make[2]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/test'
+test -z "src/pm/mpirun/src/db/libdb.a src/pm/mpirun/src/hostfile/libhostfile.a src/pm/mpirun/src/slurm/libslurm.a src/pm/mpirun/src/slurm/libnodelist.a src/pm/mpirun/src/slurm/libtasklist.a src/pm/mpirun/src/pbs/libpbs.a" || rm -f src/pm/mpirun/src/db/libdb.a src/pm/mpirun/src/hostfile/libhostfile.a src/pm/mpirun/src/slurm/libslurm.a src/pm/mpirun/src/slurm/libnodelist.a src/pm/mpirun/src/slurm/libtasklist.a src/pm/mpirun/src/pbs/libpbs.a
+test -z "  libch3affinity.la   " || rm -f   libch3affinity.la   
+rm -f ./so_locations
+rm -f *.o
+rm -f src/binding/cxx/*.o
+rm -f src/binding/cxx/*.lo
+rm -f src/binding/fortran/mpif_h/*.o
+rm -f src/binding/fortran/mpif_h/*.lo
+rm -f src/binding/fortran/use_mpi/*.o
+rm -f src/binding/fortran/use_mpi/*.lo
+rm -f src/binding/fortran/use_mpi_f08/*.o
+rm -f src/binding/fortran/use_mpi_f08/*.lo
+rm -f src/binding/fortran/use_mpi_f08/wrappers_c/*.o
+rm -f src/binding/fortran/use_mpi_f08/wrappers_c/*.lo
+rm -f src/binding/fortran/use_mpi_f08/wrappers_f/*.o
+rm -f src/binding/fortran/use_mpi_f08/wrappers_f/*.lo
+rm -f src/binding/fortran/use_mpi_f08/wrappers_f/profiling/*.o
+rm -f src/binding/fortran/use_mpi_f08/wrappers_f/profiling/*.lo
+rm -f src/env/*.o
+rm -f src/glue/romio/*.o
+rm -f src/glue/romio/*.lo
+rm -f src/mpi/attr/*.o
+rm -f src/mpi/attr/*.lo
+rm -f src/mpi/coll/*.o
+rm -f src/mpi/coll/*.lo
+rm -f src/mpi/comm/*.o
+rm -f src/mpi/comm/*.lo
+rm -f src/mpi/datatype/*.o
+rm -f src/mpi/datatype/*.lo
+rm -f src/mpi/debugger/*.o
+rm -f src/mpi/debugger/*.lo
+rm -f src/mpi/errhan/*.o
+rm -f src/mpi/errhan/*.lo
+rm -f src/mpi/group/*.o
+rm -f src/mpi/group/*.lo
+rm -f src/mpi/info/*.o
+rm -f src/mpi/info/*.lo
+rm -f src/mpi/init/*.o
+rm -f src/mpi/init/*.lo
+rm -f src/mpi/misc/*.o
+rm -f src/mpi/misc/*.lo
+rm -f src/mpi/pt2pt/*.o
+rm -f src/mpi/pt2pt/*.lo
+rm -f src/mpi/rma/*.o
+rm -f src/mpi/rma/*.lo
+rm -f src/mpi/spawn/*.o
+rm -f src/mpi/spawn/*.lo
+rm -f src/mpi/timer/*.o
+rm -f src/mpi/timer/*.lo
+rm -f src/mpi/topo/*.o
+rm -f src/mpi/topo/*.lo
+rm -f src/mpi_t/*.o
+rm -f src/mpi_t/*.lo
+rm -f src/mpid/ch3/channels/common/src/affinity/*.o
+rm -f src/mpid/ch3/channels/common/src/affinity/*.lo
+rm -f src/mpid/ch3/channels/common/src/cm/*.o
+rm -f src/mpid/ch3/channels/common/src/cm/*.lo
+rm -f src/mpid/ch3/channels/common/src/detect/arch/*.o
+rm -f src/mpid/ch3/channels/common/src/detect/arch/*.lo
+rm -f src/mpid/ch3/channels/common/src/detect/hca/*.o
+rm -f src/mpid/ch3/channels/common/src/detect/hca/*.lo
+rm -f src/mpid/ch3/channels/common/src/ft/*.o
+rm -f src/mpid/ch3/channels/common/src/ft/*.lo
+rm -f src/mpid/ch3/channels/common/src/mcast/*.o
+rm -f src/mpid/ch3/channels/common/src/mcast/*.lo
+rm -f src/mpid/ch3/channels/common/src/memory/*.o
+rm -f src/mpid/ch3/channels/common/src/memory/*.lo
+rm -f src/mpid/ch3/channels/common/src/memory/ptmalloc2/*.o
+rm -f src/mpid/ch3/channels/common/src/memory/ptmalloc2/*.lo
+rm -f src/mpid/ch3/channels/common/src/qos/*.o
+rm -f src/mpid/ch3/channels/common/src/qos/*.lo
+rm -f src/mpid/ch3/channels/common/src/rdma_cm/*.o
+rm -f src/mpid/ch3/channels/common/src/rdma_cm/*.lo
+rm -f src/mpid/ch3/channels/common/src/reg_cache/*.o
+rm -f src/mpid/ch3/channels/common/src/reg_cache/*.lo
+rm -f src/mpid/ch3/channels/common/src/scr/*.o
+rm -f src/mpid/ch3/channels/common/src/scr/*.lo
+rm -f src/mpid/ch3/channels/common/src/ud-hybrid/*.o
+rm -f src/mpid/ch3/channels/common/src/ud-hybrid/*.lo
+rm -f src/mpid/ch3/channels/common/src/util/*.o
+rm -f src/mpid/ch3/channels/common/src/util/*.lo
+rm -f src/mpid/ch3/channels/mrail/src/cuda/*.o
+rm -f src/mpid/ch3/channels/mrail/src/cuda/*.lo
+rm -f src/mpid/ch3/channels/mrail/src/gen2/*.o
+rm -f src/mpid/ch3/channels/mrail/src/gen2/*.lo
+rm -f src/mpid/ch3/channels/mrail/src/rdma/*.o
+rm -f src/mpid/ch3/channels/mrail/src/rdma/*.lo
+rm -f src/mpid/ch3/channels/nemesis/netmod/ib/*.o
+rm -f src/mpid/ch3/channels/nemesis/netmod/ib/*.lo
+rm -f src/mpid/ch3/channels/nemesis/netmod/llc/*.o
+rm -f src/mpid/ch3/channels/nemesis/netmod/llc/*.lo
+rm -f src/mpid/ch3/channels/nemesis/netmod/mxm/*.o
+rm -f src/mpid/ch3/channels/nemesis/netmod/mxm/*.lo
+rm -f src/mpid/ch3/channels/nemesis/netmod/none/*.o
+rm -f src/mpid/ch3/channels/nemesis/netmod/none/*.lo
+rm -f src/mpid/ch3/channels/nemesis/netmod/ofi/*.o
+rm -f src/mpid/ch3/channels/nemesis/netmod/ofi/*.lo
+rm -f src/mpid/ch3/channels/nemesis/netmod/portals4/*.o
+rm -f src/mpid/ch3/channels/nemesis/netmod/portals4/*.lo
+rm -f src/mpid/ch3/channels/nemesis/netmod/tcp/*.o
+rm -f src/mpid/ch3/channels/nemesis/netmod/tcp/*.lo
+rm -f src/mpid/ch3/channels/nemesis/src/*.o
+rm -f src/mpid/ch3/channels/nemesis/src/*.lo
+rm -f src/mpid/ch3/channels/nemesis/utils/monitor/*.o
+rm -f src/mpid/ch3/channels/nemesis/utils/monitor/*.lo
+rm -f src/mpid/ch3/channels/nemesis/utils/replacements/*.o
+rm -f src/mpid/ch3/channels/nemesis/utils/replacements/*.lo
+rm -f src/mpid/ch3/channels/psm/src/*.o
+rm -f src/mpid/ch3/channels/psm/src/*.lo
+rm -f src/mpid/ch3/channels/sock/src/*.o
+rm -f src/mpid/ch3/channels/sock/src/*.lo
+rm -f src/mpid/ch3/src/*.o
+rm -f src/mpid/ch3/src/*.lo
+rm -f src/mpid/ch3/util/ftb/*.o
+rm -f src/mpid/ch3/util/ftb/*.lo
+rm -f src/mpid/ch3/util/sock/*.o
+rm -f src/mpid/ch3/util/sock/*.lo
+rm -f src/mpid/common/datatype/*.o
+rm -f src/mpid/common/datatype/*.lo
+rm -f src/mpid/common/datatype/dataloop/*.o
+rm -f src/mpid/common/datatype/dataloop/*.lo
+rm -f src/mpid/common/hcoll/*.o
+rm -f src/mpid/common/hcoll/*.lo
+rm -f src/mpid/common/sched/*.o
+rm -f src/mpid/common/sched/*.lo
+rm -f src/mpid/common/sock/poll/*.o
+rm -f src/mpid/common/sock/poll/*.lo
+rm -f src/mpid/pamid/src/*.o
+rm -f src/mpid/pamid/src/*.lo
+rm -f src/mpid/pamid/src/coll/*.o
+rm -f src/mpid/pamid/src/coll/*.lo
+rm -f src/mpid/pamid/src/coll/allgather/*.o
+rm -f src/mpid/pamid/src/coll/allgather/*.lo
+rm -f src/mpid/pamid/src/coll/allgatherv/*.o
+rm -f src/mpid/pamid/src/coll/allgatherv/*.lo
+rm -f src/mpid/pamid/src/coll/allreduce/*.o
+rm -f src/mpid/pamid/src/coll/allreduce/*.lo
+rm -f src/mpid/pamid/src/coll/alltoall/*.o
+rm -f src/mpid/pamid/src/coll/alltoall/*.lo
+rm -f src/mpid/pamid/src/coll/alltoallv/*.o
+rm -f src/mpid/pamid/src/coll/alltoallv/*.lo
+rm -f src/mpid/pamid/src/coll/alltoallw/*.o
+rm -f src/mpid/pamid/src/coll/alltoallw/*.lo
+rm -f src/mpid/pamid/src/coll/barrier/*.o
+rm -f src/mpid/pamid/src/coll/barrier/*.lo
+rm -f src/mpid/pamid/src/coll/bcast/*.o
+rm -f src/mpid/pamid/src/coll/bcast/*.lo
+rm -f src/mpid/pamid/src/coll/exscan/*.o
+rm -f src/mpid/pamid/src/coll/exscan/*.lo
+rm -f src/mpid/pamid/src/coll/gather/*.o
+rm -f src/mpid/pamid/src/coll/gather/*.lo
+rm -f src/mpid/pamid/src/coll/gatherv/*.o
+rm -f src/mpid/pamid/src/coll/gatherv/*.lo
+rm -f src/mpid/pamid/src/coll/ired_scat/*.o
+rm -f src/mpid/pamid/src/coll/ired_scat/*.lo
+rm -f src/mpid/pamid/src/coll/ired_scat_block/*.o
+rm -f src/mpid/pamid/src/coll/ired_scat_block/*.lo
+rm -f src/mpid/pamid/src/coll/red_scat/*.o
+rm -f src/mpid/pamid/src/coll/red_scat/*.lo
+rm -f src/mpid/pamid/src/coll/reduce/*.o
+rm -f src/mpid/pamid/src/coll/reduce/*.lo
+rm -f src/mpid/pamid/src/coll/scan/*.o
+rm -f src/mpid/pamid/src/coll/scan/*.lo
+rm -f src/mpid/pamid/src/coll/scatter/*.o
+rm -f src/mpid/pamid/src/coll/scatter/*.lo
+rm -f src/mpid/pamid/src/coll/scatterv/*.o
+rm -f src/mpid/pamid/src/coll/scatterv/*.lo
+rm -f src/mpid/pamid/src/comm/*.o
+rm -f src/mpid/pamid/src/comm/*.lo
+rm -f src/mpid/pamid/src/dyntask/*.o
+rm -f src/mpid/pamid/src/dyntask/*.lo
+rm -f src/mpid/pamid/src/misc/*.o
+rm -f src/mpid/pamid/src/misc/*.lo
+rm -f src/mpid/pamid/src/mpix/*.o
+rm -f src/mpid/pamid/src/mpix/*.lo
+rm -f src/mpid/pamid/src/onesided/*.o
+rm -f src/mpid/pamid/src/onesided/*.lo
+rm -f src/mpid/pamid/src/pamix/*.o
+rm -f src/mpid/pamid/src/pamix/*.lo
+rm -f src/mpid/pamid/src/pt2pt/*.o
+rm -f src/mpid/pamid/src/pt2pt/*.lo
+rm -f src/mpid/pamid/src/pt2pt/persistent/*.o
+rm -f src/mpid/pamid/src/pt2pt/persistent/*.lo
+rm -f src/mutex/*.o
+rm -f src/mutex/*.lo
+rm -f src/nameserv/file/*.o
+rm -f src/nameserv/file/*.lo
+rm -f src/nameserv/pmi/*.o
+rm -f src/nameserv/pmi/*.lo
+rm -f src/pm/gforker/*.o
+rm -f src/pm/mpirun/*.o
+rm -f src/pm/mpirun/src/db/*.o
+rm -f src/pm/mpirun/src/hostfile/*.o
+rm -f src/pm/mpirun/src/pbs/*.o
+rm -f src/pm/mpirun/src/slurm/*.o
+rm -f src/pm/remshell/*.o
+rm -f src/pm/util/*.o
+rm -f src/pm/util/*.lo
+rm -f src/pmi/pmi2/poe/*.o
+rm -f src/pmi/pmi2/poe/*.lo
+rm -f src/pmi/pmi2/simple/*.o
+rm -f src/pmi/pmi2/simple/*.lo
+rm -f src/pmi/simple/*.o
+rm -f src/pmi/simple/*.lo
+rm -f src/pmi/upmi/*.o
+rm -f src/pmi/upmi/*.lo
+rm -f src/util/cvar/*.o
+rm -f src/util/cvar/*.lo
+rm -f src/util/dbg/*.o
+rm -f src/util/dbg/*.lo
+rm -f src/util/instrm/*.o
+rm -f src/util/instrm/*.lo
+rm -f src/util/logging/rlog/*.o
+rm -f src/util/logging/rlog/*.lo
+rm -f src/util/mem/*.o
+rm -f src/util/mem/*.lo
+rm -f src/util/other/*.o
+rm -f src/util/other/*.lo
+rm -f src/util/procmap/*.o
+rm -f src/util/procmap/*.lo
+rm -f src/util/thread/*.o
+rm -f src/util/thread/*.lo
+rm -f src/util/timers/*.o
+rm -f src/util/timers/*.lo
+rm -f *.lo
+make[1]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3'
+Making clean in examples
+make[1]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/examples'
+rm -rf .libs _libs
+ rm -f cpi
+rm -f *.o
+rm -f *.lo
+make[1]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/examples'
+Making clean in src/env/mpiname
+make[1]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/env/mpiname'
+ rm -f mpiname
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+make[1]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/env/mpiname'
+Making clean in src/util/mv2_ckpt_rebuild
+make[1]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/util/mv2_ckpt_rebuild'
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+make[1]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/src/util/mv2_ckpt_rebuild'
+Making clean in osu_benchmarks
+make[1]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks'
+Making clean in mpi
+make[2]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks/mpi'
+Making clean in pt2pt
+make[3]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks/mpi/pt2pt'
+test -z "" || rm -f 
+rm -rf .libs _libs
+ rm -f osu_bibw osu_bw osu_latency osu_mbw_mr osu_multi_lat osu_latency_mt
+rm -f *.o
+rm -f ../../util/*.o
+rm -f *.lo
+make[3]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks/mpi/pt2pt'
+Making clean in collective
+make[3]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks/mpi/collective'
+ rm -f osu_alltoallv osu_allgatherv osu_scatterv osu_gatherv osu_reduce_scatter osu_barrier osu_reduce osu_allreduce osu_alltoall osu_bcast osu_gather osu_allgather osu_scatter osu_iallgather osu_ibcast osu_ialltoall osu_ibarrier osu_igather osu_iscatter osu_iscatterv osu_igatherv osu_iallgatherv osu_ialltoallv osu_ialltoallw osu_ireduce osu_iallreduce
+rm -rf .libs _libs
+rm -f *.o
+rm -f ../../util/*.o
+rm -f *.lo
+make[3]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks/mpi/collective'
+Making clean in startup
+make[3]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks/mpi/startup'
+rm -rf .libs _libs
+ rm -f osu_init osu_hello
+rm -f *.o
+rm -f *.lo
+make[3]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks/mpi/startup'
+Making clean in one-sided
+make[3]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks/mpi/one-sided'
+rm -rf .libs _libs
+ rm -f osu_acc_latency osu_get_bw osu_get_latency osu_put_bibw osu_put_bw osu_put_latency osu_get_acc_latency osu_fop_latency osu_cas_latency
+rm -f *.o
+rm -f ../../util/*.o
+rm -f *.lo
+make[3]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks/mpi/one-sided'
+make[3]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks/mpi'
+rm -rf .libs _libs
+rm -f *.lo
+make[3]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks/mpi'
+make[2]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks/mpi'
+make[2]: Entering directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks'
+rm -rf .libs _libs
+rm -f *.lo
+make[2]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks'
+make[1]: Leaving directory `/home/gavahi/explorer/cryptMPI-mvapich2-2.3.3/osu_benchmarks'

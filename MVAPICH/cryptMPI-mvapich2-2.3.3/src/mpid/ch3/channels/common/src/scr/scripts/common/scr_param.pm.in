@@ -1,0 +1,195 @@
+package scr_param;
+use strict;
+
+# reads in an SCR hash file and translates it
+# into a perl hash object
+
+#my $sysconf = "@SCR_CONFIG_FILE@";
+my $sysconf = "/etc/scr.conf";
+
+sub new
+{
+  my $type = shift;
+  my $usrfile = undef;
+  if (@_ > 0) {
+    $usrfile = shift;
+  }
+
+  my $self = {};
+
+  $self->{prog} = 'scr_param';
+  $self->{usrconf} = undef;
+  $self->{sysconf} = undef;
+  $self->{compile} = undef;
+  $self->{no_user} = undef;
+
+  # read in the user configuration file, if specified
+  if (defined $usrfile and -r $usrfile) {
+    $self->{usrconf} = read_config_file($self, $usrfile);
+  }
+
+  # read in the system configuration file
+  if (defined $sysconf and -r $sysconf) {
+    $self->{sysconf} = read_config_file($self, $sysconf);
+  }
+
+  # set our compile time constants
+  $self->{compile} = {};
+  #$self->{compile}{"CNTLDIR"}{"@SCR_CNTL_BASE@"} = {};
+  $self->{compile}{"CNTLDIR"}{"/tmp"} = {};
+  #$self->{compile}{"CACHEDIR"}{"@SCR_CACHE_BASE@"} = {};
+  $self->{compile}{"CACHEDIR"}{"/tmp"} = {};
+  #$self->{compile}{"SCR_CNTL_BASE"}{"@SCR_CNTL_BASE@"} = {};
+  $self->{compile}{"SCR_CNTL_BASE"}{"/tmp"} = {};
+  #$self->{compile}{"SCR_CACHE_BASE"}{"@SCR_CACHE_BASE@"} = {};
+  $self->{compile}{"SCR_CACHE_BASE"}{"/tmp"} = {};
+  $self->{compile}{"SCR_CACHE_SIZE"}{"2"} = {};
+
+  # set our restricted parameters
+  $self->{no_user} = {};
+  $self->{no_user}{"SCR_CNTL_BASE"} = {};
+
+  # TODO: At this point we could scan the environment and user config file
+  # for restricted parameters to print a warning.  However, in this case
+  # printing the extra messages from a perl script whose output is used by
+  # other scripts as input may do more harm than good.  Printing the
+  # warning in the library should be sufficient.
+
+  # if CACHE_BASE and CACHE_SIZE are set and the user didn't set CACHEDESC,
+  # create a single CACHEDESC in the user hash
+  my $cache_base = get($self, "SCR_CACHE_BASE");
+  my $cache_size = get($self, "SCR_CACHE_SIZE");
+  if (not defined $self->{usrconf}{"CACHEDESC"} and
+      defined $cache_base and
+      defined $cache_size)
+  {
+    $self->{usrconf}{"CACHEDESC"}{"0"}{"BASE"}{$cache_base} = {};
+    $self->{usrconf}{"CACHEDESC"}{"0"}{"SIZE"}{$cache_size} = {};
+  }
+
+  return bless $self, $type;
+}
+
+sub read_config_file
+{
+  my $self = shift @_;
+  my $file = shift @_;
+
+  my $h = {};
+
+  if (-r $file) {
+    if (open(IN, $file)) {
+      while (my $line = <IN>) {
+        chomp $line;
+        $line =~ s/^\s*//g; # strip any leading whitespace from line
+        $line =~ s/\s*$//g; # strip any trailing whitespace from line
+        $line =~ s/=/ /g;   # replace '=' with spaces
+        my @parts = split(/\s+/, $line);
+        my $master_key   = undef;
+        my $master_value = undef;
+        while (@parts > 0) {
+          my $part = shift @parts;
+          if ($part =~ /^#/) {
+            @parts = ();
+          } else {
+            # convert the key to upper case
+            my $key = uc($part);
+
+            # read in the value (should have at least one more item in the list)
+            if (@parts == 0) {
+              print "$self->{prog}: ERROR: Invalid key=value pair detected in $file.\n";
+              exit 1;
+            }
+            my $value = shift @parts;
+
+            # record the key value pair in the hash
+            if (defined $master_key) {
+              $$h{$master_key}{$master_value}{$key}{$value} = {};
+            } else {
+              $master_key   = $key;
+              $master_value = $value;
+              $$h{$master_key}{$master_value} = {};
+            }
+          }
+        }
+      }
+    }
+
+    # done reading, close the file
+    close(IN);
+  } else {
+    print "$self->{prog}: ERROR: Could not open file: $file\n";
+  }
+
+  return $h;
+}
+
+sub get
+{
+  my $self = shift;
+  my $name = shift;
+
+  # if param is set in environment, return that value
+  if (not defined $self->{no_user}{$name} and defined $ENV{$name}) {
+    return $ENV{$name};
+  }
+
+  # otherwise, check whether we have it defined in our user config file
+  if (not defined $self->{no_user}{$name} and defined $self->{usrconf}{$name}) {
+    my $first = (keys %{$self->{usrconf}{$name}})[0];
+    return $first;
+  }
+
+  # otherwise, check whether we have it defined in our system config file
+  if (defined $self->{sysconf}{$name}) {
+    my $first = (keys %{$self->{sysconf}{$name}})[0];
+    return $first;
+  }
+
+  # otherwise, check whether its a compile time constant
+  if (defined $self->{compile}{$name}) {
+    my $first = (keys %{$self->{compile}{$name}})[0];
+    return $first;
+  }
+
+  return undef;
+}
+
+sub get_hash
+{
+  my $self = shift;
+  my $name = shift;
+
+  # if param is set in environment, return that value
+  if (not defined $self->{no_user}{$name} and defined $ENV{$name}) {
+    my $h = {};
+    %$h = $ENV{$name};
+    return $h;
+    #return $ENV{$name};
+  }
+
+  # otherwise, check whether we have it defined in our user config file
+  if (not defined $self->{no_user}{$name} and defined $self->{usrconf}{$name}) {
+    my $h = {};
+    %$h = %{$self->{usrconf}{$name}};
+    return $h;
+  }
+
+  # otherwise, check whether we have it defined in our system config file
+  if (defined $self->{sysconf}{$name}) {
+    my $h = {};
+    %$h = %{$self->{sysconf}{$name}};
+    return $h;
+  }
+
+  # otherwise, check whether its a compile time constant
+  if (defined $self->{compile}{$name}) {
+    my $h = {};
+    %$h = %{$self->{compile}{$name}};
+    return $h;
+  }
+
+  return undef;
+}
+
+1;

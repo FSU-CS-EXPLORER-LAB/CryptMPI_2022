@@ -1,0 +1,18 @@
+# this gives access to the mvapich2 header files
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+if test "@NEEDSPLIB@" = "yes" ; then
+   plib=@PMPILIBNAME@
+else
+   plib=
+fi
+
+Name: mvapich2
+Description: MVAPICH2 is an implementation of the Message-Passing Interface (MPI).  This is an MPI-2 implementation over RDMA networks (such as Infiniband) which includes all MPI-1 features.  It is based on MPICH2 and MVICH.
+Version: @MVAPICH2_VERSION@
+Requires:
+Libs: @WRAPPER_LDFLAGS@ -L${libdir} -l${plib} -l@MPILIBNAME@ @WRAPPER_LIBS@
+Cflags: @WRAPPER_CPPFLAGS@ @WRAPPER_CFLAGS@ -I${includedir}

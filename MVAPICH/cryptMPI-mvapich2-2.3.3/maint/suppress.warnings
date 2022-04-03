@@ -1,0 +1,193 @@
+# Warning suppression file
+
+.* : the comparison will always evaluate as 'true' for the address of '.*' will never be NULL
+
+src/mpid/ch3/channels/common/src/memory/ptmalloc2/hooks.c : variable 'nb' set but not used
+src/mpid/ch3/channels/common/src/memory/ptmalloc2/mvapich_malloc.c : variable 'ret' set but not used
+
+pm/pmiserv/pmip_cb.c : null argument where non-null required
+
+src/mpltrmem.c : variable 'old_head' set but not used
+fancyprint.c : variable ‘ierr’ set but not used
+iterator.c : variable ‘ierr’ set but not used
+clog_util.c : variable ‘isz’ set but not used
+mpi-io/mpiu_external32.c : implicit declaration of function 'MPIR_Datatype_iscontig'
+mpi-io/mpiu_external32.c : unused variable 'extent'
+mpi-io/read_allb.c : implicit declaration of function 'MPIU_datatype_full_size'
+mpi-io/read_allb.c : implicit declaration of function 'MPIU_read_external32_conversion_fn'
+mpi-io/read.c : implicit declaration of function 'MPIU_datatype_full_size'
+mpi-io/read.c : implicit declaration of function 'MPIU_read_external32_conversion_fn'
+mpi-io/read_all.c : implicit declaration of function 'MPIU_datatype_full_size'
+mpi-io/read_all.c : implicit declaration of function 'MPIU_read_external32_conversion_fn'
+mpi-io/read_ordb.c : implicit declaration of function 'MPIU_datatype_full_size'
+mpi-io/read_ordb.c : implicit declaration of function 'MPIU_read_external32_conversion_fn'
+mpi-io/read_sh.c : implicit declaration of function 'MPIU_datatype_full_size'
+mpi-io/read_sh.c : implicit declaration of function 'MPIU_read_external32_conversion_fn'
+mpi-io/write.c : implicit declaration of function 'MPIU_external32_buffer_setup'
+mpi-io/write_all.c : implicit declaration of function 'MPIU_external32_buffer_setup'
+mpi-io/write_allb.c : implicit declaration of function 'MPIU_external32_buffer_setup'
+mpi-io/write_ordb.c : implicit declaration of function 'MPIU_external32_buffer_setup'
+mpi-io/write_ord.c : implicit declaration of function 'MPIU_external32_buffer_setup'
+mpi-io/write_sh.c : implicit declaration of function 'MPIU_external32_buffer_setup'
+adio/common/ad_coll_build_req_new.c : unused variable 'cb_node_ct'
+./utils/args/args.c : zero-length gnu_printf format string
+./utils/string/string.c : zero-length gnu_printf format string
+./tools/topo/hwloc/topo_hwloc.c : label 'fn_fail' defined but not used
+./tools/bootstrap/external/slurm_query_native_int.c : label 'fn_fail' defined but not used
+./tools/bootstrap/external/slurm_query_jobid.c : label 'fn_fail' defined but not used
+./tools/bootstrap/external/ll_query_native_int.c : label 'fn_fail' defined but not used
+./tools/bootstrap/external/ll_query_node_list.c : label 'fn_fail' defined but not used
+./tools/bootstrap/external/lsf_query_native_int.c : label 'fn_fail' defined but not used
+./tools/bootstrap/external/sge_query_native_int.c : label 'fn_fail' defined but not used
+./tools/bootstrap/external/pbs_query_native_int.c : label 'fn_fail' defined but not used
+./tools/bootstrap/external/pbs_query_jobid.c : label 'fn_fail' defined but not used
+./pm/pmiserv/pmiserv_pmi.c : label 'fn_fail' defined but not used
+./pm/pmiserv/pmiserv_utils.c : label 'create_mapping_key' defined but not used
+./pm/pmiserv/pmiserv_utils.c : label 'fn_fail' defined but not used
+./pm/pmiserv/pmip_utils.c : label ‘fn_fail’ defined but not used
+./ui/mpich/utils.c : zero-length gnu_printf format string
+./ui/mpich/utils.c : zero-length gnu_printf format string
+src/mpi/attr/comm_free_keyval.c : variable 'keyval_ptr' set but not used
+src/mpi/attr/comm_set_attr.c : variable 'keyval_ptr' set but not used
+src/mpi/attr/keyval_free.c : label 'fn_fail' defined but not used
+src/mpi/attr/keyval_free.c : variable 'keyval_ptr' set but not used
+src/mpi/coll/barrier.c : label 'fn_fail' defined but not used
+src/mpi/coll/allreduce.c : label 'fn_fail' defined but not used
+src/mpi/coll/alltoall.c : label 'fn_fail' defined but not used
+src/mpi/coll/bcast.c : label 'fn_fail' defined but not used
+src/mpi/coll/alltoallv.c : label 'fn_fail' defined but not used
+src/mpi/coll/alltoallw.c : label 'fn_fail' defined but not used
+src/mpi/coll/reduce_local.c : label 'fn_fail' defined but not used
+src/mpi/coll/reduce_local.c : label 'fn_fail' defined but not used
+src/mpi/coll/reduce_local.c : unused variable 'op_ptr'
+src/mpi/coll/op_commutative.c : label 'fn_fail' defined but not used
+src/mpi/coll/iallgatherv.c : variable 'is_homogeneous' set but not used
+src/mpi/coll/iallgatherv.c : 'mpir_sched_chkpmem_stk_\[0\]' may be used uninitialized in this function
+src/mpi/coll/iallgather.c : 'mpir_sched_chkpmem_stk_\[0\]' may be used uninitialized in this function
+src/mpi/coll/iallgatherv.c : 'mpir_sched_chkpmem_stk_\[0\]' may be used uninitialized in this function
+src/mpi/coll/iallgather.c : 'mpir_sched_chkpmem_stk_\[0\]' may be used uninitialized in this function
+src/mpi/coll/iallreduce.c : 'mpir_sched_chkpmem_stk_\[0\]' may be used uninitialized in this function
+src/mpi/coll/iallreduce.c : 'mpir_sched_chkpmem_stk_\[0\]' may be used uninitialized in this function
+src/mpi/coll/ibcast.c : variable 'is_homogeneous' set but not used
+src/mpi/coll/ireduce.c : variable 'is_commutative' set but not used
+src/mpi/coll/ired_scat_block.c : 'mpir_sched_chkpmem_stk_\[0\]' may be used uninitialized in this function
+src/mpi/coll/ireduce.c : 'mpir_sched_chkpmem_stk_\[0\]' may be used uninitialized in this function
+src/mpi/coll/iscatter.c : unused variable 'recvtype_ptr'
+src/mpi/coll/iscatter.c : unused variable 'sendtype_ptr'
+src/mpi/coll/iscatter.c : 'mpir_sched_chkpmem_stk_\[0\]' may be used uninitialized in this function
+src/mpi/datatype/pack_size.c : variable 'comm_ptr' set but not used
+src/mpi/datatype/type_size.c : variable 'datatype_ptr' set but not used
+src/mpi/datatype/type_extent.c : variable 'datatype_ptr' set but not used
+src/mpi/datatype/type_commit.c : variable 'datatype_ptr' set but not used
+src/mpi/datatype/type_free.c : variable 'datatype_ptr' set but not used
+src/mpi/datatype/type_get_envelope.c : variable 'datatype_ptr' set but not used
+src/mpi/datatype/type_get_contents.c : variable 'datatype_ptr' set but not used
+src/mpi/datatype/type_get_extent.c : variable 'datatype_ptr' set but not used
+src/mpi/datatype/type_lb.c : variable 'datatype_ptr' set but not used
+src/mpi/datatype/type_get_true_extent.c : variable 'datatype_ptr' set but not used
+src/mpi/datatype/type_match_size.c : variable 'tname' set but not used
+src/mpi/datatype/type_create_struct.c : label 'fn_fail' defined but not used
+src/mpi/datatype/pack_external_size.c : variable 'datatype_ptr' set but not used
+src/mpi/datatype/type_create_subarray.c : variable 'datatype_ptr' set but not used
+src/mpi/group/group_compare.c : label 'fn_fail' defined but not used
+src/mpi/group/group_rank.c : label 'fn_fail' defined but not used
+src/mpi/group/group_translate_ranks.c : label 'fn_fail' defined but not used
+src/mpi/group/group_size.c : label 'fn_fail' defined but not used
+src/mpi/init/initthread.c : label 'fn_exit' defined but not used
+src/mpi/rma/win_get_name.c : label 'fn_fail' defined but not used
+src/mpi/rma/win_set_name.c : label 'fn_fail' defined but not used
+src/mpi/topo/cart_coords.c : label 'fn_fail' defined but not used
+src/mpi/topo/cart_get.c : label 'fn_fail' defined but not used
+src/mpi/topo/inhb_allgather.c : variable 'comm_size' set but not used
+src/mpi/topo/inhb_alltoall.c : variable 'comm_size' set but not used
+src/mpi_t/cat_changed.c : label 'fn_fail' defined but not used
+src/mpi_t/cat_get_categories.c : label 'fn_fail' defined but not used
+src/mpi_t/cat_get_cvars.c : label 'fn_fail' defined but not used
+src/mpi_t/cat_get_info.c : label 'fn_fail' defined but not used
+src/mpi_t/cat_get_num.c : label 'fn_fail' defined but not used
+src/mpi_t/cat_get_pv.c : label 'fn_fail' defined but not used
+src/mpi_t/cvar_get_num.c : label 'fn_fail' defined but not used
+src/mpi_t/cvar_handle_free.c : label 'fn_fail' defined but not used
+src/mpi_t/enum_get_info.c : label 'fn_fail' defined but not used
+src/mpi_t/enum_get_item.c : label 'fn_fail' defined but not used
+src/mpi_t/pvar_handle_free.c : label 'fn_fail' defined but not used
+src/mpi_t/pvar_read.c : label 'fn_fail' defined but not used
+src/mpi_t/pvar_readreset.c : label 'fn_fail' defined but not used
+src/mpi_t/pvar_reset.c : label 'fn_fail' defined but not used
+src/mpi_t/pvar_session_free.c : label 'fn_fail' defined but not used
+src/mpi_t/pvar_start.c : label 'fn_fail' defined but not used
+src/mpi_t/pvar_stop.c : label 'fn_fail' defined but not used
+src/mpi_t/pvar_write.c : label 'fn_fail' defined but not used
+src/binding/f77/attr_getf.c : dereferencing type-punned pointer will break strict-aliasing rules
+src/mpi/coll/barrier_group.c : label 'fn_fail' defined but not used
+src/mpi/coll/helper_fns.c : label 'fn_fail' defined but not used
+src/mpi/coll/helper_fns.c : 'mpi_errno' may be used uninitialized in this function
+src/mpi/comm/commutil.c : label 'fn_fail' defined but not used
+src/mpi/comm/commutil.c : label 'fn_exit' defined but not used
+src/mpi/pt2pt/mpir_request.c : label 'fn_exit' defined but not used
+src/util/param/param_vals.c : label 'fn_fail' defined but not used
+src/binding/f77/attr_getf.c : dereferencing type-punned pointer will break strict-aliasing rules
+src/mpid/ch3/src/ch3u_comm.c : label 'fn_fail' defined but not used
+src/mpid/ch3/src/ch3u_handle_connection.c : label 'fn_fail' defined but not used
+src/mpid/ch3/src/ch3u_recvq.c : variable 'mpi_errno' set but not used
+src/mpid/ch3/src/ch3u_recvq.c : label 'fn_fail' defined but not used
+src/mpid/ch3/src/ch3u_recvq.c : 'simple_aint_creator' defined but not used
+src/mpid/ch3/src/ch3u_recvq.c : 'simple_uint_creator' defined but not used
+src/mpid/ch3/src/ch3u_recvq.c : 'simple_double_creator' defined but not used
+src/mpid/ch3/src/ch3u_rma_sync.c : unused variable 'iovcnt'
+src/mpid/ch3/src/ch3u_rma_sync.c : unused variable 'iov'
+src/mpid/ch3/src/ch3u_rma_sync.c : unused variable 'accum_pkt'
+src/mpid/ch3/src/ch3u_rma_sync.c : label 'fn_fail' defined but not used
+src/mpid/ch3/src/ch3u_rma_sync.c : variable 'data_buf' set but not used
+src/mpid/ch3/src/ch3u_rma_sync.c : unused variable 'complete'
+src/mpid/ch3/src/ch3u_rma_sync.c : 'mpiu_chkpmem_stk_\[0\]' may be used uninitialized in this function
+src/mpid/ch3/src/ch3u_rma_sync.c : 'MPIDI_CH3I_Send_flush_msg' defined but not used
+src/mpid/ch3/src/ch3u_rma_sync.c : 'source_win_handle' may be used uninitialized in this function
+src/mpid/ch3/src/ch3u_rma_sync.c : 'MPIDI_CH3I_Send_lock_put_or_acc' defined but not used
+src/mpid/ch3/src/ch3u_rma_sync.c : 'MPIDI_CH3I_Send_lock_get' defined but not used
+src/mpid/ch3/src/ch3u_rma_sync.c : 'target_tsz' may be used uninitialized in this function
+src/mpid/ch3/src/ch3u_win_fns.c : label 'fn_fail' defined but not used
+src/mpid/ch3/src/ch3u_win_fns.c : unused variable 'result'
+src/mpid/ch3/src/ch3u_win_fns.c : unused variable 'group_self'
+src/mpid/ch3/src/ch3u_win_fns.c : unused variable 'group_comm'
+src/mpid/ch3/src/ch3u_win_fns.c : unused variable 'comm_self_ptr'
+src/mpid/ch3/src/mpid_abort.c : passing argument 2 of 'MPIDI_CH3_Abort' discards 'const' qualifier from pointer target type
+src/mpid/ch3/src/mpid_cancel_recv.c : implicit declaration of function 'dreg_unregister'
+src/mpid/ch3/src/mpid_cancel_recv.c : label 'fn_exit' defined but not used
+src/mpid/ch3/src/mpid_cancel_send.c : implicit declaration of function 'dreg_unregister'
+src/mpid/ch3/src/mpid_imrecv.c : unused variable 'msg_type'
+src/mpid/ch3/src/mpid_iprobe.c : label 'fn_fail' defined but not used
+src/mpid/ch3/src/mpid_irecv.c : unused variable 'msg_type'
+src/mpid/ch3/src/mpid_issend.c : unused variable 'seqnum'
+src/mpid/ch3/src/mpid_probe.c : label 'fn_fail' defined but not used
+src/mpid/ch3/src/mpid_recv.c : unused variable 'msg_type'
+src/mpid/ch3/src/mpid_vc.c : unused variable 'node_name_buf'
+src/mpid/ch3/src/mpid_vc.c : unused variable 'node_names'
+src/mpid/ch3/src/mpid_vc.c : unused variable 'j'
+src/mpid/ch3/src/mpid_vc.c : 'publish_node_id' defined but not used
+src/mpid/ch3/src/mpid_vc.c : 'mpiu_chkpmem_stk_[0]' may be used uninitialized in this function
+src/mpid/ch3/src/mpidi_pg.c : implicit declaration of function 'MPIDI_CH3I_Cleanup_after_connection'
+src/mpid/ch3/src/mpidi_pg.c : 'mpiu_chkpmem_stk_\[0\]' may be used uninitialized in this function
+src/mpid/common/datatype/dataloop/dataloop_create.c : variable 'err' set but not used
+src/mpid/common/datatype/mpid_type_debug.c : variable 'sticky_ub' set but not used
+src/mpid/common/datatype/mpid_type_debug.c : variable 'sticky_lb' set but not used
+src/mpid/common/datatype/mpid_type_debug.c : variable 'ub' set but not used
+src/mpid/common/datatype/mpid_type_debug.c : variable 'true_ub' set but not used
+src/mpid/common/datatype/mpid_type_debug.c : variable 'string' set but not used
+src/mpid/common/datatype/mpid_type_debug.c : variable 'dtp' set but not used
+src/mpid/common/datatype/mpir_type_flatten.c : variable 'datatype_ptr' set but not used
+src/mpid/common/sched/mpid_sched.c : label 'fn_fail' defined but not used
+src/nameserv/file/file_nameserv.c : unused variable 'FCNAME'
+src/mpid/ch3/channels/nemesis/src/mpid_nem_lmt_dma.c : left-hand operand of comma expression has no effect
+src/mpid/ch3/channels/nemesis/netmod/none/none.c : initialization from incompatible pointer type
+src/mpid/ch3/channels/nemesis/netmod/none/none.c : (near initialization for 'MPIDI_nem_none_funcs.ckpt_precheck')
+src/mpid/ch3/channels/nemesis/netmod/none/none.c : initialization from incompatible pointer type
+src/mpid/ch3/channels/nemesis/netmod/none/none.c : (near initialization for 'MPIDI_nem_none_funcs.ckpt_restart')
+src/mpid/ch3/channels/nemesis/netmod/none/none.c : initialization from incompatible pointer type
+src/mpid/ch3/channels/nemesis/netmod/none/none.c : (near initialization for 'MPIDI_nem_none_funcs.ckpt_continue')
+src/mpid/ch3/channels/nemesis/netmod/none/none.c : initialization from incompatible pointer type
+src/mpid/ch3/channels/nemesis/netmod/none/none.c : (near initialization for 'MPIDI_nem_none_funcs.poll')
+src/mpid/ch3/channels/nemesis/netmod/none/none.c : initialization from incompatible pointer type
+src/mpid/ch3/channels/nemesis/netmod/none/none.c : (near initialization for 'MPIDI_nem_none_funcs.get_business_card')
+src/mpid/ch3/channels/nemesis/netmod/none/none.c : initialization from incompatible pointer type
+src/mpid/ch3/channels/nemesis/netmod/none/none.c : (near initialization for 'MPIDI_nem_none_funcs.connect_to_root')
