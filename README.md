@@ -95,7 +95,7 @@ The flags are discussed in this section, work in both MIPICH and MVAPICH.
 ```bash
 export MV2_SECURITY_APPROACH=302
 export MV2_INTER_GATHER_TUNING=3 
-echo "Direct - No Shared-Mem [Gather_intra]" 
+echo "Opportunistic Binomial Gather (Direct - No Shared-Mem) [Gather_intra]" 
 
 export MV2_SECURITY_APPROACH=302
 export MV2_INTER_GATHER_TUNING=4
