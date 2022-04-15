@@ -1,7 +1,0 @@
-#!/bin/sh
-# When configured within MPICH via PAC_CONFIG_SUBDIR, this file will be sourced
-# by the top-level configure.  This lets us propagate shell variable changes
-# back upstream.
-
-CPPFLAGS="  -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src -D_REENTRANT -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio/include"
-WRAPPER_LIBS="$WRAPPER_LIBS -lpthread "
