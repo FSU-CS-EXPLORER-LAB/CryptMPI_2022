@@ -1,0 +1,6 @@
+{
+    "C_Cpp.dimInactiveRegions": false,
+    "files.associations": {
+        "type_traits": "c"
+    }
+}
