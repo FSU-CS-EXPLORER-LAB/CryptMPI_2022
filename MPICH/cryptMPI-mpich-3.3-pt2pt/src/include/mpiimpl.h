@@ -190,6 +190,8 @@ extern int inter_allreduce_tuning;
 /************************************/
 /*  Added by Abu Naser              */
 /************************************/
+#if 0 // disable everything here
+
 #include <openssl/evp.h>
 #include <openssl/aes.h>
 #include <openssl/err.h>
@@ -410,7 +412,7 @@ extern EVP_CIPHER_CTX *ctx_global_dec;
 #define OMP_DYNAMIC_THREADS 0             // Noleland
 #define OMP_DYNAMIC_THREADS_INNOVATION 0  
 #define OPENMP_PIPE_LINE 0
-#define OMP_DYNAMIC_THREADS_PIPELINE 0        // only for noleland cluster, require pipeline+multi-thread
+#define OMP_DYNAMIC_THREADS_PIPELINE 1        // only for noleland cluster, require pipeline+multi-thread
 #define CRYPTMPI_SINGLE_THREAD_MODE 0        // 1 for using single thread pipeline, above 2 flags should 1
 #define OMP_DYNAMIC_THREADS_PIPELINE_INNOVATION 0 // only for innovation cluster, reruire pipeline+multi-thread
 
@@ -460,7 +462,7 @@ extern long ed_times;
 /* For profiling */
 #define LOG_DATA 0
 #define COLL_LOG_DATA 0
-#define ALL_COMM_PLUS_ENC_TIME 1
+#define ALL_COMM_PLUS_ENC_TIME 0
 #if COLL_LOG_DATA
 extern int max_bcast_datasz;
 extern int max_reduce_datasz;
@@ -602,21 +604,21 @@ extern struct  data_size_debug datasizeDB[DB_DATA];
 #define UNENCRYPTED_PIPELINE 0
 #define UNENCREPTED_HEADER_SZ 26
 
-/****************************** OMP pt2pt Added by Abu *****************************/
-#define CRYPTMPI_COUNTER_MODE 1 // 1 to enable counter mode
+/****************************** Mohsen OMP pt2pt Added by Abu *****************************/
+// #define CRYPTMPI_COUNTER_MODE 0 // 1 to enable counter mode
 #if CRYPTMPI_COUNTER_MODE
 #define COUNTER_HEADER_SIZE 26 
 
 /* base counter flags*/
-#define BASE_COUNTER_MODE 0
+#define BASE_COUNTER_MODE 1
 #define BASE_COUNTER_NO_PIPELINE 1   // if 1 then there is no pipeline, 0 otherwise
 #define BASE_COUNTER_LIBRARY_NONCE 0 // if 1 then generate nonce using library call rand_bytes, otherwise otpmized one (default)
 #define COLL_NAIVE_BASECOUNTER 0  // collective enc
 
 /* pre-computation flag */
-#define PRE_COMPUTE_COUNTER_MODE 0
+#define PRE_COMPUTE_COUNTER_MODE 1
 #define DYNAMIC_PIPELINE 1        // keep it as 1
-#define COLL_NAIVE_PRECOMPUTE 1  // collective enc
+#define COLL_NAIVE_PRECOMPUTE 0  // collective enc
 #define MAX_COMMON_COUNTER_SZ 8388608 // 8MB
 #define INITIAL_COMMON_COUNTER_SZ 4096 // 4K
 #define PRE_COM_DATA_RANGE SIXTY_4K
@@ -657,6 +659,8 @@ extern void multithreads_encryption_common_counter_large_msg(const void *buf, in
                                              EVP_CIPHER_CTX * t_counter_ctx, long unsigned int counter, int tid);  
 #endif // endof counter mode
 
+
+#endif // disable everything here
 /****************************** Added by Mehran *****************************/
 
 extern int security_approach;
@@ -876,6 +880,13 @@ int MPIR_Gather_MV2_Direct_CNoSM_RR(const void *sendbuf, int sendcount, MPI_Data
 /* end of add*/
 
 #include "mpidpost.h"
+
+/************************************/
+/*  Added by Abu Naser              */
+/************************************/
+#include "cryptmpi.h"
+
+
 
 /* avoid conflicts in source files with old-style "char FCNAME[]" vars */
 #undef FUNCNAME
