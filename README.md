@@ -94,8 +94,13 @@ The flags are discussed in this section, work in both MIPICH and MVAPICH.
 
 ```bash
 export MV2_SECURITY_APPROACH=302
+unset MV2_INTER_GATHER_TUNING
+unset MV2_CONCURRENT_COMM
+echo "Naive [Gather_intra]" 
+
+export MV2_SECURITY_APPROACH=302
 export MV2_INTER_GATHER_TUNING=3 
-echo "Opportunistic Binomial Gather (Direct - No Shared-Mem) [Gather_intra]" 
+echo "Opportunistic Binomial Gather (Direct - No Shared-Mem) [MPIR_Naive_Sec_Gather]" 
 
 export MV2_SECURITY_APPROACH=302
 export MV2_INTER_GATHER_TUNING=4
@@ -182,11 +187,11 @@ unset MV2_SECURITY_APPROACH
 echo "CHS"
 
 
-export MV2_ALLTOALL_TUNING=20
+export MV2_ALLTOALL_TUNING=5
 export MV2_SECURITY_APPROACH=2001
 echo "O-CHS"
 
-
+export MV2_ALLTOALL_TUNING=5
 export MV2_SECURITY_APPROACH=2002
 echo "Naive-CHS"
 
