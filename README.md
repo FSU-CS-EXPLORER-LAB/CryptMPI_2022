@@ -93,7 +93,7 @@ The flags are discussed in this section, work in both MIPICH and MVAPICH.
 
 
 ```bash
-export MV2_SECURITY_APPROACH=302
+export MV2_SECURITY_APPROACH=301
 unset MV2_INTER_GATHER_TUNING
 unset MV2_CONCURRENT_COMM
 echo "Naive  [MPIR_Naive_Sec_Gather]" 
