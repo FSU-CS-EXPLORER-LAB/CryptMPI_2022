@@ -1891,18 +1891,25 @@ int MPIR_Scatter_MV2_Direct_no_shmem_intra_RR_UNENC(const void *sendbuf,
                             MPI_Datatype recvtype,
                             int root, MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
-#if SCATTER_PRINT_FUN
+     
+    if (comm_ptr->dev.ch.is_uniform != 1  || (comm_ptr->dev.ch.is_global_block != 1 || comm_ptr->dev.ch.is_blocked != 1) || root!=0)
+    {
+    #if SCATTER_PRINT_FUN
+    char hostname[100];
+    int namelen;
+    gethostname(hostname, &namelen);
+    printf("[scatter osu rank = %d host = %s] Inseert MPIR_Scatter_MV2_Direct_no_shmem_intra_RR_UNENC but used MV2_Direct \n",comm_ptr->rank,hostname);fflush(stdout);
+#endif
+        //printf("call MPIR_Scatter_MV2_Direct\n");fflush(stdout);
+        int ret = MPIR_Scatter_MV2_Direct(sendbuf, sendcnt, sendtype, recvbuf, recvcnt, recvtype, root, comm_ptr, errflag);
+        return ret;
+    }
+    #if SCATTER_PRINT_FUN
     char hostname[100];
     int namelen;
     gethostname(hostname, &namelen);
     printf("[scatter osu rank = %d host = %s] Func: MPIR_Scatter_MV2_Direct_no_shmem_intra_RR_UNENC\n",comm_ptr->rank,hostname);fflush(stdout);
-#endif     
-    if (comm_ptr->dev.ch.is_uniform != 1  || (comm_ptr->dev.ch.is_global_block != 1 || comm_ptr->dev.ch.is_blocked != 1) || root!=0)
-    {
-        //printf("call MPIR_Scatter_MV2_Direct\n");fflush(stdout);
-        int ret = MPIR_Scatter_MV2_Direct(sendbuf, sendcnt, sendtype, recvbuf, recvcnt, recvtype, root, comm_ptr, errflag);
-        return ret;
-    } 
+#endif
     MPIR_TIMER_START(coll,scatter,direct);
     int rank, comm_size;
     int mpi_errno = MPI_SUCCESS;
@@ -2222,18 +2229,25 @@ int MPIR_Scatter_MV2_Direct_no_shmem_intra_RR(const void *sendbuf,
                             MPI_Datatype recvtype,
                             int root, MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
-#if SCATTER_PRINT_FUN
+
+    if (comm_ptr->dev.ch.is_uniform != 1  || (comm_ptr->dev.ch.is_global_block != 1 || comm_ptr->dev.ch.is_blocked != 1) || root!=0)
+    {
+        #if SCATTER_PRINT_FUN
     char hostname[100];
     int namelen;
     gethostname(hostname, &namelen);
-    printf("[scatter osu rank = %d host = %s] Func: MPIR_Scatter_MV2_Direct_no_shmem_intra_RR\n",comm_ptr->rank,hostname);fflush(stdout);
+    printf("[scatter osu rank = %d host = %s] Func: MPIR_Scatter_MV2_Direct_no_shmem_intra_RR but used MV2_Direct [c=%d] \n",comm_ptr->rank,hostname,recvcnt);fflush(stdout);
 #endif
-    if (comm_ptr->dev.ch.is_uniform != 1  || (comm_ptr->dev.ch.is_global_block != 1 || comm_ptr->dev.ch.is_blocked != 1) || root!=0)
-    {
         //printf("call MPIR_Scatter_MV2_Direct\n");fflush(stdout);
         int ret = MPIR_Scatter_MV2_Direct(sendbuf, sendcnt, sendtype, recvbuf, recvcnt, recvtype, root, comm_ptr, errflag);
         return ret;
-    }     
+    }   
+    #if SCATTER_PRINT_FUN
+    char hostname[100];
+    int namelen;
+    gethostname(hostname, &namelen);
+    printf("[scatter osu rank = %d host = %s] Func: MPIR_Scatter_MV2_Direct_no_shmem_intra_RR [c=%d] \n",comm_ptr->rank,hostname,recvcnt);fflush(stdout);
+#endif  
     MPIR_TIMER_START(coll,scatter,direct);
     int rank, comm_size;
     int mpi_errno = MPI_SUCCESS;
@@ -2541,6 +2555,7 @@ int MPIR_Scatter_MV2_Direct_no_shmem_intra_RR(const void *sendbuf,
     {
        // printf("--->> rank %d waiting to finish send\n",rank);fflush(stdout);
          /* ... then wait for *all* of them to finish: */
+          fprintf(stderr,"[%d] Scatter-RR 08 c=%d [r=%d]\n",local_rank,recvcnt,reqs);
         mpi_errno = MPIC_Waitall(reqs, reqarray, starray, errflag);
         /* --BEGIN ERROR HANDLING-- */
         if (mpi_errno == MPI_ERR_IN_STATUS) {

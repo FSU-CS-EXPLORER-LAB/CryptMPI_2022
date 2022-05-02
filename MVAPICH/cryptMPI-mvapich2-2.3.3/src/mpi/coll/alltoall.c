@@ -6,6 +6,7 @@
  */
 
 #include "mpiimpl.h"
+#include "secure_allgather.h"
 
 /*
 === BEGIN_MPI_T_CVAR_INFO_BLOCK ===
@@ -717,9 +718,18 @@ int MPI_Alltoall(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
 
     /* ... body of routine ...  */
 
-    mpi_errno = MPIR_Alltoall_impl(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm_ptr, &errflag);
-    if (mpi_errno) goto fn_fail;
 
+    // if (DEBUG_INIT_FILE)  fprintf(stderr,"[%d] Selecting Naive SA=%d count=%d\n",comm_ptr->rank,security_approach,recvcount);
+    if(security_approach==1002){
+        //NAIVE
+        mpi_errno = MPIR_Naive_Sec_Alltoall(sendbuf, sendcount, sendtype,
+                                recvbuf, recvcount, recvtype,
+                                comm_ptr, &errflag);
+    }else{
+        mpi_errno = MPIR_Alltoall_impl(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm_ptr, &errflag);
+    }
+    if (mpi_errno) goto fn_fail;
+    
     /* ... end of body of routine ... */
     
   fn_exit:
@@ -740,3 +750,90 @@ int MPI_Alltoall(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
     goto fn_exit;
     /* --END ERROR HANDLING-- */
 }
+
+
+
+
+
+
+/****************************** Added by Mehran ***********************/
+#undef FUNCNAME
+#define FUNCNAME MPIR_Naive_Sec_Alltoall
+#undef FCNAME
+#define FCNAME MPL_QUOTE(FUNCNAME)
+int MPIR_Naive_Sec_Alltoall(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
+                        void *recvbuf, int recvcount, MPI_Datatype recvtype,
+                        MPID_Comm *comm_ptr, MPIR_Errflag_t *errflag)
+{
+#if ALLTOALL_PRINT_FUN
+    if (PRINT_FUN_NAME) {
+        char hostname[100];
+        int namelen;
+        gethostname(hostname, &namelen);
+        printf("[Alltoall rank = %d host = %s  SA=%d] Func: MPIR_Naive_Sec_Alltoall  count = %d\n",comm_ptr->rank,hostname,security_approach, recvcount);fflush(stdout);
+    }
+#endif     
+    //printf("MPIR_Naive_Sec_Allgather\n");
+    int mpi_errno = MPI_SUCCESS;
+    int sendtype_sz, recvtype_sz;
+    unsigned long  ciphertext_sendbuf_len = 0;
+    sendtype_sz= recvtype_sz= 0;
+    int var;
+    var=MPI_Type_size(sendtype, &sendtype_sz);
+    var=MPI_Type_size(recvtype, &recvtype_sz);
+
+    int rank;
+    rank = comm_ptr->rank;
+    unsigned long count=0;
+    unsigned long next, dest, src;
+    unsigned int i;
+
+    unsigned long t=0;
+    t = (unsigned long)(sendtype_sz*sendcount);
+    unsigned long   max_out_len = (unsigned long) (16 + (sendtype_sz*sendcount));
+
+    for( i = 0; i < comm_ptr->local_size; i++){
+        next =(unsigned long )(i*((recvcount*recvtype_sz) + 16+12));
+        src =(unsigned long )(i*(recvcount*recvtype_sz));
+        
+        RAND_bytes(ciphertext_sendbuf+next, 12); // 12 bytes of nonce
+
+        if(!EVP_AEAD_CTX_seal(ctx, ciphertext_sendbuf+next+12,
+                         &ciphertext_sendbuf_len, max_out_len,
+                         ciphertext_sendbuf+next, 12,
+                         sendbuf+src,  t,
+                        NULL, 0))
+        {
+            printf("Error in encryption: Naive Alltoall\n");
+            fflush(stdout);
+        }
+
+    }//end for
+
+
+
+    
+    mpi_errno = MPIR_Alltoall_impl(ciphertext_sendbuf, ciphertext_sendbuf_len+12, MPI_CHAR,
+                                    ciphertext_recvbuf, ((recvcount*recvtype_sz) + 16+12), MPI_CHAR,
+                                    comm_ptr, errflag);
+
+    
+    for( i = 0; i < comm_ptr->local_size; i++){
+        next =(unsigned long )(i*((recvcount*recvtype_sz) + 16+12));
+        dest =(unsigned long )(i*(recvcount*recvtype_sz));
+        
+
+        if(!EVP_AEAD_CTX_open(ctx, ((recvbuf+dest)),
+                        &count, (unsigned long )((recvcount*recvtype_sz)+16),
+                         (ciphertext_recvbuf+next), 12,
+                        (ciphertext_recvbuf+next+12), (unsigned long )((recvcount*recvtype_sz)+16),
+                        NULL, 0)){
+                    printf("Decryption error: allgather\n");fflush(stdout);        
+            }                               
+       
+    }
+
+}
+
+
+/****************************** Added by Mehran ***********************/

@@ -213,6 +213,13 @@ int MPIR_Allgather_Direct_MV2(
           void *recvbuf, int recvcnt, MPI_Datatype recvtype,
     MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count[]=%d  SA=%d] Func: MPIR_Allgather_Direct_MV2\n", comm_ptr->rank,hostname,recvcnt,security_approach);fflush(stdout);
+	}
+#endif      
     MPIR_TIMER_START(coll,allgather,direct);
     int i;
     int mpi_errno = MPI_SUCCESS;
@@ -362,6 +369,14 @@ int MPIR_Allgather_DirectSpread_MV2(
           void *recvbuf, int recvcnt, MPI_Datatype recvtype,
     MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count[]=%d  SA=%d] Func: MPIR_Allgather_DirectSpread_MV2\n", comm_ptr->rank,hostname,recvcnt,security_approach);fflush(stdout);
+	}
+#endif  
+
     MPIR_TIMER_START(coll,allgather,directspread);
     int i;
     int mpi_errno = MPI_SUCCESS;
@@ -510,6 +525,13 @@ int MPIR_Allgather_RD_MV2(const void *sendbuf,
                           MPI_Datatype recvtype, MPID_Comm * comm_ptr,
                           MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count=%d  SA=%d] Func: MPIR_Allgather_RD_MV2\n", comm_ptr->rank,hostname,recvcount,security_approach);fflush(stdout);
+	}
+#endif          
     MPIR_TIMER_START(coll,allgather,rd);
     int comm_size, rank;
     int mpi_errno = MPI_SUCCESS;
@@ -1322,7 +1344,13 @@ int MPIR_Allgather_Encrypted_RDB_MV2(const void *sendbuf,
                           MPI_Datatype recvtype, MPID_Comm * comm_ptr,
                           MPIR_Errflag_t *errflag)
 {
-
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count=%d  SA=%d] Func: MPIR_Allgather_Encrypted_RDB_MV2\n", comm_ptr->rank,hostname,recvcount,security_approach);fflush(stdout);
+	}
+#endif   
 
     MPIR_TIMER_START(coll,allgather,enc_rdb);
     int comm_size, rank;
@@ -1626,6 +1654,13 @@ int MPIR_Allgather_NaivePlus_RDB_MV2(const void *sendbuf,
                           MPI_Datatype recvtype, MPID_Comm * comm_ptr,
                           MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count=%d  SA=%d] Func: MPIR_Allgather_NaivePlus_RDB_MV2\n", comm_ptr->rank,hostname,recvcount,security_approach);fflush(stdout);
+	}
+#endif    
 
 
     MPIR_TIMER_START(coll,allgather,np_rdb);
@@ -1733,6 +1768,9 @@ int MPIR_Allgather_NaivePlus_RDB_MV2(const void *sendbuf,
 
                 MPIR_PVAR_INC(allgather, enc_rdb, send, (curr_cnt * recvcount*recvtype_extent )+ 16+12, MPI_CHAR); 
                 MPIR_PVAR_INC(allgather, enc_rdb, recv, (comm_size - dst_tree_root) * (recvcount*recvtype_extent) + 16+12, MPI_CHAR);
+
+                // printf("[%d] RD-Plus 04-in c=%d send = %d  recv = %d dst = %d  [curr_cnt=%d  comm_size=%d  my_tree_root=%d rec_ex=%d]\n", rank,recvcount,(curr_cnt * recvcount*recvtype_extent)+28,(comm_size - dst_tree_root) * (recvcount*recvtype_extent)+28,dst,curr_cnt,comm_size,my_tree_root,recvtype_extent);
+
                 mpi_errno =
                     MPIC_Sendrecv(sbuf, (curr_cnt * recvcount*recvtype_extent) + 16+12, 
                             MPI_CHAR, dst, MPIR_ALLGATHER_TAG,
@@ -1781,6 +1819,8 @@ int MPIR_Allgather_NaivePlus_RDB_MV2(const void *sendbuf,
 
                 MPIR_PVAR_INC(allgather, enc_rdb, send, (curr_cnt * recvcount), recvtype); 
                 MPIR_PVAR_INC(allgather, enc_rdb, recv, (comm_size - dst_tree_root) * recvcount, recvtype);
+                printf("[%d] RD-Plus 06-in c=%d send = %d  recv = %d dst = %d [curr_cnt=%d  comm_size=%d  my_tree_root=%d rec_ex=%d]\n",
+                rank,recvcount,(curr_cnt * recvcount*recvtype_extent),(comm_size - dst_tree_root) * (recvcount*recvtype_extent),dst,curr_cnt,comm_size,my_tree_root,recvtype_extent);
                 mpi_errno =
                     MPIC_Sendrecv(sbuf, (curr_cnt * recvcount) , 
                             recvtype, dst, MPIR_ALLGATHER_TAG,
@@ -2087,6 +2127,13 @@ int MPIR_Allgather_Bruck_MV2(const void *sendbuf,
                              MPI_Datatype recvtype, MPID_Comm * comm_ptr,
                              MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count=%d  SA=%d] Func: MPIR_Allgather_Bruck_MV2\n", comm_ptr->rank,hostname,recvcount,security_approach);fflush(stdout);
+	}
+#endif       
     MPIR_TIMER_START(coll,allgather,bruck);
     int comm_size, rank;
     int mpi_errno = MPI_SUCCESS;
@@ -2457,7 +2504,13 @@ int MPIR_Allgather_Ring_MV2(const void *sendbuf,
                             MPI_Datatype recvtype, MPID_Comm * comm_ptr,
                             MPIR_Errflag_t *errflag)
 {
-
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count=%d  SA=%d] Func: MPIR_Allgather_Ring_MV2\n", comm_ptr->rank,hostname,recvcount,security_approach);fflush(stdout);
+	}
+#endif     
     MPIR_TIMER_START(coll,allgather,ring);
     int comm_size, rank;
     int mpi_errno = MPI_SUCCESS;
@@ -2746,6 +2799,13 @@ int MPIR_Allgather_gather_bcast_MV2(
           void *recvbuf, int recvcount, MPI_Datatype recvtype,
     MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count=%d  SA=%d] Func: MPIR_Allgather_gather_bcast_MV2\n", comm_ptr->rank,hostname,recvcount,security_approach);fflush(stdout);
+	}
+#endif        
     MPIR_TIMER_START(coll,allgather,gather_bcast);
     int comm_size;
     int mpi_errno = MPI_SUCCESS;
@@ -2846,6 +2906,13 @@ int MPIR_Allgather_intra_MV2(const void *sendbuf,
 int MPIR_2lvl_Concurrent_Multileader_SharedMem_Allgather_MV2(const void *sendbuf,int sendcnt, MPI_Datatype sendtype,
                             void *recvbuf, int recvcnt,MPI_Datatype recvtype,
                             MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag){
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count[]=%d  SA=%d] Func: MPIR_2lvl_Concurrent_Multileader_SharedMem_Allgather_MV2\n", comm_ptr->rank,hostname,recvcnt,security_approach);fflush(stdout);
+	}
+#endif        
     int rank, size;
     int local_rank, local_size, idx;
      
@@ -3098,6 +3165,13 @@ int MPIR_2lvl_SharedMem_Allgather_MV2(const void *sendbuf,int sendcnt, MPI_Datat
                             void *recvbuf, int recvcnt,MPI_Datatype recvtype,
                             MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count=%d  SA=%d] Func: MPIR_2lvl_SharedMem_Allgather_MV2\n", comm_ptr->rank,hostname,recvcnt,security_approach);fflush(stdout);
+	}
+#endif   	
     int rank, size;
     int local_rank, local_size;
     int leader_comm_size = 0, leader_rank; 
@@ -3406,6 +3480,13 @@ int MPIR_2lvl_SharedMem_Allgather_MV2(const void *sendbuf,int sendcnt, MPI_Datat
 int MPIR_2lvl_SharedMem_Concurrent_Encryption_Allgather_MV2(const void *sendbuf,int sendcnt, MPI_Datatype sendtype,
                             void *recvbuf, int recvcnt,MPI_Datatype recvtype,
                             MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag){
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count=%d  SA=%d] Func: MPIR_2lvl_SharedMem_Concurrent_Encryption_Allgather_MV2\n", comm_ptr->rank,hostname,recvcnt,security_approach);fflush(stdout);
+	}
+#endif   									
     int rank, size;
     int local_rank, local_size, idx;
     int leader_comm_size = 0, leader_rank; 
@@ -3442,6 +3523,8 @@ int MPIR_2lvl_SharedMem_Concurrent_Encryption_Allgather_MV2(const void *sendbuf,
         leader_rank = leader_commptr->rank;
     }
 
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] HS2 01 \n",rank);
+
     //First, each process should encrypt its data
     if(security_approach == 2006){
 
@@ -3450,19 +3533,24 @@ int MPIR_2lvl_SharedMem_Concurrent_Encryption_Allgather_MV2(const void *sendbuf,
         unsigned int i;
 
         unsigned long  ciphertext_len = 0;
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] HS2 01-1 \n",rank);
         void* out = (void*)((char*) ciphertext_shmem_buffer + (my_node * p + local_rank) * (recvcnt * recvtype_extent + 12 + 16));
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] HS2 01-2 \n",rank);
         void* in;
         if(sendbuf == MPI_IN_PLACE) {
             in = (void*)((char*)recvbuf + (rank * recvcnt * recvtype_extent));
         }else{
             in = (void*)((char*)sendbuf);
         }  
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] HS2 01-3 \n",rank);
 
         RAND_bytes(out, 12); // 12 bytes of nonce
 
         unsigned long t=0;
         t = (unsigned long)(recvcnt * recvtype_extent);
         unsigned long   max_out_len = (unsigned long) (16 + t);
+
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] HS2 02 \n",rank);
     
         if(!EVP_AEAD_CTX_seal(ctx, out+12,  
                             &ciphertext_len, max_out_len,
@@ -3473,6 +3561,8 @@ int MPIR_2lvl_SharedMem_Concurrent_Encryption_Allgather_MV2(const void *sendbuf,
                 printf("Error in Naive+ concurrent encryption: allgather-shmem\n");
                 fflush(stdout);
         }
+
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] HS2 03 \n",rank);
         
         mpi_errno = MPIR_Barrier_impl(comm_ptr->node_comm, errflag);
         if (mpi_errno) {
@@ -3505,6 +3595,8 @@ int MPIR_2lvl_SharedMem_Concurrent_Encryption_Allgather_MV2(const void *sendbuf,
             MPIR_ERR_POP(mpi_errno);
             goto fn_fail;
 	    }*/
+
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] HS2 04 \n",rank);
 	
         if (mpi_errno) {
             MPIR_ERR_POP(mpi_errno);
@@ -3516,12 +3608,14 @@ int MPIR_2lvl_SharedMem_Concurrent_Encryption_Allgather_MV2(const void *sendbuf,
             unsigned long count=0;
             unsigned long next, dest;
             unsigned int i;
+
+            if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] HS2 05 \n",rank);
             
             mpi_errno = MPIR_Allgather_impl(out, p*(max_out_len+12), MPI_CHAR,
                                             ciphertext_shmem_buffer, p*(max_out_len+12), MPI_CHAR,
                                             leader_commptr, errflag);
             
-            
+            if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] HS2 06 \n",rank);
             //Step3: Decryption
             
             for(i = 0; i < n; i+=1){
@@ -3543,6 +3637,8 @@ int MPIR_2lvl_SharedMem_Concurrent_Encryption_Allgather_MV2(const void *sendbuf,
             //printf("%d @ check4\n", rank);
 
             //End of NAIVE PLUS
+
+            if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] HS2 07 \n",rank);
         
 
             if (mpi_errno) {
@@ -3577,6 +3673,8 @@ int MPIR_2lvl_SharedMem_Concurrent_Encryption_Allgather_MV2(const void *sendbuf,
                     idx = i * p + local_rank;
                     next =(unsigned long )(idx*(max_out_len+12));
                     dest =(unsigned long )(idx*(sendtype_sz*sendcnt));
+
+                    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] HS2 08 [i=%d] \n",rank,i);
                     
                     if(!EVP_AEAD_CTX_open(ctx, ((shmem_buffer+dest)),
                                     &count, (unsigned long )((recvcnt*recvtype_sz)),
@@ -3585,10 +3683,13 @@ int MPIR_2lvl_SharedMem_Concurrent_Encryption_Allgather_MV2(const void *sendbuf,
                                     NULL, 0)){
                             printf("Decryption error in Naive+ shmem_allgather Conncurrent Encryption II while %d tried to decrypt %d from %d to %d\n", rank, count, next, dest);fflush(stdout);        
                     }
+                    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] HS2 09 [i=%d] \n",rank,i);
                 }
                                             
             }//end for
         }//end if
+
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] HS2 10 \n",rank);
 
         mpi_errno = MPIR_Barrier_impl(comm_ptr->node_comm, errflag);
         if (mpi_errno) {
@@ -3610,6 +3711,8 @@ int MPIR_2lvl_SharedMem_Concurrent_Encryption_Allgather_MV2(const void *sendbuf,
                 
             }
         }
+
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] HS2 11 \n",rank);
         
         if (mpi_errno) {
             MPIR_ERR_POP(mpi_errno);
@@ -3637,6 +3740,13 @@ int MPIR_2lvl_Allgather_Encrypted_RDB_MV2(const void *sendbuf,int sendcnt, MPI_D
                             void *recvbuf, int recvcnt,MPI_Datatype recvtype,
                             MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count=%d  SA=%d] Func: MPIR_2lvl_Allgather_Encrypted_RDB_MV2\n", comm_ptr->rank,hostname,recvcnt,security_approach);fflush(stdout);
+	}
+#endif 	
     int rank, size;
     int local_rank, local_size;
     int leader_comm_size = 0, leader_rank; 
@@ -3796,6 +3906,13 @@ int MPIR_2lvl_Allgather_MV2(const void *sendbuf,int sendcnt, MPI_Datatype sendty
                             void *recvbuf, int recvcnt,MPI_Datatype recvtype,
                             MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count=%d  SA=%d] Func: MPIR_2lvl_Allgather_MV2\n", comm_ptr->rank,hostname,recvcnt,security_approach);fflush(stdout);
+	}
+#endif 		
     int rank, size;
     int local_rank, local_size;
     int leader_comm_size = 0; 
@@ -4054,6 +4171,13 @@ int MPIR_2lvl_Allgather_nonblocked_MV2(
           void *recvbuf, int recvcnt, MPI_Datatype recvtype,
     MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count=%d  SA=%d] Func: MPIR_2lvl_Allgather_nonblocked_MV2\n", comm_ptr->rank,hostname,recvcnt,security_approach);fflush(stdout);
+	}
+#endif 	
     MPIR_TIMER_START(coll,allgather,2lvl_nonblocked);
     int i;
     int mpi_errno = MPI_SUCCESS;
@@ -4420,6 +4544,13 @@ int MPIR_2lvl_Allgather_Multileader_RD_nonblocked_MV2(
           void *recvbuf, int recvcount, MPI_Datatype recvtype,
     MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count=%d  SA=%d] Func: MPIR_2lvl_Allgather_Multileader_RD_nonblocked_MV2\n", comm_ptr->rank,hostname,recvcount,security_approach);fflush(stdout);
+	}
+#endif 		
 
     MPIR_TIMER_START(coll,allgather,2lvl_multileader_rd_nonblocked);
     //    printf("MPIR_2lvl_Allgather_Multileader_RD_nonblocked_MV2\n");
@@ -5224,6 +5355,13 @@ int MPIR_2lvl_Allgather_Multileader_RD_MV2(
           void *recvbuf, int recvcount, MPI_Datatype recvtype,
     MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count=%d  SA=%d] Func: MPIR_2lvl_Allgather_Multileader_RD_MV2\n", comm_ptr->rank,hostname,recvcount,security_approach);fflush(stdout);
+	}
+#endif 			
     MPIR_TIMER_START(coll,allgather,2lvl_multileader_rd);
 
     int mpi_errno = MPI_SUCCESS;
@@ -5948,6 +6086,13 @@ int MPIR_2lvl_Allgather_Multileader_Ring_MV2(
           void *recvbuf, int recvcount, MPI_Datatype recvtype,
     MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count[]=%d  SA=%d] Func: MPIR_2lvl_Allgather_Multileader_Ring_MV2\n", comm_ptr->rank,hostname,recvcount,security_approach);fflush(stdout);
+	}
+#endif 			
     MPIR_TIMER_START(coll,allgather,2lvl_multileader_ring);
 
     int mpi_errno = MPI_SUCCESS;
@@ -6263,7 +6408,13 @@ int MPIR_Concurrent_Allgather_MV2(
           void *recvbuf, int recvcount, MPI_Datatype recvtype,
     MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
-
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count[]=%d  SA=%d] Func: MPIR_Concurrent_Allgather_MV2\n", comm_ptr->rank,hostname,recvcount,security_approach);fflush(stdout);
+	}
+#endif 	
     int mpi_errno = MPI_SUCCESS;
     int mpi_errno_ret = MPI_SUCCESS;
     int i, j;
@@ -6400,6 +6551,13 @@ int MPIR_2lvl_Allgather_Ring_nonblocked_MV2(
           void *recvbuf, int recvcount, MPI_Datatype recvtype,
     MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count[]=%d  SA=%d] Func: MPIR_2lvl_Allgather_Ring_nonblocked_MV2\n", comm_ptr->rank,hostname,recvcount,security_approach);fflush(stdout);
+	}
+#endif 	
     MPIR_TIMER_START(coll,allgather,2lvl_ring_nonblocked);
     int mpi_errno = MPI_SUCCESS;
     int mpi_errno_ret = MPI_SUCCESS;
@@ -6663,6 +6821,13 @@ int MPIR_2lvl_Allgather_Direct_MV2(
           void *recvbuf, int recvcnt, MPI_Datatype recvtype,
     MPID_Comm *comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count[]=%d  SA=%d] Func: MPIR_2lvl_Allgather_Direct_MV2\n", comm_ptr->rank,hostname,recvcnt,security_approach);fflush(stdout);
+	}
+#endif 		
     MPIR_TIMER_START(coll,allgather,2lvl_direct);
     int i, j;
     int mpi_errno = MPI_SUCCESS;
@@ -6959,6 +7124,13 @@ int MPIR_2lvl_Allgather_Ring_MV2(
           void *recvbuf, int recvcnt, MPI_Datatype recvtype,
     MPID_Comm *comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count = %d  SA=%d] Func: MPIR_2lvl_Allgather_Ring_MV2\n", comm_ptr->rank,hostname,recvcnt,security_approach);fflush(stdout);
+	}
+#endif  
     MPIR_TIMER_START(coll,allgather,2lvl_ring);
     int i, j;
     int mpi_errno = MPI_SUCCESS;
@@ -6982,10 +7154,15 @@ int MPIR_2lvl_Allgather_Ring_MV2(
 
     /* get info about communicator for ranks on the same node */
     MPID_Comm* shmem_commptr;
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ring 01 \n",rank);
     MPI_Comm shmem_comm = comm_ptr->dev.ch.shmem_comm;
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ring 02 \n",rank);
     MPID_Comm_get_ptr(shmem_comm, shmem_commptr);
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ring 02-1 \n",rank);
     int local_rank = shmem_commptr->rank;
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ring 02-2 \n",rank);
     int local_size = shmem_commptr->local_size;
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ring 02-3 \n",rank);
 
     /* get info about communicator across node leaders */
     MPID_Comm* leader_commptr = NULL;
@@ -6994,6 +7171,7 @@ int MPIR_2lvl_Allgather_Ring_MV2(
     if (local_rank == 0) {
         /* Node leader. Extract the rank, size information for the leader
          * communicator */
+
         MPI_Comm leader_comm = comm_ptr->dev.ch.leader_comm;
         MPID_Comm_get_ptr(leader_comm, leader_commptr);
         leader_rank = leader_commptr->rank;
@@ -7003,7 +7181,9 @@ int MPIR_2lvl_Allgather_Ring_MV2(
     int gather_msgs    = 0;
     int allgather_msgs = 0;
     int max_local_size = 0;
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ring 03 \n",rank);
     int *node_sizes    = comm_ptr->dev.ch.node_sizes;
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ring 04 \n",rank);
 
     /* request/status object allocation is different for 
      * leader vs. non-leader */
@@ -7045,14 +7225,18 @@ int MPIR_2lvl_Allgather_Ring_MV2(
 
     int reqs = 0;
 
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ring 05 \n",rank); 
     /* gather data to leaders on each node */
     int rank_index = comm_ptr->dev.ch.rank_list_index;
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ring 06 rank_index=%d\n",rank,rank_index); 
     if (local_rank == 0) {
         /* post receives for incoming data from procs on our node */
         for (i = 1; i < local_size; i++) {
             /* get global rank of this process */
+            if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ring 07 i=%d\n",rank,i);                        
+            
             int srcrank = comm_ptr->dev.ch.rank_list[rank_index + i];
-
+             if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ring 08 srcrank=%d\n",rank,srcrank); 
             /* compute pointer in receive buffer for incoming data from this rank */
             void* rbuf = (void*)((char*) recvbuf + srcrank * recvcnt * recvtype_extent);
 
@@ -7253,6 +7437,13 @@ int MPIR_Allgather_index_tuned_intra_MV2(const void *sendbuf, int sendcount, MPI
                        void *recvbuf, int recvcount, MPI_Datatype recvtype,
                        MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if ALLGATHER_PRINT_FUN
+   if (0 && (PRINT_FUN_NAME || DEBUG_INIT_FILE)){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count=%d  SA=%d] Func: MPIR_Allgather_index_tuned_intra_MV2\n", comm_ptr->rank,hostname,recvcount,security_approach);fflush(stdout);
+	}
+#endif     
 
     int mpi_errno = MPI_SUCCESS;
     int nbytes = 0, comm_size, recvtype_size;
@@ -7276,6 +7467,14 @@ int MPIR_Allgather_index_tuned_intra_MV2(const void *sendbuf, int sendcount, MPI
 
     MPID_Datatype_get_size_macro(recvtype, recvtype_size);
     nbytes = recvtype_size * recvcount;
+
+    
+    /*
+    if (init_phase==1) {
+        //if (init_rank==0) printf("Mohsen\n");
+        MPIR_2lvl_Allgather_Ring_MV2(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm_ptr, errflag);
+	    goto fn_exit;
+    }*/
 
     int i, rank;
     MPI_Aint recvtype_extent;
@@ -7604,7 +7803,13 @@ int MPIR_Allgather_MV2(const void *sendbuf, int sendcount, MPI_Datatype sendtype
                        void *recvbuf, int recvcount, MPI_Datatype recvtype,
                        MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
-    
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count[]=%d  SA=%d] Func: MPIR_Allgather_MV2\n", comm_ptr->rank,hostname,recvcount,security_approach);fflush(stdout);
+	}
+#endif     
     int mpi_errno = MPI_SUCCESS;
     int nbytes = 0, comm_size, recvtype_size;
     int range = 0;
@@ -7615,6 +7820,14 @@ int MPIR_Allgather_MV2(const void *sendbuf, int sendcount, MPI_Datatype sendtype
     int local_size = -1;
     MPI_Comm shmem_comm;
     MPID_Comm *shmem_commptr=NULL;
+
+    /*
+    if (comm_ptr->rank == 0){
+        if (comm_ptr->dev.ch.is_uniform==1) printf("This is uniform\n");  else printf("This is not uniform\n"); 
+        if (comm_ptr->dev.ch.is_global_block == 1) printf("This is global_block\n");  else printf("This is not global_block\n"); 
+        if (comm_ptr->dev.ch.is_blocked == 1) printf("This is blocked\n");  else printf("This is not blocked\n"); 
+    }
+    */
     
     if (mv2_use_indexed_tuning || mv2_use_indexed_allgather_tuning) {
 	    return MPIR_Allgather_index_tuned_intra_MV2(sendbuf, sendcount,

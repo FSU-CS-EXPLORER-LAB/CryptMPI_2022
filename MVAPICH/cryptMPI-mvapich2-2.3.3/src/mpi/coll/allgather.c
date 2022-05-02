@@ -21,6 +21,11 @@
 #include "coll_shmem.h"
 #endif /* _OSU_MVAPICH_ */
 
+// EVP_AEAD_CTX *ctx = NULL;
+// unsigned char key [32] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','a','b','c','d','e','f'};
+// unsigned char nonce[12] = {'1','2','3','4','5','6','7','8','9','0','1','2'};  
+#include "secure_allgather.h"
+
 /*
 === BEGIN_MPI_T_CVAR_INFO_BLOCK ===
 
@@ -825,6 +830,78 @@ fn_fail:
     goto fn_exit;
 }
 
+
+/****************************** Added by Mehran ***********************/
+#undef FUNCNAME
+#define FUNCNAME MPIR_Naive_Sec_Allgather
+#undef FCNAME
+#define FCNAME MPL_QUOTE(FUNCNAME)
+int MPIR_Naive_Sec_Allgather(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
+                        void *recvbuf, int recvcount, MPI_Datatype recvtype,
+                        MPID_Comm *comm_ptr, MPIR_Errflag_t *errflag)
+{
+#if ALLGATHER_PRINT_FUN
+   if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[Allgather rank = %d host = %s count = %d] Func: MPIR_Naive_Sec_Allgather\n", comm_ptr->rank,hostname,recvcount);fflush(stdout);
+	}
+#endif      
+    //printf("MPIR_Naive_Sec_Allgather\n");
+    int mpi_errno = MPI_SUCCESS;
+    int sendtype_sz, recvtype_sz;
+    unsigned long  ciphertext_sendbuf_len = 0;
+    sendtype_sz= recvtype_sz= 0;
+    int var;
+    var=MPI_Type_size(sendtype, &sendtype_sz);
+    var=MPI_Type_size(recvtype, &recvtype_sz);
+
+    int rank;
+    rank = comm_ptr->rank;
+
+    RAND_bytes(ciphertext_sendbuf, 12); // 12 bytes of nonce
+
+    unsigned long t=0;
+    t = (unsigned long)(sendtype_sz*sendcount);
+    unsigned long   max_out_len = (unsigned long) (16 + (sendtype_sz*sendcount));
+
+    if(!EVP_AEAD_CTX_seal(ctx, ciphertext_sendbuf+12,
+                         &ciphertext_sendbuf_len, max_out_len,
+                         ciphertext_sendbuf, 12,
+                         sendbuf,  t,
+                        NULL, 0))
+    {
+              printf("Error in encryption: allgather\n");
+              fflush(stdout);
+    }
+    mpi_errno = MPIR_Allgather_impl(ciphertext_sendbuf, ciphertext_sendbuf_len+12, MPI_CHAR,
+                                    ciphertext_recvbuf, ((recvcount*recvtype_sz) + 16+12), MPI_CHAR,
+                                    comm_ptr, errflag);
+
+    unsigned long count=0;
+    unsigned long next, dest;
+    unsigned int i;
+    for( i = 0; i < comm_ptr->local_size; i++){
+        next =(unsigned long )(i*((recvcount*recvtype_sz) + 16+12));
+        dest =(unsigned long )(i*(recvcount*recvtype_sz));
+        
+
+        if(!EVP_AEAD_CTX_open(ctx, ((recvbuf+dest)),
+                        &count, (unsigned long )((recvcount*recvtype_sz)+16),
+                         (ciphertext_recvbuf+next), 12,
+                        (ciphertext_recvbuf+next+12), (unsigned long )((recvcount*recvtype_sz)+16),
+                        NULL, 0)){
+                    printf("Decryption error: allgather\n");fflush(stdout);        
+            }                               
+       
+    }
+
+}
+
+
+/****************************** Added by Mehran ***********************/
+
+
 /* MPIR_Allgather_impl should be called by any internal component that
    would otherwise call MPI_Allgather.  This differs from
    MPIR_Allgather in that this will call the coll_fns version if it
@@ -993,10 +1070,19 @@ int MPI_Allgather(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
 #   endif /* HAVE_ERROR_CHECKING */
 
     /* ... body of routine ...  */
+    /****************************** Added by Mehran ***********************/
+    if(security_approach==1001){
+        //NAIVE
+        mpi_errno = MPIR_Naive_Sec_Allgather(sendbuf, sendcount, sendtype,
+                                recvbuf, recvcount, recvtype,
+                                comm_ptr, &errflag);
+    }else{
+        mpi_errno = MPIR_Allgather_impl(sendbuf, sendcount, sendtype,
+                                recvbuf, recvcount, recvtype,
+                                comm_ptr, &errflag);
+    }
+    /****************************** Added by Mehran ***********************/
 
-    mpi_errno = MPIR_Allgather_impl(sendbuf, sendcount, sendtype,
-                                    recvbuf, recvcount, recvtype,
-                                    comm_ptr, &errflag);
     if (mpi_errno) goto fn_fail;
 #ifdef _OSU_MVAPICH_
     if (mv2_use_osu_collectives) {

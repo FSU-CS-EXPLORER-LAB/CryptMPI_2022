@@ -1957,10 +1957,12 @@ int MPIR_Gather_index_tuned_intra_MV2(const void *sendbuf,
                     MPI_Datatype recvtype,
                     int root, MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag) {
 #if GATHER_PRINT_FUN
+if (PRINT_FUN_NAME){
     char hostname[100];
     int namelen;
     gethostname(hostname, &namelen);
-    printf("[gather osu rank = %d host = %s] Func: MPIR_Gather_index_tuned_intra_MV2\n",comm_ptr->rank,hostname);fflush(stdout);
+    printf("[gather rank = %d host = %s count=%d  security_approach=%d] Func: MPIR_Gather_index_tuned_intra_MV2\n", comm_ptr->rank, hostname,recvcnt,security_approach);
+}
 #endif      
     int comm_size_index = 0;
     int inter_node_algo_index = 0;
@@ -2203,10 +2205,12 @@ int MPIR_Gather_MV2(const void *sendbuf,
                     int root, MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
 #if GATHER_PRINT_FUN
+if (PRINT_FUN_NAME ){
     char hostname[100];
     int namelen;
     gethostname(hostname, &namelen);
     printf("[gather osu rank = %d host = %s] Func: MPIR_Gather_MV2\n",comm_ptr->rank,hostname);fflush(stdout);
+}
 #endif     
     int mpi_errno = MPI_SUCCESS;
     int range = 0;
@@ -2380,10 +2384,12 @@ int MPIR_Gather_MV2_Direct_CHS(const void *sendbuf, int sendcount, MPI_Datatype 
                       MPIR_Errflag_t *errflag)
 {
 #if GATHER_PRINT_FUN
+if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
     char hostname[100];
     int namelen;
     gethostname(hostname, &namelen);
-    printf("[gather osu rank = %d host = %s] Func: MPIR_Gather_MV2_Direct_CHS\n",comm_ptr->rank,hostname);fflush(stdout);
+    printf("[gather rank = %d host = %s count=%d  security_approach=%d] Func: MPIR_Gather_MV2_Direct_CHS\n", comm_ptr->rank, hostname,recvcount,security_approach);
+}
 #endif 
    if (comm_ptr->dev.ch.is_uniform != 1  || (comm_ptr->dev.ch.is_global_block != 1 || comm_ptr->dev.ch.is_blocked != 1) || root!=0)
     {
@@ -2432,14 +2438,20 @@ int MPIR_Gather_MV2_Direct_CHS(const void *sendbuf, int sendcount, MPI_Datatype 
     }
 #endif    
 
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 01 \n",rank);
+
     shmem_comm = comm_ptr->dev.ch.shmem_comm;
     MPID_Comm_get_ptr(shmem_comm, shmem_commptr);
     //printf("Done get_ptr: rank %d count_ite %d\n",comm_ptr->rank, count_ite);fflush(stdout);
     //conc_size = 8;
+
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 02 \n",rank);
     conc_comm = comm_ptr->dev.ch.concurrent_comm;
     MPID_Comm_get_ptr(conc_comm, conc_commptr);
     conc_rank = conc_commptr->rank;
     conc_size = conc_commptr->local_size;
+
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 03 \n",rank);
      
     mpi_errno = PMPI_Comm_rank(shmem_comm, &local_rank);
     if (mpi_errno)
@@ -2455,7 +2467,7 @@ int MPIR_Gather_MV2_Direct_CHS(const void *sendbuf, int sendcount, MPI_Datatype 
    
     MPIU_CHKLMEM_DECL(2);
     
-
+if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 04 \n",rank);
     rank = comm_ptr->rank;
      MPID_Get_node_id(comm_ptr, rank, &rank_node_id);
     MPID_Get_node_id(comm_ptr, root, &root_node_id);
@@ -2470,7 +2482,7 @@ int MPIR_Gather_MV2_Direct_CHS(const void *sendbuf, int sendcount, MPI_Datatype 
     */
    
    
-
+if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 05 \n",rank);
     comm_size = comm_ptr->local_size;
     //printf(" comm_ptr->local_size %d comm_ptr->remote_size %d local_size %d\n",comm_ptr->local_size,comm_ptr->remote_size,local_size);fflush(stdout);
        MPIU_CHKLMEM_MALLOC(reqarray, MPID_Request **,
@@ -2481,7 +2493,7 @@ int MPIR_Gather_MV2_Direct_CHS(const void *sendbuf, int sendcount, MPI_Datatype 
                     "starray");             
                     
 
-
+if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 06 \n",rank);
     int next = 0;
     int dest = 0;
     int src_global_rank = 0;
@@ -2508,7 +2520,9 @@ int MPIR_Gather_MV2_Direct_CHS(const void *sendbuf, int sendcount, MPI_Datatype 
          src_global_rank = rank + local_size;
         for (i = 1; i < conc_size; i++)
         {
+            if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 07 \n",rank);
             mpi_errno = MPIC_Irecv(ciphertext_recvbuf + next, t + 28, MPI_BYTE, i, MPIR_GATHER_TAG, conc_commptr, &reqarray[reqs++]);
+            if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 08 \n",rank);
             // mpi_errno = MPIC_Irecv(ciphertext_recvbuf + next, t + 28, MPI_BYTE, src_global_rank, MPIR_GATHER_TAG, comm_ptr, &reqarray[reqs++]);
             next += (t + 28);
              src_global_rank += local_size;
@@ -2522,7 +2536,8 @@ int MPIR_Gather_MV2_Direct_CHS(const void *sendbuf, int sendcount, MPI_Datatype 
         for (i = 1; i < conc_size; i++)
         {
             dest = src_global_rank * t; // get the decryption location
-             mpi_errno = MPIC_Waitall(1, &reqarray[i], starray, errflag);
+            if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 09 \n",rank);
+            mpi_errno = MPIC_Waitall(1, &reqarray[i], starray, errflag);
             if (!EVP_AEAD_CTX_open(global_ctx, shmem_buffer + dest,
                                    &count, max_out_len,
                                    (ciphertext_recvbuf + next), 12,
@@ -2540,7 +2555,7 @@ int MPIR_Gather_MV2_Direct_CHS(const void *sendbuf, int sendcount, MPI_Datatype 
                 fflush(stdout);
             }
 #endif
-
+if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 10 \n",rank);
             next += (t + 28);
             src_global_rank += local_size;
         }
@@ -2564,6 +2579,7 @@ int MPIR_Gather_MV2_Direct_CHS(const void *sendbuf, int sendcount, MPI_Datatype 
            memcpy(recvbuf, shmem_buffer, recvcount * recvtype_extent * comm_size);
 
         }    
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 11 \n",rank);
     }
     //printf("we are here\n");fflush(stdout);
 
@@ -2575,6 +2591,7 @@ int MPIR_Gather_MV2_Direct_CHS(const void *sendbuf, int sendcount, MPI_Datatype 
         unsigned long max_out_len = (unsigned long)(sendtype_extent * sendcount+16);
         unsigned long ciphertext_sendbuf_len;
         int global_dest_rank = rank % local_size;
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 12 \n",rank);
 
         // if(rank == 0 && count_ite >= 16)
          //   printf("3. rank %d count_ite %d\n",rank, count_ite);fflush(stdout);
@@ -2582,6 +2599,8 @@ int MPIR_Gather_MV2_Direct_CHS(const void *sendbuf, int sendcount, MPI_Datatype 
         {
            
              RAND_bytes(ciphertext_sendbuf, 12);
+             if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 13 \n",rank);
+             
             if (!EVP_AEAD_CTX_seal(global_ctx, ciphertext_sendbuf + 12,
                                    &ciphertext_sendbuf_len, max_out_len,
                                    ciphertext_sendbuf, 12,
@@ -2601,7 +2620,7 @@ int MPIR_Gather_MV2_Direct_CHS(const void *sendbuf, int sendcount, MPI_Datatype 
                 fflush(stdout);
             }
 #endif
-
+if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 14 \n",rank);
                // printf(COLOR_MAGENTA"CHS gather [rank %d conc_rank %d] sending to dest_rank %d dest conc rank %d"COLOR_RESET"\n",rank, conc_rank, global_dest_rank,0);fflush(stdout);
                     mpi_errno = MPIC_Send(ciphertext_sendbuf,
                                            (t + 28),
@@ -2612,7 +2631,7 @@ int MPIR_Gather_MV2_Direct_CHS(const void *sendbuf, int sendcount, MPI_Datatype 
                                            MPI_BYTE, global_dest_rank, MPIR_GATHER_TAG, comm_ptr,
                                             errflag);*/                        
                                           
-           
+if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 15 \n",rank);           
             if (mpi_errno)
             {
                 /* for communication errors, just record the error but continue */
@@ -2632,6 +2651,8 @@ int MPIR_Gather_MV2_Direct_CHS(const void *sendbuf, int sendcount, MPI_Datatype 
 
      /* check if multiple threads are calling this collective function */
     MPIDU_ERR_CHECK_MULTIPLE_THREADS_EXIT(comm_ptr);
+
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Ga-CHS 15 \n",rank);
    
     
     //printf(COLOR_YELLOW"@@ rank %d root %d rank_node_id %d root_node_id %d"COLOR_RESET"\n", rank, root,rank_node_id,root_node_id);fflush(stdout);
@@ -2655,10 +2676,12 @@ int MPIR_Gather_MV2_Direct_CHS_UNENCRYPTED(const void *sendbuf, int sendcount, M
                       MPIR_Errflag_t *errflag)
 {
 #if GATHER_PRINT_FUN
+if (PRINT_FUN_NAME){
     char hostname[100];
     int namelen;
     gethostname(hostname, &namelen);
-    printf("[gather osu rank = %d host = %s] Func: MPIR_Gather_MV2_Direct_CHS_UNENCRYPTED\n",comm_ptr->rank,hostname);fflush(stdout);
+    printf("[gather rank = %d host = %s count=%d  security_approach=%d] Func: MPIR_Gather_MV2_Direct_CHS_UNENCRYPTED\n", comm_ptr->rank, hostname,recvcount,security_approach);
+}
 #endif     
 
     int rank, comm_size;

@@ -24,6 +24,7 @@
 #include "coll_shmem.h"
 #endif
 
+// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Initeee 02\n",init_rank);
 // Add By Mohsen
 int init_phase=1;
 int super_node=0;
@@ -36,10 +37,11 @@ int PRINT_Ring_FUN_NAME=0;
 int PRINT_RSA_FUN_NAME=0;
 int UNSEC_ALLREDUCE_MULTI_LEADER=0;
 int PRINT_SUPER=0;
+int init_rank=0;
 
 int CONCUR_INTER_METHOD=3;
-int CONCUR_AllGTHER_METHOD=1;
-int CONCUR_RS_METHOD=1;
+int CONCUR_AllGTHER_METHOD=0;
+int CONCUR_RS_METHOD=0;
 int leader_cnt=1;
 int SHMEM_BCAST=0;
 int Allgather_Reduce=0;
@@ -84,6 +86,7 @@ int cryptmpi_local_rank;
 int cryptmpi_own_rank;
 int cryptmpi_init_done = 0;
 int security_approach=0;
+int init_security_approach=0;
 
 unsigned char Send_common_IV[32], Recv_common_IV[MAX_PROCESS_SIZE*32];
 unsigned char enc_common_buffer[MAX_COMMON_COUNTER_SZ], dec_common_buffer[MAX_COMMON_COUNTER_SZ];
@@ -213,7 +216,15 @@ int MPI_Init( int *argc, char ***argv )
     int mpi_errno = MPI_SUCCESS;
     int rc ATTRIBUTE((unused));
     int threadLevel, provided;
+
+    char *m_tc = getenv("MV2_PRINT_FUN_NAME");
+	if (m_tc && (strncmp(m_tc, "1",1) == 0))	PRINT_FUN_NAME = 1;
+
 	
+	m_tc = getenv("MV2_DEBUG_INIT_FILE");
+	if (m_tc && (strncmp(m_tc, "1",1) == 0))	DEBUG_INIT_FILE = 1;
+
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Init 01\n",init_rank);
 
     MPID_MPI_INIT_STATE_DECL(MPID_STATE_MPI_INIT);
 
@@ -319,35 +330,41 @@ int MPI_Init( int *argc, char ***argv )
 
 
 /* Added by Abu Naser */
-    security_approach = 0;
+
+    MPID_Comm *comm_ptr = NULL;
+    MPID_Comm_get_ptr(MPI_COMM_WORLD, comm_ptr);
+    init_rank = comm_ptr->rank;
+    init_security_approach = 0;
     MPI_SEC_Initial_Key_Aggrement();
    
-    char *s_value, *o_value, *t_value, *sml_value, a_value, *c_value, *cb_value, *b_value, *ob_value;
+    char *s_value, *o_value, *t_value, *sml_value, *a_value, *c_value, *cb_value, *b_value, *ob_value;
     char *rl_value;
     if ((s_value = getenv("MV2_SECURITY_APPROACH")) != NULL) {   // Mohsen: "MV2_" is appended to make Flags uniform
-        security_approach = (atoi(s_value));
+        init_security_approach = (atoi(s_value));
     }
 
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Init 02\n",init_rank);
+
    /****************************** Added by Mehran *****************************/
-     MPID_Comm *comm_ptr = NULL;
-    MPID_Comm_get_ptr(MPI_COMM_WORLD, comm_ptr);
+    // MPID_Comm *comm_ptr = NULL;
+    // MPID_Comm_get_ptr(MPI_COMM_WORLD, comm_ptr);
 
      overlap_decryption = 0;
     if ((o_value = getenv("MV2_OVERLAP_DECRYPTION")) != NULL) {  // Mohsen: "MV2_" is appended to make Flags uniform
         overlap_decryption = (atoi(o_value));
     }
- 
+if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Init 03-1\n",init_rank);
     allocated_shmem = 0;
     if ((t_value = getenv("MV2_INTER_ALLGATHER_TUNING")) != NULL) {
         int alg = (atoi(t_value));
         if(alg == 14 || alg == 18 || alg == 20){
             allocated_shmem = 1;
-            if(security_approach!=0){
+            if(init_security_approach!=0){
                 allocated_shmem = 2;
             }
         }
     }
-
+if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Init 03-2\n",init_rank);
     int initialize_rank_list = 0;
     if ((a_value = getenv("MV2_ALLTOALL_TUNING")) != NULL) {
         int alg = (atoi(a_value));
@@ -358,6 +375,7 @@ int MPI_Init( int *argc, char ***argv )
             initialize_rank_list = 1;
         }
     }
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Init 03-3\n",init_rank);
     /********************** Added by Mohsen **************************/
 	
 	char *tc;
@@ -375,6 +393,15 @@ int MPI_Init( int *argc, char ***argv )
 	if ((value = getenv("MV2_SUPER_NODE")) != NULL) 
     super_node = atoi(value);
 
+    if ((value = getenv("MV2_INTER_SCATTER_TUNING")) != NULL) 
+        allocated_shmem = 2;     
+
+    if ((value = getenv("MV2_INTER_GATHER_TUNING")) != NULL) {
+        if (value==4)   allocated_shmem = 2; 
+        else allocated_shmem = 1; 
+    }
+        
+    
 	tc = getenv("MV2_CONCUR_RS_METHOD");   // Reduce-Scatter in 1st step of Ring
 
 	if (tc && (strncmp(tc, "2",2) == 0))	{	
@@ -405,12 +432,12 @@ int MPI_Init( int *argc, char ***argv )
 
 	if ((CONCUR_INTER_METHOD != 1) && (CONCUR_INTER_METHOD != 2) && (CONCUR_INTER_METHOD != 3) ){ 
 		CONCUR_INTER_METHOD = 1;
-		if (comm_ptr->rank==0) fprintf(stderr,COLOR_YELLOW"CryptoMPI Warning: CONCUR_INTER_METHOD is out of range. It has been set to 1."COLOR_RESET"\n");
+		if (comm_ptr->rank==0) fprintf(stderr,COLOR_YELLOW"CryptMPI Warning: CONCUR_INTER_METHOD is out of range. It has been set to 1."COLOR_RESET"\n");
 	}
 
 	if ((super_node == 1) || (CONCUR_AllGTHER_METHOD == 2) || (SHMEM_BCAST == 1) || (CONCUR_RS_METHOD == 2)) {
         allocated_shmem = 1;        
-        if (comm_ptr->rank==0) fprintf(stderr,COLOR_GREEN"CryptoMPI: Allreduce shared memory creation..."COLOR_RESET"\n");
+        if (comm_ptr->rank==0) fprintf(stderr,COLOR_GREEN"CryptMPI: Allreduce shared memory creation..."COLOR_RESET"\n");
     }
 	
 	enc_choping_sz = choping_sz + ENC_MSG_TAG_SIZE;
@@ -422,15 +449,15 @@ int MPI_Init( int *argc, char ***argv )
         int alg = (atoi(b_value));               
         if(alg == 13) {
             allocated_shmem = 2; 
-            if (comm_ptr->rank==0) fprintf(stderr,COLOR_GREEN"CryptoMPI: Bcast shared memory creation..."COLOR_RESET"\n");
+            if (comm_ptr->rank==0) fprintf(stderr,COLOR_GREEN"CryptMPI: Bcast shared memory creation..."COLOR_RESET"\n");
         }
     }  
     /****************************** End by Cong *****************************/
-
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Initeee 04\n",init_rank);
     if(allocated_shmem != 0){
         init_shmem();
     }
-
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Initeee 05\n",init_rank);
     shmem_leaders = 1;
     if ((sml_value = getenv("MV2_SHMEM_LEADERS")) != NULL) {    // Mohsen: "MV2_" is appended to make Flags uniform
         shmem_leaders = (atoi(sml_value));
@@ -454,12 +481,26 @@ int MPI_Init( int *argc, char ***argv )
         }
     }
 
-    if ((rl_value = getenv("INIT_RANK_LIST")) != NULL) {
-        initialize_rank_list = (atoi(c_value));
+    if ((rl_value = getenv("MV2_INIT_RANK_LIST")) != NULL) {  // Mohsen: "MV2_" is appended to make Flags uniform
+        initialize_rank_list = (atoi(rl_value));
     }
+
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Init 06 initialize_rank_list=%d\n",init_rank,initialize_rank_list);
+
     if(initialize_rank_list == 1 && NULL == comm_ptr->dev.ch.rank_list){
         MPIR_Errflag_t errflag = MPIR_ERR_NONE;
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Init 07\n",init_rank);
         mpi_errno = create_allgather_comm(comm_ptr, &errflag);
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Init 08\n",init_rank);
+        MPID_Comm* shmem_commptr;
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Init 09 \n",init_rank);
+        MPI_Comm shmem_comm = comm_ptr->dev.ch.shmem_comm;
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Init 10 \n",init_rank);
+        MPID_Comm_get_ptr(shmem_comm, shmem_commptr);
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Init 11\n",init_rank);
+        int local_rank = shmem_commptr->rank;
+        if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Init 12\n",init_rank);
+
         if(mpi_errno) {
             MPIR_ERR_POP(mpi_errno);
         }
@@ -491,7 +532,12 @@ int MPI_Init( int *argc, char ***argv )
     init_crypto();
 /* end of add */
 
-    
+
+    MPI_Barrier(MPI_COMM_WORLD);
+    if (comm_ptr->rank==0) fprintf(stderr,COLOR_GREEN"CryptMPI: Initialization is Completed!"COLOR_RESET"\n");
+
+    init_phase=0;
+    security_approach = init_security_approach;
     /* ... end of body of routine ... */
     MPID_MPI_INIT_FUNC_EXIT(MPID_STATE_MPI_INIT);
     return mpi_errno;
@@ -511,12 +557,32 @@ int MPI_Init( int *argc, char ***argv )
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Added by Abu Naser */
 
 void init_openmp_key(){
 
     //if(OPENMP_MULTI_THREAD_ONLY)
-    if(security_approach==600 || security_approach==601)
+    if(init_security_approach==600 || init_security_approach==601)
     {    
         global_openmp_ctx = EVP_AEAD_CTX_new(EVP_aead_aes_128_gcm(),
                                              symmetric_key,
@@ -532,7 +598,7 @@ void init_openmp_key(){
                                              symmetric_key_size, 0);                                                                          
     }
     //else if(OPENMP_PIPE_LINE)
-    else if(security_approach==602)
+    else if(init_security_approach==602)
     {
          global_small_msg_ctx = EVP_AEAD_CTX_new(EVP_aead_aes_128_gcm(),
                                              &symmetric_key[symmetric_key_size*2],
@@ -560,7 +626,7 @@ void init_openmp_key(){
     openmp_active_thread_no = 1;
     int i;
 //#if OMP_DYNAMIC_THREADS_PIPELINE || OMP_DYNAMIC_THREADS_PIPELINE_INNOVATION
-    if (security_approach == 602)
+    if (init_security_approach == 602)
     {
         for (i = 0; i < MAX_RANKS_LIMIT; i++)
         {
@@ -605,7 +671,7 @@ void init_openmp_key(){
 
 
 //#if OMP_DYNAMIC_THREADS_PIPELINE || OMP_DYNAMIC_THREADS_PIPELINE_INNOVATION || OMP_DYNAMIC_THREADS || OMP_DYNAMIC_THREADS_INNOVATION
-    if (security_approach == 602)
+    if (init_security_approach == 602)
     {
         int hybrid = 0;
         int spread = 0;
@@ -656,7 +722,7 @@ void init_counter_mode_keys(){
     openmp_active_thread_no = 1;
  int i;
 //#if PRE_COMPUTE_COUNTER_MODE
- if (security_approach == 702)
+ if (init_security_approach == 702)
  {
      for (i = 0; i < MAX_RANKS_LIMIT; i++)
      {
@@ -698,7 +764,7 @@ void init_counter_mode_keys(){
     }
 
 //#if PRE_COMPUTE_COUNTER_MODE
-    if (security_approach == 702)
+    if (init_security_approach == 702)
     {
         /* init common counter array */
         //RAND_bytes(Send_common_IV, 16);
@@ -733,7 +799,7 @@ void init_counter_mode_keys(){
 //#endif
 
 //#if PRE_COMPUTE_COUNTER_MODE
-    if (security_approach == 702)
+    if (init_security_approach == 702)
     {
         int hybrid = 0;
         int spread = 0;
@@ -790,7 +856,7 @@ void init_crypto(){
 
 /************ Add by Mohsen *************/
 
-    if(security_approach==2005 || security_approach==2001)
+    if(init_security_approach==2005 || init_security_approach==2001)
     {    
         //local_ctx = EVP_AEAD_CTX_new(EVP_aead_aes_128_gcm(),
           //                                   symmetric_key,
@@ -802,11 +868,11 @@ void init_crypto(){
 
 /************ End by Mohsen *************/    
 
-if (security_approach == 600 || security_approach == 601 || security_approach == 602)
+if (init_security_approach == 600 || init_security_approach == 601 || init_security_approach == 602)
     {
          init_openmp_key();         // will initialize cryptMPI-AesGcm
     }
-    else if(security_approach == 700 || security_approach == 701 || security_approach == 702)
+    else if(init_security_approach == 700 || init_security_approach == 701 || init_security_approach == 702)
     {
          init_counter_mode_keys();   // will initialize counter-mode
     }
@@ -977,18 +1043,24 @@ void MPI_SEC_Initial_Key_Aggrement(){
 int init_shmem(){
     static const char FCNAME[] = "init_shmem";
     int mpi_errno = MPI_SUCCESS;
-    int security_approach, overlap_decryption;
+    int init_security_approach, overlap_decryption;
     //printf("Hello from init_shmem\n");
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] SHM 01 \n",init_rank);    
     MPID_Comm *comm_ptr = NULL;
     MPID_Comm_get_ptr(MPI_COMM_WORLD, comm_ptr);
     MPID_Comm *shmem_comm_ptr = NULL;
     MPID_Comm_get_ptr(comm_ptr->dev.ch.shmem_comm, shmem_comm_ptr);
 
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] SHM 02 \n",init_rank);  
+
        //TODO: Allocate Shmem
-    size_t shmem_size = (comm_ptr->local_size) * 4 * 1024 *1024;
-    size_t ciphertext_shmem_size = (comm_ptr->local_size) * (1024 * 1024 * 4 + 16 + 12);
+    int  SHM_size = 4 * 1024 *1024;
+    size_t shmem_size = (comm_ptr->local_size) * SHM_size;
+    size_t ciphertext_shmem_size = (comm_ptr->local_size) * (SHM_size + 16 + 12);
     shmem_key = 12345; //32984;
     ciphertext_shmem_key = 67890; //56982;
+
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] SHM 03 \n",init_rank);  
 
     if(shmem_comm_ptr->rank == 0){
         
@@ -999,6 +1071,7 @@ int init_shmem(){
 
         }
     }
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] SHM 04 \n",init_rank);  
     MPI_Barrier(MPI_COMM_WORLD);
     if(shmem_comm_ptr->rank > 0){
         shmid = shmget(shmem_key, shmem_size, 0666);
@@ -1008,12 +1081,15 @@ int init_shmem(){
 
         }
     }
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] SHM 05 \n",init_rank);  
     
     if (shmid < 0) {
         printf("%s",strerror(errno));
         printf("ERROR 1\n");
         goto fn_fail;
     }
+
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] SHM 06 \n",init_rank);  
     
     // attach shared memory 
 
@@ -1030,6 +1106,10 @@ int init_shmem(){
         }
 
     }
+
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] SHM 07 \n",init_rank);  
+
+    if (comm_ptr->rank==0) fprintf(stderr,COLOR_GREEN"CryptMPI: Shared Memory with size of %d Bytes (index: %d) is allocated with security_approach: %d"COLOR_RESET"\n",SHM_size,allocated_shmem,security_approach);
 
     return mpi_errno;
     
@@ -1066,6 +1146,8 @@ int create_concurrent_comm (MPI_Comm comm, int size, int my_rank)
     if(mpi_errno) {
        MPIR_ERR_POP(mpi_errno);
     }
+    
+    if (comm_ptr->rank==0) fprintf(stderr,COLOR_GREEN"CryptMPI: Concurrent comm created."COLOR_RESET"\n");
 
     return (mpi_errno);
     fn_fail:

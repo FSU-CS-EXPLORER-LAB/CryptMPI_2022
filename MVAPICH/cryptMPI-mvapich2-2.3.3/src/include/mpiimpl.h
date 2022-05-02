@@ -188,9 +188,6 @@ static inline void MPIUI_Memset(void *s, int c, size_t n)
 
 /************ Mohsen *************/
 
-#define COLL_NAIVE_AESGCM 0      // encypt and decrypt both intra and inter node comm: reduce, allreduce, bcast
-#define COLL_NAIVE_AESGCM_PLUS 1 // encrypt and derypt only inter-node communication
-
 extern int PRINT_FUN_NAME;
 extern int ALLGATHER_PRINT_FUN_NAME;
 extern int ENABLE_SECURE_DEBUG;
@@ -209,11 +206,20 @@ extern int Allgather_Reduce;
 extern int enc_choping_sz;
 extern int super_node;
 extern int UNSEC_ALLREDUCE_MULTI_LEADER;
+extern int init_rank;
 
-/* Collective debug function flag */
-#define ALLREDUCE_PRINT_FUN  1		//Mohsen
-#define Print_Ring  0		//Mohsen
+extern int inter_scatter_tuning;
+
+
+/* Mohsen: Collective debug function flag */
+#define ALLREDUCE_PRINT_FUN  0
+#define Print_Ring  0		
 #define ALLGATHER_PRINT_FUN  1
+#define BCAST_PRINT_FUN  0
+#define GATHER_PRINT_FUN 1
+#define SCATTER_PRINT_FUN 0
+#define ALLTOALL_PRINT_FUN 1
+
 
 /************ End *************/
 
@@ -426,8 +432,6 @@ extern void multithread_decryption_common_counter_large_msg(void *buf, int datas
 extern void multithreads_encryption_common_counter_large_msg(const void *buf, int enc_datasize,  unsigned char * out,
                                              EVP_CIPHER_CTX * t_counter_ctx, long unsigned int counter, int tid);  
 /*************counter flags end *******************/
-#define SCATTER_PRINT_FUN 0
-#define GATHER_PRINT_FUN 0
 
 /************************************/
 /*  End of add                      */

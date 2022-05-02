@@ -660,6 +660,13 @@ int MPIR_Naive_Sec_Scatter(const void *sendbuf, int sendcount, MPI_Datatype send
                       void *recvbuf, int recvcount, MPI_Datatype recvtype,
                       int root, MPID_Comm *comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if SCATTER_PRINT_FUN
+   if (PRINT_FUN_NAME){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[allreduce rank=%d host=%s count=%d] Func: MPIR_Naive_Sec_Scatter\n", comm_ptr->rank,hostname,recvcount);fflush(stdout);
+	}
+#endif      
     int mpi_errno = MPI_SUCCESS;
     int sendtype_sz, recvtype_sz;
     unsigned long  ciphertext_sendbuf_len = 0;
@@ -787,8 +794,17 @@ int MPI_Scatter(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
 		void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
 		MPI_Comm comm)
 {
-    int mpi_errno = MPI_SUCCESS;
     MPID_Comm *comm_ptr = NULL;
+    MPID_Comm_get_ptr( comm, comm_ptr );
+#if SCATTER_PRINT_FUN
+   if (PRINT_FUN_NAME){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[allreduce rank=%d host=%s count=%d] Func: MPI_Scatter\n", comm_ptr->rank,hostname,recvcount);fflush(stdout);
+	}
+#endif     
+    int mpi_errno = MPI_SUCCESS;
+    
     MPIR_Errflag_t errflag = MPIR_ERR_NONE;
     MPID_MPI_STATE_DECL(MPID_STATE_MPI_SCATTER);
 
@@ -809,7 +825,7 @@ int MPI_Scatter(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
 #   endif /* HAVE_ERROR_CHECKING */
 
     /* Convert MPI object handles to object pointers */
-    MPID_Comm_get_ptr( comm, comm_ptr );
+    
 
     /* Validate parameters and objects (post conversion) */
 #   ifdef HAVE_ERROR_CHECKING

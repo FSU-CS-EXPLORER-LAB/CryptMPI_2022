@@ -865,6 +865,14 @@ int MPIR_Bcast_ML_Shmem_MV2(void *buffer,
                                           MPI_Datatype datatype,
                                           int root, MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
+    ///
+#if BCAST_PRINT_FUN
+   if (PRINT_FUN_NAME){
+	char hostname[100];
+    int namelen;
+    gethostname(hostname, &namelen);
+    printf("[Bcast rank = %d host = %s count = %d  SA=%d] Func: MPIR_Bcast_ML_Shmem_MV2\n", comm_ptr->rank,hostname,count,se);fflush(stdout);}
+#endif        
     int rank, comm_size;
     int mpi_errno = MPI_SUCCESS;
     int mpi_errno_ret = MPI_SUCCESS;
@@ -3628,6 +3636,13 @@ int MPIR_Bcast_tune_intra_MV2(void *buffer,
 int MPIR_Bcast_MV2(void *buf, int count, MPI_Datatype datatype,
                    int root, MPID_Comm * comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if BCAST_PRINT_FUN
+   if (PRINT_FUN_NAME){
+	char hostname[100];
+    int namelen;
+    gethostname(hostname, &namelen);
+    printf("[Bcast rank = %d host = %s count = %d  SA=%d] Func: MPIR_Bcast_MV2\n", comm_ptr->rank,hostname,count,security_approach);fflush(stdout);}
+#endif        
 
     int mpi_errno = MPI_SUCCESS;
     MPIR_T_PVAR_COMM_COUNTER_INC(MV2,mv2_coll_bcast_subcomm,1,comm_ptr);

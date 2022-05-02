@@ -110,11 +110,13 @@ int MPIR_Gather_intra(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
                       MPIR_Errflag_t *errflag)
 {
 #if GATHER_PRINT_FUN
+if (PRINT_FUN_NAME){
     char hostname[100];
     int namelen;
     gethostname(hostname, &namelen);
-    printf("[gather rank = %d host = %s] Func: MPIR_Gather_intra\n", comm_ptr->rank, hostname);
+    printf("[gather rank = %d host = %s count=%d  security_approach=%d] Func: MPIR_Gather_intra\n", comm_ptr->rank, hostname,recvcount,security_approach);
     fflush(stdout);
+}
 #endif
 #if 0
      if (comm_ptr->dev.ch.is_uniform == 1 && security_approach > 302 && security_approach <= 305)
@@ -1241,6 +1243,14 @@ int MPIR_Naive_Sec_Gather(const void *sendbuf, int sendcount, MPI_Datatype sendt
                           void *recvbuf, int recvcount, MPI_Datatype recvtype,
                           int root, MPID_Comm *comm_ptr, MPIR_Errflag_t *errflag)
 {
+#if GATHER_PRINT_FUN
+if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+    char hostname[100];
+    int namelen;
+    gethostname(hostname, &namelen);
+    printf("[gather rank = %d host = %s count=%d  security_approach=%d] Func: MPIR_Naive_Sec_Gather\n", comm_ptr->rank, hostname,recvcount,security_approach);
+}
+#endif     
     int mpi_errno = MPI_SUCCESS;
     int sendtype_sz, recvtype_sz;
     unsigned long ciphertext_sendbuf_len = 0;
@@ -1497,6 +1507,14 @@ int MPI_Gather(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
         }*/
     if (security_approach == 301)
     {
+#if GATHER_PRINT_FUN
+if (PRINT_FUN_NAME || DEBUG_INIT_FILE){
+    char hostname[100];
+    int namelen;
+    gethostname(hostname, &namelen);
+    printf("[gather rank = %d host = %s count=%d  security_approach=%d] Func: MPIR_Naive_Sec_Gather\n", comm_ptr->rank, hostname,recvcount,security_approach);
+}
+#endif  
         //NAIVE
         //mpi_errno = MPIR_Naive_Sec_Gather(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, root, comm_ptr, &errflag);
         int sendtype_sz, recvtype_sz;
