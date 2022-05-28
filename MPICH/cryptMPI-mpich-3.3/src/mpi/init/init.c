@@ -354,7 +354,7 @@ int MPI_Init(int *argc, char ***argv)
      if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Initeee 01\n",init_rank);
     MPI_SEC_Initial_Key_Aggrement();    
 
-    char *s_value, *o_value, *t_value, *sml_value, a_value, *c_value, *cb_value, *b_value, *ob_value, *sct_value;
+    char *s_value, *o_value, *t_value, *sml_value, *a_value, *c_value, *cb_value, *b_value, *ob_value, *sct_value;
     char *rl_value;
     allocated_shmem = 0;
     if ((s_value = getenv("MV2_SECURITY_APPROACH")) != NULL) {   // Mohsen: "MV2_" is appended to make Flags uniform
