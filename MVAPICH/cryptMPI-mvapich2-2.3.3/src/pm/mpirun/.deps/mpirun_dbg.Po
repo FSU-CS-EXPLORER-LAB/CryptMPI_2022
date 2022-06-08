@@ -1,6 +1,0 @@
-src/pm/mpirun/mpirun_dbg.o: src/pm/mpirun/mpirun_dbg.c \
- /usr/include/stdc-predef.h src/pm/mpirun/mpirun_dbg.h
-
-/usr/include/stdc-predef.h:
-
-src/pm/mpirun/mpirun_dbg.h:
