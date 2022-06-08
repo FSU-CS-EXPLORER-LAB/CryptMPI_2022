@@ -37,6 +37,7 @@ int *comm_rank_list_back;
 int init_rank=0;
 
 int inter_scatter_tuning=0;
+int inter_alltoall_tuning=0;
 int mv2_user_allgather_inter=0;
 /*** Mehran Added ***/
 int bcast_tuning = 0;
@@ -383,16 +384,22 @@ int MPI_Init(int *argc, char ***argv)
         }
     }
 
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Initeee 04-1\n",init_rank);
+
     int initialize_rank_list = 0;
     if ((a_value = getenv("MV2_ALLTOALL_TUNING")) != NULL) {
         int alg = (atoi(a_value));
+		inter_alltoall_tuning = alg;
         if(alg == 5){
             if(allocated_shmem == 0){
                 allocated_shmem = 1;
             }
             initialize_rank_list = 1;
+			concurrent_comm = 1;
         }
     }
+
+    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Initeee 04-2\n",init_rank);
     
     if ((rl_value = getenv("MV2_INIT_RANK_LIST")) != NULL) {
         initialize_rank_list = (atoi(rl_value));
@@ -403,7 +410,7 @@ int MPI_Init(int *argc, char ***argv)
     /****************************** End by Mehran *********************/
 
     /********************** Added by Mohsen **************************/
-	// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Initeee 06-1\n",init_rank);
+	if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] Initeee 06-1\n",init_rank);
 	char *tc;
 	char *value;
 	
@@ -501,7 +508,8 @@ int MPI_Init(int *argc, char ***argv)
             concurrent_comm = 1;
         }
     }   
-    
+	
+
     /********************** Added by Mohsen **************************/
     
     if (concurrent_comm == 1){

@@ -11,16 +11,16 @@
 #
 # in the top-level romio directory
 #
-PREFIX=/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/mpich_install
-ROMIO_HOME=/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio
+PREFIX=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/Install_mpich
+ROMIO_HOME=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio
 ARCH=LINUX
 RANLIB=ranlib
-TOP_BUILD_DIR=/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio
+TOP_BUILD_DIR=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio
 # LAM Do we want to install or uninstall?
 WANT_INSTALL=1
 #
 # Default paths (set at configure time)
-prefix=/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/mpich_install
+prefix=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/Install_mpich
 exec_prefix=${prefix}
 bindir=${exec_prefix}/bin
 sbindir=${exec_prefix}/sbin
@@ -35,7 +35,7 @@ datarootdir=@datatrootdir@
 #datadir=${datarootdir}
 docdir=${datarootdir}/doc/${PACKAGE_TARNAME}
 ## Location of sources
-#top_srcdir=/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio
+#top_srcdir=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio
 #
 # File access mode
 MODE=0644

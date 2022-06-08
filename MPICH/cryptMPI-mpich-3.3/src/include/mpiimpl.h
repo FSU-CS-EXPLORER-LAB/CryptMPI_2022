@@ -171,6 +171,7 @@ extern int mv2_user_allgather_inter;
 extern int bcast_tuning;
 /********************/
 extern int inter_scatter_tuning;
+extern int inter_alltoall_tuning;
 // extern int is_uniform;
 extern int inter_gather_tuning;
 extern int inter_allreduce_tuning;
@@ -179,6 +180,7 @@ extern int inter_allreduce_tuning;
 #define ALLREDUCE_PRINT_FUN  0		//Mohsen
 #define Print_Ring  0		//Mohsen
 #define ALLGATHER_PRINT_FUN  0
+#define ALLTOALL_PRINT_FUN  1
 #define BCAST_PRINT_FUN  0
 #define GATHER_PRINT_FUN 0
 #define SCATTER_PRINT_FUN 0
@@ -224,8 +226,8 @@ extern int inter_allreduce_tuning;
 #define COLOR_RESET "\x1b[0m"
 
 /* Define sizes */
-#define COMMON_LARGE_SEND_BUFFER_SIZE  67110656 //67108864 //150401232 //9437184 
-#define COMMON_LARGE_RECV_BUFFER_SIZE  67110656 //67108864 //150401232 //9437184 
+#define COMMON_LARGE_SEND_BUFFER_SIZE  67130656 //67108864 //150401232 //9437184 
+#define COMMON_LARGE_RECV_BUFFER_SIZE  67130656 //67108864 //150401232 //9437184 
 #define NON_BLOCKING_SND_RCV_1 64
 #define NON_BLOCKING_SND_RCV_2 9437184
 #define NON_BLOCK_SEND NON_BLOCKING_SND_RCV_1

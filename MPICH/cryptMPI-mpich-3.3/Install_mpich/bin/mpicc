@@ -27,11 +27,11 @@
 #
 # Directory locations: Fixed for any MPI implementation.
 # Set from the directory arguments to configure (e.g., --prefix=/usr/local)
-prefix=/home/gavahi/explorer/cryptMPI-mpich-3.3/Install_mpich
-exec_prefix=/home/gavahi/explorer/cryptMPI-mpich-3.3/Install_mpich
-sysconfdir=/home/gavahi/explorer/cryptMPI-mpich-3.3/Install_mpich/etc
-includedir=/home/gavahi/explorer/cryptMPI-mpich-3.3/Install_mpich/include
-libdir=/home/gavahi/explorer/cryptMPI-mpich-3.3/Install_mpich/lib
+prefix=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/Install_mpich
+exec_prefix=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/Install_mpich
+sysconfdir=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/Install_mpich/etc
+includedir=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/Install_mpich/include
+libdir=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/Install_mpich/lib
 
 # Default settings for compiler, flags, and libraries.
 # Determined by a combination of environment variables and tests within

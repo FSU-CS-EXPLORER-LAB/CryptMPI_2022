@@ -1,4 +1,4 @@
-prefix=/home/gavahi/explorer/cryptMPI-mpich-3.3/Install_mpich
+prefix=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/Install_mpich
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

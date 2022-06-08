@@ -96,8 +96,8 @@ Name **mkstemp is defined in src/mpi/errhan/errnames.txt:845 but never used
 Name **pmi_version %s %s %s %s is defined in src/mpi/errhan/errnames.txt:1474 but never used
 Name **bad_sock is defined in src/mpi/errhan/errnames.txt:494 but never used
 Name **ibv_destroy_cq is defined in src/mpi/errhan/errnames.txt:782 but never used
-Name **ptlleappend %s is defined in src/mpid/ch3/channels/nemesis/netmod/portals4/errnames.txt:18 but never used
 Name **ch4|loadsendiov is defined in src/mpid/ch4/errnames.txt:17 but never used
+Name **ptlleappend %s is defined in src/mpid/ch3/channels/nemesis/netmod/portals4/errnames.txt:18 but never used
 Name **nextbootmsg is defined in src/mpi/errhan/errnames.txt:610 but never used
 Name **shmw_badhnd is defined in src/mpi/errhan/errnames.txt:569 but never used
 Name **ofid_stx_ctx_close is defined in src/mpid/ch4/netmod/ofi/errnames.txt:98 but never used
@@ -372,8 +372,8 @@ Name **ibv_create_ah %p is defined in src/mpi/errhan/errnames.txt:809 but never 
 Name **PtlEQAlloc is defined in src/mpid/ch4/netmod/portals4/errnames.txt:5 but never used
 Name **cmd_too_long is defined in src/mpi/errhan/errnames.txt:1465 but never used
 Name **mx_open_endpoint is defined in src/mpi/errhan/errnames.txt:760 but never used
-Name **ch3|rma_flags is defined in src/mpid/ch3/errnames.txt:44 but never used
 Name **ch4|invalid_locality %s is defined in src/mpid/ch4/errnames.txt:39 but never used
+Name **ch3|rma_flags is defined in src/mpid/ch3/errnames.txt:44 but never used
 Name **ch4|pktarraytoosmall is defined in src/mpid/ch4/errnames.txt:4 but never used
 Name **ofid_tsenddata is defined in src/mpid/ch4/netmod/ofi/errnames.txt:50 but never used
 Name **socket %s %d is defined in src/mpi/errhan/errnames.txt:508 but never used

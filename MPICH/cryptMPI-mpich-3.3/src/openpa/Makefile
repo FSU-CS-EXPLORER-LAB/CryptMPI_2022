@@ -203,7 +203,8 @@ am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/openpa.pc.in \
 	$(top_srcdir)/confdb/install-sh $(top_srcdir)/confdb/ltmain.sh \
 	$(top_srcdir)/confdb/missing README confdb/ar-lib \
 	confdb/compile confdb/config.guess confdb/config.sub \
-	confdb/install-sh confdb/ltmain.sh confdb/missing
+	confdb/depcomp confdb/install-sh confdb/ltmain.sh \
+	confdb/missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -246,20 +247,20 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/confdb/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/confdb/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = ar
-AUTOCONF = ${SHELL} /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/confdb/missing autoconf
-AUTOHEADER = ${SHELL} /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/confdb/missing autoheader
-AUTOMAKE = ${SHELL} /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/confdb/missing automake-1.15
+AUTOCONF = ${SHELL} /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/confdb/missing autoconf
+AUTOHEADER = ${SHELL} /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/confdb/missing autoheader
+AUTOMAKE = ${SHELL} /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/confdb/missing automake-1.15
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS =   
 CONFIG_STATUS_DEPENDENCIES = $(top_srcdir)/VERSION
 CPP = gcc -E
-CPPFLAGS =   -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src
+CPPFLAGS =   -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
@@ -287,7 +288,7 @@ LIPO =
 LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
-MAKEINFO = ${SHELL} /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/confdb/missing makeinfo
+MAKEINFO = ${SHELL} /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/confdb/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /usr/bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -311,11 +312,11 @@ SET_MAKE =
 SHELL = /bin/sh
 STRIP = strip
 VERSION = 1.0.3
-abs_builddir = /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa
-abs_srcdir = /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa
-abs_top_builddir = /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa
-abs_top_srcdir = /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa
-ac_ct_AR = 
+abs_builddir = /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa
+abs_srcdir = /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa
+abs_top_builddir = /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa
+abs_top_srcdir = /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa
+ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
 am__include = include
@@ -344,7 +345,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/confdb/install-sh
+install_sh = ${SHELL} /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/confdb/install-sh
 internal_pkg_config_libs = 
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
@@ -359,7 +360,7 @@ pdfdir = ${docdir}
 
 # pkgconfig files
 pkgconfigdir = ${exec_prefix}/lib/pkgconfig
-prefix = /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/mpich_install
+prefix = /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/Install_mpich
 program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin

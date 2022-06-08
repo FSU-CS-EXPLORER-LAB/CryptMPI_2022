@@ -1,7 +1,7 @@
 make  all-recursive
-make[1]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3'
+make[1]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3'
 Making all in src/mpl
-make[2]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl'
+make[2]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl'
   CC       src/bt/mpl_bt.lo
   CC       src/dbg/mpl_dbg.lo
   CC       src/env/mpl_env.lo
@@ -15,57 +15,51 @@ make[2]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-
   CC       src/thread/mpl_thread.lo
   CC       src/thread/mpl_thread_win.lo
   CC       src/thread/mpl_thread_solaris.lo
-  CC       src/thread/mpl_thread_argobots.lo
   CC       src/thread/mpl_thread_posix.lo
   CC       src/timer/mpl_timer_clock_gettime.lo
+  CC       src/thread/mpl_thread_argobots.lo
   CC       src/timer/mpl_timer_gcc_ia64_cycle.lo
-  CC       src/timer/mpl_timer_gethrtime.lo
-  CC       src/timer/mpl_timer_gettimeofday.lo
   CC       src/timer/mpl_timer_linux86_cycle.lo
-  CC       src/timer/mpl_timer_ppc64_cycle.lo
+  CC       src/timer/mpl_timer_gethrtime.lo
   CC       src/timer/mpl_timer_mach_absolute_time.lo
+  CC       src/timer/mpl_timer_ppc64_cycle.lo
+  CC       src/timer/mpl_timer_gettimeofday.lo
   CC       src/timer/mpl_timer_query_performance_counter.lo
-  CC       src/timer/mpl_timer_win86_cycle.lo
   CC       src/shm/mpl_shm.lo
+  CC       src/timer/mpl_timer_win86_cycle.lo
   CC       src/timer/mpl_timer_device.lo
   CC       src/shm/mpl_shm_sysv.lo
-  CC       src/shm/mpl_shm_mmap.lo
   CC       src/shm/mpl_shm_win.lo
+  CC       src/shm/mpl_shm_mmap.lo
   CCLD     libmpl.la
-make[2]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl'
+make[2]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl'
 Making all in src/openpa
-make[2]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa'
+make[2]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa'
 Making all in src
-make[3]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src'
-cd .. && /bin/sh ./config.status src/config.h
-config.status: creating src/config.h
-config.status: src/config.h is unchanged
+make[3]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src'
 make  all-am
-make[4]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src'
-  CC       opa_queue.lo
+make[4]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src'
   CC       opa_primitives.lo
-cd .. && /bin/sh ./config.status src/config.h
+  CC       opa_queue.lo
   CCLD     libopa.la
-config.status: creating src/config.h
-config.status: src/config.h is unchanged
-make[4]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src'
-make[3]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src'
+make[4]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src'
+make[3]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src'
 Making all in test
-make[3]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/test'
+make[3]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/test'
 make[3]: Nothing to be done for `all'.
-make[3]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/test'
-make[3]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa'
+make[3]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/test'
+make[3]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa'
 make[3]: Nothing to be done for `all-am'.
-make[3]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa'
-make[2]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa'
+make[3]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa'
+make[2]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa'
 Making all in src/hwloc
-make[2]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc'
+make[2]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc'
 Making all in include
-make[3]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc/include'
+make[3]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc/include'
 make[3]: Nothing to be done for `all'.
-make[3]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc/include'
+make[3]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc/include'
 Making all in hwloc
-make[3]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc/hwloc'
+make[3]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc/hwloc'
   CC       topology.lo
   CC       traversal.lo
   CC       distances.lo
@@ -76,68 +70,65 @@ make[3]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-
   CC       diff.lo
   CC       shmem.lo
   CC       misc.lo
-  CC       base64.lo
   CC       topology-noos.lo
-  CC       topology-xml-nolibxml.lo
+  CC       base64.lo
   CC       topology-synthetic.lo
   CC       topology-xml.lo
+  CC       topology-xml-nolibxml.lo
   CC       topology-linux.lo
   CC       topology-hardwired.lo
   CC       topology-x86.lo
   CCLD     libhwloc_embedded.la
-make[3]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc/hwloc'
-make[3]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc'
+make[3]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc/hwloc'
+make[3]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc'
 make[3]: Nothing to be done for `all-am'.
-make[3]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc'
-make[2]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc'
+make[3]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc'
+make[2]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/hwloc'
 Making all in src/mpi/romio
-make[2]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio'
-make[3]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio'
-cd . && /bin/sh ./config.status adio/include/romioconf.h
-config.status: creating adio/include/romioconf.h
-config.status: adio/include/romioconf.h is unchanged
+make[2]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio'
+make[3]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio'
   CC       mpi-io/close.lo
+  CC       mpi-io/file_c2f.lo
   CC       mpi-io/delete.lo
   CC       mpi-io/fsync.lo
-  CC       mpi-io/get_atom.lo
   CC       mpi-io/file_f2c.lo
-  CC       mpi-io/file_c2f.lo
   CC       mpi-io/get_amode.lo
-  CC       mpi-io/get_extent.lo
+  CC       mpi-io/get_atom.lo
   CC       mpi-io/get_bytoff.lo
+  CC       mpi-io/get_extent.lo
   CC       mpi-io/get_group.lo
-  CC       mpi-io/get_info.lo
   CC       mpi-io/get_posn.lo
+  CC       mpi-io/get_info.lo
   CC       mpi-io/get_size.lo
   CC       mpi-io/get_posn_sh.lo
-  CC       mpi-io/get_view.lo
   CC       mpi-io/iread.lo
   CC       mpi-io/iread_at.lo
-  CC       mpi-io/iread_all.lo
-  CC       mpi-io/iread_sh.lo
-  CC       mpi-io/iwrite_all.lo
   CC       mpi-io/iread_atall.lo
-  CC       mpi-io/iwrite.lo
-  CC       mpi-io/open.lo
+  CC       mpi-io/iread_all.lo
   CC       mpi-io/iwrite_atall.lo
+  CC       mpi-io/iwrite_all.lo
+  CC       mpi-io/iwrite_at.lo
+  CC       mpi-io/open.lo
+  CC       mpi-io/get_view.lo
+  CC       mpi-io/iwrite.lo
+  CC       mpi-io/iread_sh.lo
   CC       mpi-io/iwrite_sh.lo
-  CC       mpi-io/rd_atalle.lo
-  CC       mpi-io/rd_atallb.lo
   CC       mpi-io/prealloc.lo
+  CC       mpi-io/rd_atallb.lo
+  CC       mpi-io/rd_atalle.lo
   CC       mpi-io/read.lo
   CC       mpi-io/read_all.lo
-  CC       mpi-io/iwrite_at.lo
   CC       mpi-io/read_allb.lo
   CC       mpi-io/read_alle.lo
-  CC       mpi-io/read_ord.lo
-  CC       mpi-io/read_orde.lo
-  CC       mpi-io/read_atall.lo
   CC       mpi-io/read_at.lo
-  CC       mpi-io/register_datarep.lo
-  CC       mpi-io/seek.lo
+  CC       mpi-io/read_atall.lo
+  CC       mpi-io/read_ord.lo
   CC       mpi-io/read_ordb.lo
+  CC       mpi-io/read_orde.lo
   CC       mpi-io/read_sh.lo
+  CC       mpi-io/register_datarep.lo
   CC       mpi-io/seek_sh.lo
+  CC       mpi-io/seek.lo
   CC       mpi-io/set_atom.lo
   CC       mpi-io/set_info.lo
   CC       mpi-io/set_size.lo
@@ -174,104 +165,104 @@ config.status: adio/include/romioconf.h is unchanged
   CC       adio/ad_nfs/ad_nfs.lo
   CC       adio/ad_nfs/ad_nfs_resize.lo
   CC       adio/ad_nfs/ad_nfs_features.lo
-  CC       adio/ad_testfs/ad_testfs_close.lo
   CC       adio/ad_testfs/ad_testfs_read.lo
+  CC       adio/ad_testfs/ad_testfs_close.lo
   CC       adio/ad_testfs/ad_testfs_rdcoll.lo
-  CC       adio/ad_testfs/ad_testfs_delete.lo
-  CC       adio/common/ad_done_fake.lo
   CC       adio/ad_testfs/ad_testfs_wrcoll.lo
   CC       adio/ad_testfs/ad_testfs_open.lo
-  CC       adio/ad_testfs/ad_testfs_done.lo
   CC       adio/ad_testfs/ad_testfs_write.lo
   CC       adio/ad_testfs/ad_testfs_fcntl.lo
+  CC       adio/ad_testfs/ad_testfs_done.lo
   CC       adio/ad_testfs/ad_testfs_iread.lo
   CC       adio/ad_testfs/ad_testfs_iwrite.lo
   CC       adio/ad_testfs/ad_testfs_wait.lo
   CC       adio/ad_testfs/ad_testfs_flush.lo
-  CC       adio/ad_testfs/ad_testfs_seek.lo
   CC       adio/ad_testfs/ad_testfs_resize.lo
+  CC       adio/ad_testfs/ad_testfs_seek.lo
   CC       adio/ad_testfs/ad_testfs_hints.lo
-  CC       adio/common/ad_iread_fake.lo
   CC       adio/ad_testfs/ad_testfs.lo
+  CC       adio/ad_testfs/ad_testfs_delete.lo
   CC       adio/ad_ufs/ad_ufs.lo
-  CC       adio/common/ad_aggregate.lo
   CC       adio/ad_ufs/ad_ufs_open.lo
-  CC       adio/common/ad_iwrite_fake.lo
-  CC       adio/common/ad_close.lo
+  CC       adio/common/ad_aggregate.lo
   CC       adio/common/ad_aggregate_new.lo
+  CC       adio/common/ad_close.lo
   CC       adio/common/ad_coll_build_req_new.lo
   CC       adio/common/ad_coll_exch_new.lo
-  CC       adio/common/ad_delete.lo
   CC       adio/common/ad_darray.lo
+  CC       adio/common/ad_delete.lo
   CC       adio/common/ad_done.lo
+  CC       adio/common/ad_done_fake.lo
   CC       adio/common/ad_end.lo
   CC       adio/common/ad_fcntl.lo
   CC       adio/common/ad_features.lo
   CC       adio/common/ad_flush.lo
   CC       adio/common/ad_fstype.lo
-  CC       adio/common/ad_get_sh_fp.lo
   CC       adio/common/ad_hints.lo
+  CC       adio/common/ad_get_sh_fp.lo
   CC       adio/common/ad_init.lo
-  CC       adio/common/ad_iread.lo
+  CC       adio/common/ad_iread_fake.lo
   CC       adio/common/ad_io_coll.lo
   CC       adio/common/ad_iopen.lo
+  CC       adio/common/ad_iread.lo
   CC       adio/common/ad_iread_coll.lo
-  CC       adio/common/ad_iwrite.lo
   CC       adio/common/ad_iwrite_coll.lo
+  CC       adio/common/ad_iwrite.lo
+  CC       adio/common/ad_iwrite_fake.lo
   CC       adio/common/ad_open.lo
   CC       adio/common/ad_opencoll.lo
   CC       adio/common/ad_opencoll_failsafe.lo
-  CC       adio/common/ad_prealloc.lo
+  CC       adio/common/ad_wait_fake.lo
   CC       adio/common/ad_opencoll_scalable.lo
-  CC       adio/common/ad_read_coll.lo
   CC       adio/common/ad_read.lo
+  CC       adio/common/ad_prealloc.lo
+  CC       adio/common/ad_read_coll.lo
   CC       adio/common/ad_read_str.lo
   CC       adio/common/ad_read_str_naive.lo
-  CC       adio/common/ad_seek.lo
-  CC       adio/common/ad_set_sh_fp.lo
   CC       adio/common/ad_resize.lo
-  CC       adio/common/ad_wait.lo
+  CC       adio/common/ad_seek.lo
+  CC       adio/common/ad_write_coll.lo
   CC       adio/common/ad_set_view.lo
   CC       adio/common/ad_subarray.lo
-  CC       adio/common/ad_wait_fake.lo
-  CC       adio/common/ad_write_str.lo
-  CC       adio/common/ad_write_str_naive.lo
-  CC       adio/common/ad_write_coll.lo
+  CC       adio/common/ad_set_sh_fp.lo
   CC       adio/common/ad_write_nolock.lo
-  CC       adio/common/adi_close.lo
+  CC       adio/common/ad_wait.lo
+  CC       adio/common/ad_write_str.lo
   CC       adio/common/ad_write.lo
-  CC       adio/common/byte_offset.lo
   CC       adio/common/cb_config_list.lo
+  CC       adio/common/adi_close.lo
+  CC       adio/common/ad_write_str_naive.lo
   CC       adio/common/eof_offset.lo
+  CC       adio/common/byte_offset.lo
+  CC       adio/common/error.lo
   CC       adio/common/flatten.lo
   CC       adio/common/get_fp_posn.lo
-  CC       adio/common/error.lo
   CC       adio/common/greq_fns.lo
   CC       adio/common/heap_sort.lo
-  CC       adio/common/iscontig.lo
-  CC       adio/common/malloc.lo
+  CC       adio/common/lock.lo
   CC       adio/common/shfp_fname.lo
+  CC       adio/common/iscontig.lo
   CC       adio/common/status_setb.lo
   CC       adio/common/strfns.lo
-  CC       adio/common/ad_threaded_io.lo
   CC       adio/common/system_hints.lo
-  CC       adio/common/lock.lo
   CC       adio/common/hint_fns.lo
+  CC       adio/common/malloc.lo
+  CC       adio/common/ad_threaded_io.lo
   CC       adio/common/p2p_aggregation.lo
   CC       adio/common/onesided_aggregation.lo
   CC       adio/common/ad_tuning.lo
   CC       adio/common/utils.lo
   CCLD     libromio.la
-make[3]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio'
-make[2]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio'
+make[3]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio'
+make[2]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio'
 Making all in src/pm/hydra
-make[2]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra'
+make[2]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra'
 Making all in mpl
-make[3]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/mpl'
+make[3]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/mpl'
   CC       src/bt/mpl_bt.lo
   CC       src/dbg/mpl_dbg.lo
-  CC       src/mem/mpl_trmem.lo
   CC       src/env/mpl_env.lo
+  CC       src/mem/mpl_trmem.lo
   CC       src/msg/mpl_msg.lo
   CC       src/sock/mpl_sock.lo
   CC       src/sock/mpl_host.lo
@@ -286,27 +277,27 @@ make[3]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-
   CC       src/timer/mpl_timer_clock_gettime.lo
   CC       src/timer/mpl_timer_gcc_ia64_cycle.lo
   CC       src/timer/mpl_timer_gethrtime.lo
-  CC       src/timer/mpl_timer_gettimeofday.lo
-  CC       src/timer/mpl_timer_mach_absolute_time.lo
   CC       src/timer/mpl_timer_linux86_cycle.lo
+  CC       src/timer/mpl_timer_gettimeofday.lo
+  CC       src/timer/mpl_timer_ppc64_cycle.lo
+  CC       src/timer/mpl_timer_mach_absolute_time.lo
   CC       src/timer/mpl_timer_query_performance_counter.lo
   CC       src/timer/mpl_timer_win86_cycle.lo
-  CC       src/timer/mpl_timer_ppc64_cycle.lo
   CC       src/timer/mpl_timer_device.lo
   CC       src/shm/mpl_shm.lo
   CC       src/shm/mpl_shm_sysv.lo
   CC       src/shm/mpl_shm_mmap.lo
   CC       src/shm/mpl_shm_win.lo
   CCLD     libmpl.la
-make[3]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/mpl'
+make[3]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/mpl'
 Making all in tools/topo/hwloc/hwloc
-make[3]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc'
+make[3]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc'
 Making all in include
-make[4]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc/include'
+make[4]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc/include'
 make[4]: Nothing to be done for `all'.
-make[4]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc/include'
+make[4]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc/include'
 Making all in hwloc
-make[4]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc/hwloc'
+make[4]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc/hwloc'
   CC       topology.lo
   CC       traversal.lo
   CC       distances.lo
@@ -326,43 +317,40 @@ make[4]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-
   CC       topology-hardwired.lo
   CC       topology-x86.lo
   CCLD     libhwloc_embedded.la
-make[4]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc/hwloc'
-make[4]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc'
+make[4]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc/hwloc'
+make[4]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc'
 make[4]: Nothing to be done for `all-am'.
-make[4]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc'
-make[3]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc'
+make[4]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc'
+make[3]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra/tools/topo/hwloc/hwloc'
 Making all in .
-make[3]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra'
-cd . && /bin/sh ./config.status include/hydra_config.h
-config.status: creating include/hydra_config.h
-config.status: include/hydra_config.h is unchanged
+make[3]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra'
+  CC       utils/alloc/alloc.lo
+  CC       utils/dbg/dbg.lo
   CC       utils/args/args.lo
   CC       utils/env/env.lo
-  CC       utils/alloc/alloc.lo
+  CC       utils/launch/launch.lo
   CC       utils/others/others.lo
   CC       utils/signals/signals.lo
-  CC       utils/dbg/dbg.lo
-  CC       utils/launch/launch.lo
   CC       utils/string/string.lo
   CC       utils/sock/sock.lo
-  CC       tools/bootstrap/src/bsci_launch.lo
-  CC       tools/bootstrap/src/bsci_init.lo
-  CC       tools/topo/hwloc/topo_hwloc.lo
-  CC       tools/bootstrap/src/bsci_finalize.lo
-  CC       tools/bootstrap/src/bsci_query_native_int.lo
-  CC       tools/bootstrap/src/bsci_query_node_list.lo
   CC       tools/topo/topo.lo
+  CC       tools/topo/hwloc/topo_hwloc.lo
+  CC       tools/bootstrap/src/bsci_init.lo
+  CC       tools/bootstrap/src/bsci_launch.lo
+  CC       tools/bootstrap/src/bsci_finalize.lo
   CC       tools/bootstrap/src/bsci_query_proxy_id.lo
+  CC       tools/bootstrap/src/bsci_query_node_list.lo
+  CC       tools/bootstrap/utils/bscu_wait.lo
+  CC       tools/bootstrap/src/bsci_query_native_int.lo
   CC       tools/bootstrap/src/bsci_wait.lo
   CC       tools/bootstrap/src/bsci_env.lo
-  CC       tools/bootstrap/utils/bscu_wait.lo
   CC       tools/bootstrap/utils/bscu_cb.lo
-  CC       tools/bootstrap/external/fork_init.lo
   CC       tools/bootstrap/external/external_common.lo
   CC       tools/bootstrap/external/external_common_launch.lo
+  CC       tools/bootstrap/external/fork_init.lo
   CC       tools/bootstrap/external/user_init.lo
-  CC       tools/bootstrap/external/rsh_init.lo
   CC       tools/bootstrap/external/manual_init.lo
+  CC       tools/bootstrap/external/rsh_init.lo
   CC       tools/bootstrap/external/rsh_env.lo
   CC       tools/bootstrap/external/ssh_init.lo
   CC       tools/bootstrap/external/ssh.lo
@@ -374,155 +362,903 @@ config.status: include/hydra_config.h is unchanged
   CC       tools/bootstrap/external/slurm_query_native_int.lo
   CC       tools/bootstrap/external/slurm_query_node_list.lo
   CC       tools/bootstrap/external/slurm_query_proxy_id.lo
-  CC       tools/bootstrap/external/ll_launch.lo
   CC       tools/bootstrap/external/ll_init.lo
+  CC       tools/bootstrap/external/ll_launch.lo
+  CC       tools/bootstrap/external/ll_query_node_list.lo
   CC       tools/bootstrap/external/ll_query_native_int.lo
   CC       tools/bootstrap/external/ll_query_proxy_id.lo
-  CC       tools/bootstrap/external/ll_env.lo
+  CC       tools/bootstrap/external/sge_query_native_int.lo
+  CC       tools/bootstrap/external/sge_query_node_list.lo
+  CC       tools/bootstrap/external/pbs_init.lo
+  CC       tools/bootstrap/external/pbs_query_native_int.lo
+  CC       tools/bootstrap/external/pbs_query_node_list.lo
+  CC       tools/bootstrap/external/cobalt_query_native_int.lo
+  CC       tools/bootstrap/persist/persist_init.lo
+  CC       tools/bootstrap/external/cobalt_query_node_list.lo
+  CC       tools/bootstrap/persist/persist_launch.lo
   CC       tools/bootstrap/external/lsf_init.lo
-  CC       tools/bootstrap/external/ll_query_node_list.lo
+  CC       tools/bootstrap/external/ll_env.lo
   CC       tools/bootstrap/external/lsf_query_native_int.lo
   CC       tools/bootstrap/external/lsf_query_node_list.lo
   CC       tools/bootstrap/external/lsf_env.lo
   CC       tools/bootstrap/external/sge_init.lo
-  CC       tools/bootstrap/external/sge_query_native_int.lo
-  CC       tools/bootstrap/external/sge_query_node_list.lo
+  CC       pm/pmiserv/pmiserv_pmci.lo
   CC       tools/bootstrap/external/sge_env.lo
-  CC       tools/bootstrap/external/pbs_init.lo
-  CC       tools/bootstrap/external/pbs_query_native_int.lo
-  CC       tools/bootstrap/external/pbs_query_node_list.lo
+  CC       pm/pmiserv/pmiserv_cb.lo
+  CC       pm/pmiserv/common.lo
   CC       tools/bootstrap/external/cobalt_init.lo
-  CC       tools/bootstrap/external/cobalt_query_native_int.lo
-  CC       tools/bootstrap/external/cobalt_query_node_list.lo
-  CC       tools/bootstrap/persist/persist_init.lo
-  CC       tools/bootstrap/persist/persist_launch.lo
-  CC       tools/bootstrap/persist/persist_wait.lo
   CC       tools/ckpoint/ckpoint.lo
+  CC       tools/bootstrap/persist/persist_wait.lo
   CC       tools/demux/demux.lo
-  CC       tools/demux/demux_poll.lo
+  CC       tools/bootstrap/persist/hydra_persist-persist_server.o
   CC       tools/demux/demux_select.lo
+  CC       tools/demux/demux_poll.lo
   CC       tools/debugger/debugger.lo
+  CC       pm/pmiserv/hydra_pmi_proxy-pmip_utils.o
   CC       ui/utils/uiu.lo
   CC       pm/pmiserv/pmiserv_pmi.lo
   CC       pm/pmiserv/pmiserv_pmi_v1.lo
-  CC       pm/pmiserv/pmiserv_pmi_v2.lo
-  CC       pm/pmiserv/pmiserv_pmci.lo
-  CC       pm/pmiserv/pmiserv_cb.lo
-  CC       pm/pmiserv/pmiserv_utils.lo
-  CC       pm/pmiserv/common.lo
-  CC       pm/pmiserv/pmi_v2_common.lo
-  CC       tools/bootstrap/persist/hydra_persist-persist_server.o
-  CC       tools/nameserver/hydra_nameserver-hydra_nameserver.o
-  CC       pm/pmiserv/hydra_pmi_proxy-pmip.o
-  CC       pm/pmiserv/hydra_pmi_proxy-pmip_cb.o
-  CC       pm/pmiserv/hydra_pmi_proxy-pmip_utils.o
-  CC       pm/pmiserv/hydra_pmi_proxy-pmip_pmi_v1.o
   CC       pm/pmiserv/hydra_pmi_proxy-pmip_pmi_v2.o
   CC       pm/pmiserv/hydra_pmi_proxy-common.o
   CC       pm/pmiserv/hydra_pmi_proxy-pmi_v2_common.o
-  CC       ui/mpich/mpiexec.o
+  CC       pm/pmiserv/pmi_v2_common.lo
+  CC       pm/pmiserv/pmiserv_pmi_v2.lo
+  CC       pm/pmiserv/pmiserv_utils.lo
   CC       ui/mpich/utils.o
+  CC       tools/nameserver/hydra_nameserver-hydra_nameserver.o
+  CC       pm/pmiserv/hydra_pmi_proxy-pmip.o
+  CC       pm/pmiserv/hydra_pmi_proxy-pmip_cb.o
+  CC       pm/pmiserv/hydra_pmi_proxy-pmip_pmi_v1.o
+  CC       ui/mpich/mpiexec.o
   CCLD     libhydra.la
   CCLD     hydra_persist
   CCLD     hydra_nameserver
   CCLD     hydra_pmi_proxy
   CCLD     libpm.la
   CCLD     mpiexec.hydra
-make[3]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra'
-make[2]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra'
+make[3]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra'
+make[2]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/pm/hydra'
 Making all in .
-make[2]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3'
-cd . && /bin/sh ./config.status src/include/mpichconf.h
-  CC       src/mutex/lib_libmpi_la-mutex_create.lo
+make[2]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3'
   CC       src/mutex/lib_libmpi_la-mutex_free.lo
+  CC       src/mutex/lib_libmpi_la-mutex_create.lo
   CC       src/mutex/lib_libmpi_la-mutex_lock.lo
   CC       src/mutex/lib_libmpi_la-mutex_unlock.lo
+  CC       src/mpi_t/lib_libmpi_la-cat_changed.lo
+  CC       src/mpi_t/lib_libmpi_la-cat_get_categories.lo
+  CC       src/mpi_t/lib_libmpi_la-cat_get_cvars.lo
+  CC       src/mpi_t/lib_libmpi_la-cat_get_info.lo
+  CC       src/mpi_t/lib_libmpi_la-cat_get_num.lo
+  CC       src/mpi_t/lib_libmpi_la-cat_get_pvars.lo
+  CC       src/mpi_t/lib_libmpi_la-cvar_get_info.lo
+  CC       src/mpi_t/lib_libmpi_la-cvar_get_num.lo
+  CC       src/mpi_t/lib_libmpi_la-cvar_handle_alloc.lo
+  CC       src/mpi_t/lib_libmpi_la-cvar_handle_free.lo
+  CC       src/mpi_t/lib_libmpi_la-cvar_read.lo
+  CC       src/mpi_t/lib_libmpi_la-cvar_write.lo
+  CC       src/mpi_t/lib_libmpi_la-enum_get_info.lo
+  CC       src/mpi_t/lib_libmpi_la-mpit_finalize.lo
+  CC       src/mpi_t/lib_libmpi_la-enum_get_item.lo
+  CC       src/mpi_t/lib_libmpi_la-pvar_get_info.lo
+  CC       src/mpi_t/lib_libmpi_la-mpit_initthread.lo
+  CC       src/mpi_t/lib_libmpi_la-pvar_get_num.lo
+  CC       src/mpi_t/lib_libmpi_la-pvar_handle_alloc.lo
+  CC       src/mpi_t/lib_libmpi_la-pvar_handle_free.lo
+  CC       src/mpi_t/lib_libmpi_la-pvar_read.lo
+  CC       src/mpi_t/lib_libmpi_la-pvar_readreset.lo
+  CC       src/mpi_t/lib_libmpi_la-pvar_reset.lo
+  CC       src/mpi_t/lib_libmpi_la-pvar_session_create.lo
+  CC       src/mpi_t/lib_libmpi_la-pvar_session_free.lo
+  CC       src/mpi_t/lib_libmpi_la-pvar_start.lo
+  CC       src/mpi_t/lib_libmpi_la-pvar_stop.lo
+  CC       src/mpi_t/lib_libmpi_la-pvar_write.lo
+  CC       src/mpi_t/lib_libmpi_la-cat_get_index.lo
+  CC       src/mpi_t/lib_libmpi_la-cvar_get_index.lo
+  CC       src/mpi_t/lib_libmpi_la-pvar_get_index.lo
+  CC       src/mpi/attr/lib_libmpi_la-attrutil.lo
+  CC       src/mpi/attr/lib_libmpi_la-dup_fn.lo
+  CC       src/mpi/coll/allgather/lib_libmpi_la-allgather_allcomm_nb.lo
+  CC       src/mpi/coll/allgather/lib_libmpi_la-allgather_intra_recursive_doubling.lo
+  CC       src/mpi/coll/allgather/lib_libmpi_la-allgather_intra_brucks.lo
+  CC       src/mpi/coll/allgather/lib_libmpi_la-allgather_intra_ring.lo
+  CC       src/mpi/coll/allgather/lib_libmpi_la-allgather_inter_local_gather_remote_bcast.lo
+  CC       src/mpi/coll/allgatherv/lib_libmpi_la-allgatherv_allcomm_nb.lo
+  CC       src/mpi/coll/allgatherv/lib_libmpi_la-allgatherv_intra_recursive_doubling.lo
+  CC       src/mpi/coll/allgatherv/lib_libmpi_la-allgatherv_intra_brucks.lo
+  CC       src/mpi/coll/allgatherv/lib_libmpi_la-allgatherv_intra_ring.lo
+  CC       src/mpi/coll/allgatherv/lib_libmpi_la-allgatherv_inter_remote_gather_local_bcast.lo
+  CC       src/mpi/coll/allreduce/lib_libmpi_la-allreduce_allcomm_nb.lo
+  CC       src/mpi/coll/allreduce/lib_libmpi_la-allreduce_intra_recursive_doubling.lo
+  CC       src/mpi/coll/allreduce/lib_libmpi_la-allreduce_intra_reduce_scatter_allgather.lo
+  CC       src/mpi/coll/allreduce/lib_libmpi_la-allreduce_intra_smp.lo
+  CC       src/mpi/coll/allreduce/lib_libmpi_la-allreduce_inter_reduce_exchange_bcast.lo
+  CC       src/mpi/coll/allreduce/lib_libmpi_la-allreduce_intra_concurrent.lo
+  CC       src/mpi/coll/alltoall/lib_libmpi_la-alltoall_allcomm_nb.lo
+  CC       src/mpi/coll/alltoall/lib_libmpi_la-alltoall_intra_pairwise_sendrecv_replace.lo
+  CC       src/mpi/coll/alltoall/lib_libmpi_la-alltoall_intra_brucks.lo
+  CC       src/mpi/coll/alltoall/lib_libmpi_la-alltoall_intra_scattered.lo
+  CC       src/mpi/coll/alltoall/lib_libmpi_la-alltoall_intra_pairwise.lo
+  CC       src/mpi/coll/alltoall/lib_libmpi_la-alltoall_inter_pairwise_exchange.lo
+  CC       src/mpi/coll/alltoallv/lib_libmpi_la-alltoallv_allcomm_nb.lo
+  CC       src/mpi/coll/alltoallv/lib_libmpi_la-alltoallv_intra_pairwise_sendrecv_replace.lo
+  CC       src/mpi/coll/alltoallv/lib_libmpi_la-alltoallv_intra_scattered.lo
+  CC       src/mpi/coll/alltoallv/lib_libmpi_la-alltoallv_inter_pairwise_exchange.lo
+  CC       src/mpi/coll/alltoallw/lib_libmpi_la-alltoallw_allcomm_nb.lo
+  CC       src/mpi/coll/alltoallw/lib_libmpi_la-alltoallw_intra_pairwise_sendrecv_replace.lo
+  CC       src/mpi/coll/alltoallw/lib_libmpi_la-alltoallw_intra_scattered.lo
+  CC       src/mpi/coll/alltoallw/lib_libmpi_la-alltoallw_inter_pairwise_exchange.lo
+  CC       src/mpi/coll/barrier/lib_libmpi_la-barrier_allcomm_nb.lo
+  CC       src/mpi/coll/barrier/lib_libmpi_la-barrier_intra_dissemination.lo
+  CC       src/mpi/coll/barrier/lib_libmpi_la-barrier_intra_smp.lo
+  CC       src/mpi/coll/barrier/lib_libmpi_la-barrier_inter_bcast.lo
+  CC       src/mpi/coll/bcast/lib_libmpi_la-bcast_utils.lo
+  CC       src/mpi/coll/bcast/lib_libmpi_la-bcast_allcomm_nb.lo
+  CC       src/mpi/coll/bcast/lib_libmpi_la-bcast_intra_binomial.lo
+  CC       src/mpi/coll/bcast/lib_libmpi_la-bcast_intra_scatter_recursive_doubling_allgather.lo
+  CC       src/mpi/coll/bcast/lib_libmpi_la-bcast_intra_scatter_ring_allgather.lo
+  CC       src/mpi/coll/bcast/lib_libmpi_la-bcast_intra_smp.lo
+  CC       src/mpi/coll/bcast/lib_libmpi_la-bcast_inter_remote_send_local_bcast.lo
+  CC       src/mpi/coll/exscan/lib_libmpi_la-exscan_allcomm_nb.lo
+  CC       src/mpi/coll/exscan/lib_libmpi_la-exscan_intra_recursive_doubling.lo
+  CC       src/mpi/coll/gather/lib_libmpi_la-gather_allcomm_nb.lo
+  CC       src/mpi/coll/gather/lib_libmpi_la-gather_intra_binomial.lo
+  CC       src/mpi/coll/gather/lib_libmpi_la-gather_inter_linear.lo
+  CC       src/mpi/coll/gather/lib_libmpi_la-gather_inter_local_gather_remote_send.lo
+  CC       src/mpi/coll/gatherv/lib_libmpi_la-gatherv_allcomm_nb.lo
+  CC       src/mpi/coll/gatherv/lib_libmpi_la-gatherv_allcomm_linear.lo
+  CC       src/mpi/coll/reduce_scatter/lib_libmpi_la-reduce_scatter_allcomm_nb.lo
+  CC       src/mpi/coll/reduce_scatter/lib_libmpi_la-reduce_scatter_intra_recursive_halving.lo
+  CC       src/mpi/coll/reduce_scatter/lib_libmpi_la-reduce_scatter_intra_pairwise.lo
+  CC       src/mpi/coll/reduce_scatter/lib_libmpi_la-reduce_scatter_intra_recursive_doubling.lo
+  CC       src/mpi/coll/reduce_scatter/lib_libmpi_la-reduce_scatter_inter_remote_reduce_local_scatter.lo
+  CC       src/mpi/coll/reduce_scatter/lib_libmpi_la-reduce_scatter_intra_noncommutative.lo
+  CC       src/mpi/coll/reduce_scatter_block/lib_libmpi_la-reduce_scatter_block_allcomm_nb.lo
+  CC       src/mpi/coll/reduce_scatter_block/lib_libmpi_la-reduce_scatter_block_intra_recursive_halving.lo
+  CC       src/mpi/coll/reduce_scatter_block/lib_libmpi_la-reduce_scatter_block_intra_pairwise.lo
+  CC       src/mpi/coll/reduce_scatter_block/lib_libmpi_la-reduce_scatter_block_intra_recursive_doubling.lo
+  CC       src/mpi/coll/reduce_scatter_block/lib_libmpi_la-reduce_scatter_block_intra_noncommutative.lo
+  CC       src/mpi/coll/reduce_scatter_block/lib_libmpi_la-reduce_scatter_block_inter_remote_reduce_local_scatter.lo
+  CC       src/mpi/coll/reduce/lib_libmpi_la-reduce_allcomm_nb.lo
+  CC       src/mpi/coll/reduce/lib_libmpi_la-reduce_intra_reduce_scatter_gather.lo
+  CC       src/mpi/coll/reduce/lib_libmpi_la-reduce_intra_binomial.lo
+  CC       src/mpi/coll/reduce/lib_libmpi_la-reduce_intra_smp.lo
+  CC       src/mpi/coll/reduce/lib_libmpi_la-reduce_inter_local_reduce_remote_send.lo
+  CC       src/mpi/coll/scan/lib_libmpi_la-scan_allcomm_nb.lo
+  CC       src/mpi/coll/scan/lib_libmpi_la-scan_intra_recursive_doubling.lo
+  CC       src/mpi/coll/scan/lib_libmpi_la-scan_intra_smp.lo
+  CC       src/mpi/coll/scatter/lib_libmpi_la-scatter_allcomm_nb.lo
+  CC       src/mpi/coll/scatter/lib_libmpi_la-scatter_intra_binomial.lo
+  CC       src/mpi/coll/scatter/lib_libmpi_la-scatter_inter_linear.lo
+  CC       src/mpi/coll/scatter/lib_libmpi_la-scatter_inter_remote_send_local_scatter.lo
+  CC       src/mpi/coll/scatterv/lib_libmpi_la-scatterv_allcomm_nb.lo
+  CC       src/mpi/coll/scatterv/lib_libmpi_la-scatterv_allcomm_linear.lo
+  CC       src/mpi/coll/neighbor_allgatherv/lib_libmpi_la-neighbor_allgatherv_allcomm_nb.lo
+  CC       src/mpi/coll/neighbor_allgather/lib_libmpi_la-neighbor_allgather_allcomm_nb.lo
+  CC       src/mpi/coll/neighbor_alltoall/lib_libmpi_la-neighbor_alltoall_allcomm_nb.lo
+  CC       src/mpi/coll/neighbor_alltoallv/lib_libmpi_la-neighbor_alltoallv_allcomm_nb.lo
+  CC       src/mpi/coll/neighbor_alltoallw/lib_libmpi_la-neighbor_alltoallw_allcomm_nb.lo
+  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_intra_recursive_doubling.lo
+  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_intra_brucks.lo
+  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_intra_ring.lo
+  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_inter_local_gather_remote_bcast.lo
+  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_gentran_algos.lo
+  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_intra_recexch_distance_doubling.lo
+  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_intra_recexch_distance_halving.lo
+  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_intra_gentran_brucks.lo
+  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_intra_recursive_doubling.lo
+  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_intra_brucks.lo
+  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_intra_ring.lo
+  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_inter_remote_gather_local_bcast.lo
+  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_gentran_algos.lo
+  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_intra_recexch_distance_doubling.lo
+  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_intra_recexch_distance_halving.lo
+  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_intra_gentran_ring.lo
+  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_naive.lo
+  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_reduce_scatter_allgather.lo
+  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_recursive_doubling.lo
+  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_smp.lo
+  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_inter_remote_reduce_local_bcast.lo
+  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_gentran_algos.lo
+  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_recexch_single_buffer.lo
+  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_recexch_multiple_buffer.lo
+  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_tree_kary.lo
+  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_tree_knomial.lo
+  CC       src/mpi/coll/ialltoall/lib_libmpi_la-ialltoall_intra_inplace.lo
+  CC       src/mpi/coll/ialltoall/lib_libmpi_la-ialltoall_intra_brucks.lo
+  CC       src/mpi/coll/ialltoall/lib_libmpi_la-ialltoall_intra_permuted_sendrecv.lo
+  CC       src/mpi/coll/ialltoall/lib_libmpi_la-ialltoall_intra_pairwise.lo
+  CC       src/mpi/coll/ialltoall/lib_libmpi_la-ialltoall_inter_pairwise_exchange.lo
+  CC       src/mpi/coll/ialltoallv/lib_libmpi_la-ialltoallv_intra_inplace.lo
+  CC       src/mpi/coll/ialltoallv/lib_libmpi_la-ialltoallv_intra_blocked.lo
+  CC       src/mpi/coll/ialltoallv/lib_libmpi_la-ialltoallv_inter_pairwise_exchange.lo
+  CC       src/mpi/coll/ialltoallw/lib_libmpi_la-ialltoallw_intra_inplace.lo
+  CC       src/mpi/coll/ialltoallw/lib_libmpi_la-ialltoallw_intra_blocked.lo
+  CC       src/mpi/coll/ialltoallw/lib_libmpi_la-ialltoallw_inter_pairwise_exchange.lo
+  CC       src/mpi/coll/ibarrier/lib_libmpi_la-ibarrier_intra_recursive_doubling.lo
+  CC       src/mpi/coll/ibarrier/lib_libmpi_la-ibarrier_intra_recexch.lo
+  CC       src/mpi/coll/ibarrier/lib_libmpi_la-ibarrier_inter_bcast.lo
+  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_intra_binomial.lo
+  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_intra_scatter_ring_allgather.lo
+  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_intra_scatter_recursive_doubling_allgather.lo
+  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_intra_smp.lo
+  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_inter_flat.lo
+  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_gentran_algos.lo
+  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_intra_tree.lo
+  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_intra_ring.lo
+  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_intra_scatter_recexch_allgather.lo
+  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_utils.lo
+  CC       src/mpi/coll/iexscan/lib_libmpi_la-iexscan_intra_recursive_doubling.lo
+  CC       src/mpi/coll/igather/lib_libmpi_la-igather_intra_binomial.lo
+  CC       src/mpi/coll/igather/lib_libmpi_la-igather_inter_short.lo
+  CC       src/mpi/coll/igather/lib_libmpi_la-igather_inter_long.lo
+  CC       src/mpi/coll/igather/lib_libmpi_la-igather_gentran_algos.lo
+  CC       src/mpi/coll/igather/lib_libmpi_la-igather_intra_tree.lo
+  CC       src/mpi/coll/igatherv/lib_libmpi_la-igatherv_allcomm_linear.lo
+  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter_intra_recursive_halving.lo
+  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter_intra_pairwise.lo
+  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter_intra_recursive_doubling.lo
+  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter_intra_noncommutative.lo
+  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter_inter_remote_reduce_local_scatterv.lo
+  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter_gentran_algos.lo
+  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter_intra_recexch.lo
+  CC       src/mpi/coll/ireduce_scatter_block/lib_libmpi_la-ireduce_scatter_block_intra_recursive_halving.lo
+  CC       src/mpi/coll/ireduce_scatter_block/lib_libmpi_la-ireduce_scatter_block_intra_pairwise.lo
+  CC       src/mpi/coll/ireduce_scatter_block/lib_libmpi_la-ireduce_scatter_block_intra_recursive_doubling.lo
+  CC       src/mpi/coll/ireduce_scatter_block/lib_libmpi_la-ireduce_scatter_block_intra_noncommutative.lo
+  CC       src/mpi/coll/ireduce_scatter_block/lib_libmpi_la-ireduce_scatter_block_inter_remote_reduce_local_scatterv.lo
+  CC       src/mpi/coll/ireduce_scatter_block/lib_libmpi_la-ireduce_scatter_block_gentran_algos.lo
+  CC       src/mpi/coll/ireduce_scatter_block/lib_libmpi_la-ireduce_scatter_block_intra_recexch.lo
+  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce_intra_binomial.lo
+  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce_intra_reduce_scatter_gather.lo
+  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce_intra_smp.lo
+  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce_gentran_algos.lo
+  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce_intra_tree.lo
+  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce_inter_local_reduce_remote_send.lo
+  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce_intra_ring.lo
+  CC       src/mpi/coll/iscan/lib_libmpi_la-iscan_intra_recursive_doubling.lo
+  CC       src/mpi/coll/iscan/lib_libmpi_la-iscan_intra_smp.lo
+  CC       src/mpi/coll/iscatter/lib_libmpi_la-iscatter_intra_binomial.lo
+  CC       src/mpi/coll/iscatter/lib_libmpi_la-iscatter_inter_linear.lo
+  CC       src/mpi/coll/iscatter/lib_libmpi_la-iscatter_inter_remote_send_local_scatter.lo
+  CC       src/mpi/coll/iscatter/lib_libmpi_la-iscatter_gentran_algos.lo
+  CC       src/mpi/coll/iscatter/lib_libmpi_la-iscatter_intra_tree.lo
+  CC       src/mpi/coll/iscatterv/lib_libmpi_la-iscatterv_allcomm_linear.lo
+  CC       src/mpi/coll/ineighbor_allgather/lib_libmpi_la-ineighbor_allgather_allcomm_linear.lo
+  CC       src/mpi/coll/ineighbor_allgatherv/lib_libmpi_la-ineighbor_allgatherv_allcomm_linear.lo
+  CC       src/mpi/coll/ineighbor_alltoall/lib_libmpi_la-ineighbor_alltoall_allcomm_linear.lo
+  CC       src/mpi/coll/ineighbor_alltoallv/lib_libmpi_la-ineighbor_alltoallv_allcomm_linear.lo
+  CC       src/mpi/coll/ineighbor_alltoallw/lib_libmpi_la-ineighbor_alltoallw_allcomm_linear.lo
+  CC       src/mpi/coll/op/lib_libmpi_la-opsum.lo
+  CC       src/mpi/coll/op/lib_libmpi_la-opmax.lo
+  CC       src/mpi/coll/op/lib_libmpi_la-opmin.lo
+  CC       src/mpi/coll/op/lib_libmpi_la-opband.lo
+  CC       src/mpi/coll/op/lib_libmpi_la-opbor.lo
+  CC       src/mpi/coll/op/lib_libmpi_la-opbxor.lo
+  CC       src/mpi/coll/op/lib_libmpi_la-opland.lo
+  CC       src/mpi/coll/op/lib_libmpi_la-oplor.lo
+  CC       src/mpi/coll/op/lib_libmpi_la-oplxor.lo
+  CC       src/mpi/coll/op/lib_libmpi_la-opprod.lo
+  CC       src/mpi/coll/op/lib_libmpi_la-opminloc.lo
+  CC       src/mpi/coll/op/lib_libmpi_la-opmaxloc.lo
+  CC       src/mpi/coll/op/lib_libmpi_la-opno_op.lo
+  CC       src/mpi/coll/op/lib_libmpi_la-opreplace.lo
+  CC       src/mpi/coll/allreduce_group/lib_libmpi_la-allreduce_group.lo
+  CC       src/mpi/coll/src/lib_libmpi_la-coll_impl.lo
+  CC       src/mpi/coll/transports/gentran/lib_libmpi_la-gentran_impl.lo
+  CC       src/mpi/coll/transports/gentran/lib_libmpi_la-gentran_utils.lo
+  CC       src/mpi/coll/transports/gentran/lib_libmpi_la-tsp_gentran.lo
+  CC       src/mpi/coll/transports/stubtran/lib_libmpi_la-stubtran_impl.lo
+  CC       src/mpi/coll/transports/stubtran/lib_libmpi_la-tsp_stubtran.lo
+  CC       src/mpi/coll/algorithms/treealgo/lib_libmpi_la-treealgo.lo
+  CC       src/mpi/coll/algorithms/treealgo/lib_libmpi_la-treeutil.lo
+  CC       src/mpi/coll/algorithms/recexchalgo/lib_libmpi_la-recexchalgo.lo
+  CC       src/mpi/coll/algorithms/stubalgo/lib_libmpi_la-stubalgo.lo
+  CC       src/mpi/coll/lib_libmpi_la-helper_fns.lo
+  CC       src/mpi/coll/lib_libmpi_la-nbcutil.lo
+  CC       src/mpi/comm/lib_libmpi_la-commutil.lo
+  CC       src/mpi/comm/lib_libmpi_la-contextid.lo
+  CC       src/mpi/datatype/dataloop/lib_libmpi_la-darray_support.lo
+  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop.lo
+  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop_create.lo
+  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop_create_blockindexed.lo
+  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop_create_contig.lo
+  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop_create_indexed.lo
+  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop_create_pairtype.lo
+  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop_create_struct.lo
+  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop_create_vector.lo
+  CC       src/mpi/datatype/dataloop/lib_libmpi_la-segment.lo
+  CC       src/mpi/datatype/dataloop/lib_libmpi_la-segment_count.lo
+  CC       src/mpi/datatype/dataloop/lib_libmpi_la-segment_flatten.lo
+  CC       src/mpi/datatype/dataloop/lib_libmpi_la-subarray_support.lo
+  CC       src/mpi/datatype/lib_libmpi_la-typeutil.lo
+  CC       src/mpi/datatype/lib_libmpi_la-ext32_datatype.lo
+  CC       src/mpi/datatype/lib_libmpi_la-looputil.lo
+  CC       src/mpi/datatype/lib_libmpi_la-type_blockindexed.lo
+  CC       src/mpi/datatype/lib_libmpi_la-type_debug.lo
+  CC       src/mpi/datatype/lib_libmpi_la-type_create_pairtype.lo
+  CC       src/mpi/datatype/lib_libmpi_la-type_flatten.lo
+  CC       src/mpi/errhan/lib_libmpi_la-errutil.lo
+  CC       src/mpi/errhan/lib_libmpi_la-dynerrutil.lo
+  CC       src/mpi/group/lib_libmpi_la-grouputil.lo
+  CC       src/mpi/info/lib_libmpi_la-infoutil.lo
+  CC       src/mpi/init/lib_libmpi_la-initinfo.lo
+  CC       src/mpi/init/lib_libmpi_la-async.lo
+  CC       src/mpi/init/lib_libmpi_la-netloc_util.lo
+  CC       src/mpi/pt2pt/lib_libmpi_la-bsendutil.lo
+  CC       src/mpi/request/lib_libmpi_la-mpir_request.lo
+  CC       src/mpi/rma/lib_libmpi_la-winutil.lo
+  CC       src/mpi/rma/lib_libmpi_la-rmatypeutil.lo
+  CC       src/mpi/topo/lib_libmpi_la-topoutil.lo
+  CC       src/util/mem/lib_libmpi_la-handlemem.lo
+  CC       src/util/mem/lib_libmpi_la-strerror.lo
+  CC       src/util/cvar/lib_libmpi_la-mpir_cvars.lo
+  CC       src/util/procmap/lib_libmpi_la-local_proc.lo
+  CC       src/util/assert/lib_libmpi_la-assert.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpi_la-fdebug.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpi_la-setbot.lo
   F77      src/binding/fortran/mpif_h/setbotf.lo
-config.status: creating src/include/mpichconf.h
-config.status: src/include/mpichconf.h is unchanged
+  CC       src/glue/romio/lib_libmpi_la-glue_romio.lo
+  CC       src/binding/fortran/use_mpi/lib_libmpi_la-create_f90_util.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_buffer.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_comm.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_comm_spawn_multiple.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_handle_connection.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_handle_recv_pkt.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_handle_recv_req.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_handle_revoke_pkt.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_handle_send_req.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_handle_op_req.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_port.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_recvq.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_request.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_rma_progress.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_rma_ops.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_rma_reqops.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_rma_sync.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_rma_pkthandler.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_rndv.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_eager.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_eagersync.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_win_fns.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_abort.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_cancel_recv.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_cancel_send.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_comm_disconnect.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_comm_spawn_multiple.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_comm_failure_ack.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_comm_get_all_failed_procs.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_comm_revoke.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_finalize.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_get_universe_size.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_getpname.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_improbe.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_imrecv.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_init.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_iprobe.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_irecv.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_irsend.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_isend.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_issend.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_mprobe.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_mrecv.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_port.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_probe.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_recv.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_rsend.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_send.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_ssend.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_startall.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_vc.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_rma.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpidi_rma.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_aint.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpidi_isend_self.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpidi_pg.lo
+  CC       src/mpid/ch3/src/lib_libmpi_la-mpidi_printf.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_finalize.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_init.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_isend.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_isendv.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_istartmsg.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_istartmsgv.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_progress.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_rma_shm.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_win_fns.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3i_comm.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3i_eagernoncontig.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_init.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_mpich.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_ckpt.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_finalize.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_network_poll.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_network.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_debug.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_lmt.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_lmt_shm.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_net_array.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_lmt_dma.lo
+  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_lmt_vmsplice.lo
+  CC       src/mpid/ch3/channels/nemesis/netmod/tcp/lib_libmpi_la-tcp_finalize.lo
+  CC       src/mpid/ch3/channels/nemesis/netmod/tcp/lib_libmpi_la-tcp_init.lo
+  CC       src/mpid/ch3/channels/nemesis/netmod/tcp/lib_libmpi_la-tcp_send.lo
+  CC       src/mpid/ch3/channels/nemesis/netmod/tcp/lib_libmpi_la-tcp_utility.lo
+  CC       src/mpid/ch3/channels/nemesis/netmod/tcp/lib_libmpi_la-socksm.lo
+  CC       src/mpid/ch3/channels/nemesis/netmod/tcp/lib_libmpi_la-tcp_getip.lo
+  CC       src/mpid/ch3/channels/nemesis/netmod/tcp/lib_libmpi_la-tcp_ckpt.lo
+  CC       src/mpid/ch3/channels/nemesis/netmod/none/lib_libmpi_la-none.lo
+  CC       src/mpid/ch3/channels/nemesis/utils/monitor/lib_libmpi_la-papi_defs.lo
+  CC       src/mpid/ch3/channels/nemesis/utils/replacements/lib_libmpi_la-mkstemp.lo
+  CC       src/mpid/common/sched/lib_libmpi_la-mpidu_sched.lo
+  CC       src/mpid/common/shm/lib_libmpi_la-mpidu_shm_alloc.lo
+  CC       src/mpid/common/shm/lib_libmpi_la-mpidu_shm_barrier.lo
+  CC       src/mpi_t/lib_libmpi_la-mpit.lo
+  CC       src/nameserv/pmi/lib_libmpi_la-pmi_nameserv.lo
+  CC       src/pmi/simple/lib_libmpi_la-simple_pmiutil.lo
+  CC       src/pmi/simple/lib_libmpi_la-simple_pmi.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-sendf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-recvf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-get_countf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-bsendf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ssendf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-rsendf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-bufattachf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-bufdetachf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-isendf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ibsendf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-issendf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-irsendf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-irecvf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-waitf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-testf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-request_freef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-waitanyf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-testanyf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-waitallf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-testallf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-waitsomef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-testsomef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iprobef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-probef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cancelf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-testcancelf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-send_initf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-bsend_initf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ssend_initf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-rsend_initf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-recv_initf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-startf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-startallf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-sendrecvf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-sndrcvrplf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typecontigf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_vectorf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_hvectorf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_indexedf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_hindexedf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_structf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_sizef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_extentf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_lbf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_ubf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_commitf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_freef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-get_elementsf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-packf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-unpackf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-pack_sizef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-barrierf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-bcastf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-gatherf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-gathervf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-scatterf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-scattervf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-allgatherf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-allgathervf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-alltoallf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-alltoallvf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-alltoallwf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-exscanf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-reducef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-op_createf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-op_freef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-allreducef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-redscatf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-scanf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-group_sizef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-group_rankf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-grouptranksf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-group_comparef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_groupf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-group_unionf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-groupinterf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-groupdifff.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-group_inclf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-group_exclf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-grouprinclf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-grouprexclf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-group_freef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_sizef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_rankf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_comparef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_dup_with_infof.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_dupf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_createf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_splitf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_freef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commtesticf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commrsizef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commrgroupf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iccreatef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-icmergef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-keyval_freef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-attr_putf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-attr_getf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-attr_deletef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-topo_testf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cart_createf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dims_createf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-graph_createf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-graphdims_getf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-graph_getf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cartdim_getf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cart_getf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cart_rankf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cart_coordsf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-grfnbcountf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-grfnbrsf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cart_shiftf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cart_subf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cart_mapf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-graph_mapf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-getpnamef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-get_versionf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-get_library_versionf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-errhcreatef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-errhsetf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-errhgetf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-errhfreef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-error_stringf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-error_classf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-finalizef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-initializedf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-abortf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-close_portf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_acceptf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_connectf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commdiscf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commparentf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_joinf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_spawnf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-spawnmultf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-lookup_namef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-open_portf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-publish_namef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-unpubnamef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_set_infof.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_get_infof.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-accumulatef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-getf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-putf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_completef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_createf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_fencef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_freef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_get_groupf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_lockf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_postf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_startf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_testf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_unlockf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_waitf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_allocatef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_allocate_sharedf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_shared_queryf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_create_dynamicf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_attachf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_detachf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_get_infof.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_set_infof.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-get_accumulatef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-fetch_and_opf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-compare_and_swapf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-rputf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-rgetf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-raccumulatef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-rget_accumulatef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_lock_allf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_unlock_allf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_flushf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_flush_allf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_flush_localf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_flush_local_allf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_syncf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-adderrclassf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-adderrcodef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-adderrstringf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commcallerrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commnewkeyf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commdelattrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commfreekeyf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_get_attrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commgetnamf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_set_attrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_set_namef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-query_threadf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-filecallerrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-greqcompletef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-greqstartf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-isthrmainf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-statsetelf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-statgetclf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typenewkeyf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typedelattrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_dupf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typefreekeyf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_get_attrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typegetcntsf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typegetenvf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typegnamef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typesetattrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typesetnamef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_match_sizef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-wincallerrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-winnewkeyf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-windelattrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-winfreekeyf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_get_attrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_get_namef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_set_attrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_set_namef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-alloc_memf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commcreerrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commgeterrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commseterrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-filecreerrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-filegeterrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-fileseterrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-finalizedf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-free_memf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-info_createf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-info_deletef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-info_dupf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-info_freef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-info_getf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-infognkf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-infognthkf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-infovallenf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-info_setf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-pack_externalf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-packesizef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-reqgetstatf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typedarrayf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typechindf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typechvecf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typecindbf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_create_hindexed_blockf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typecresizef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typecstructf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typecsubarrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typegetextentf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typegtextf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-unpackextf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-wincreerrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-wingeterrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-winseterrf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-reduce_localf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-op_commutativef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-reduce_scatter_blockf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dist_graph_create_adjacentf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dist_graph_createf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dist_graph_neighbors_countf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dist_graph_neighborsf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-improbef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-imrecvf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-mprobef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-mrecvf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_idupf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ibarrierf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ibcastf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-igatherf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-igathervf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iscatterf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iscattervf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iallgatherf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iallgathervf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ialltoallf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ialltoallvf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ialltoallwf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ireducef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iallreducef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ireduce_scatterf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ireduce_scatter_blockf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iscanf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iexscanf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ineighbor_allgatherf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ineighbor_allgathervf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ineighbor_alltoallf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ineighbor_alltoallvf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ineighbor_alltoallwf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-neighbor_allgatherf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-neighbor_allgathervf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-neighbor_alltoallf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-neighbor_alltoallvf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-neighbor_alltoallwf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_split_typef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-get_elements_xf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-status_set_elements_xf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_get_extent_xf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_get_true_extent_xf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_size_xf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_create_groupf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_failure_ackf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_failure_get_ackedf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_revokef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_shrinkf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_agreef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_openf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_closef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_deletef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_set_sizef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_preallocatef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_sizef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_groupf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_amodef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_set_infof.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_infof.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_set_viewf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_viewf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_atf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_at_allf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_atf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_at_allf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iread_atf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iwrite_atf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_readf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_allf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_allf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_writef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_ireadf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iwritef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_seekf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_positionf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_byte_offsetf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_sharedf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_sharedf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iread_sharedf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iwrite_sharedf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_orderedf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_orderedf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_seek_sharedf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_position_sharedf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_at_all_beginf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_at_all_endf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_at_all_beginf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_at_all_endf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_all_beginf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_all_endf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_all_beginf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_all_endf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_ordered_beginf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_ordered_endf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_ordered_beginf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_ordered_endf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_type_extentf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-register_datarepf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_set_atomicityf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_atomicityf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_syncf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iread_at_allf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iwrite_at_allf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iread_allf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iwrite_allf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-initf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-initthreadf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-pcontrolf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-addressf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-getaddressf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-wtimef.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-wtickf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-aint_addf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-aint_difff.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-keyval_createf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dup_fnf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_del_fnf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_copy_fnf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dup_comm_fnf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_comm_del_fnf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_comm_copy_fnf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dup_win_fnf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_win_del_fnf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_win_copy_fnf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dup_type_fnf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_type_del_fnf.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_type_copy_fnf.lo
+  CC       src/binding/fortran/use_mpi/lib_libmpifort_la-typef90cmplxf.lo
+  CC       src/binding/fortran/use_mpi/lib_libmpifort_la-typef90realf.lo
+  CC       src/binding/fortran/use_mpi/lib_libmpifort_la-typef90intf.lo
 rm -f src/binding/fortran/use_mpi/mpifnoext.h
 sed -e 's/^C/\!/g' -e '/EXTERNAL/d' \
 -e '/REAL\*8/d' \
 -e '/DOUBLE PRECISION/d' \
 -e '/MPI_WTICK/d' src/binding/fortran/mpif_h/mpif.h > src/binding/fortran/use_mpi/mpifnoext.h
+  CXX      src/binding/cxx/initcxx.lo
+  CC       src/env/mpichversion.o
   CC       src/env/mpivars.o
   CC       src/mpi/attr/lib_libmpi_la-attr_delete.lo
-  CC       src/mpi/attr/lib_libmpi_la-attr_put.lo
   CC       src/mpi/attr/lib_libmpi_la-attr_get.lo
-  CC       src/mpi/attr/lib_libmpi_la-comm_create_keyval.lo
-  CC       src/mpi/attr/lib_libmpi_la-comm_delete_attr.lo
   CC       src/mpi/attr/lib_libmpi_la-comm_free_keyval.lo
-  CC       src/mpi/attr/lib_libmpi_la-comm_get_attr.lo
-  MOD      src/binding/fortran/use_mpi/mpi_constants.mod-stamp
-  MOD      src/binding/fortran/use_mpi/mpi_sizeofs.mod-stamp
+  CC       src/mpi/attr/lib_libmpi_la-comm_delete_attr.lo
+  CC       src/mpi/attr/lib_libmpi_la-attr_put.lo
   CC       src/mpi/attr/lib_libmpi_la-comm_set_attr.lo
-  CC       src/mpi/attr/lib_libmpi_la-keyval_free.lo
+  CC       src/mpi/attr/lib_libmpi_la-comm_get_attr.lo
+  CC       src/mpi/attr/lib_libmpi_la-comm_create_keyval.lo
   CC       src/mpi/attr/lib_libmpi_la-keyval_create.lo
+  CC       src/mpi/attr/lib_libmpi_la-keyval_free.lo
   CC       src/mpi/attr/lib_libmpi_la-type_create_keyval.lo
-  CC       src/mpi/attr/lib_libmpi_la-type_delete_attr.lo
-  CC       src/mpi/attr/lib_libmpi_la-type_free_keyval.lo
   CC       src/mpi/attr/lib_libmpi_la-type_set_attr.lo
-  CC       src/mpi/attr/lib_libmpi_la-type_get_attr.lo
   CC       src/mpi/attr/lib_libmpi_la-win_get_attr.lo
+  CC       src/mpi/attr/lib_libmpi_la-type_delete_attr.lo
+  CC       src/mpi/attr/lib_libmpi_la-type_get_attr.lo
+  CC       src/mpi/attr/lib_libmpi_la-type_free_keyval.lo
   CC       src/mpi/attr/lib_libmpi_la-win_delete_attr.lo
-  CC       src/mpi/attr/lib_libmpi_la-win_create_keyval.lo
-  CC       src/mpi/attr/lib_libmpi_la-win_set_attr.lo
   CC       src/mpi/attr/lib_libmpi_la-win_free_keyval.lo
   CC       src/mpi/coll/allgather/lib_libmpi_la-allgather.lo
+  CC       src/mpi/attr/lib_libmpi_la-win_set_attr.lo
+  CC       src/mpi/attr/lib_libmpi_la-win_create_keyval.lo
   CC       src/mpi/coll/allreduce/lib_libmpi_la-allreduce.lo
+  CC       src/mpi/coll/allgatherv/lib_libmpi_la-allgatherv.lo
   CC       src/mpi/coll/alltoall/lib_libmpi_la-alltoall.lo
   CC       src/mpi/coll/alltoallv/lib_libmpi_la-alltoallv.lo
-  CC       src/mpi/coll/allgatherv/lib_libmpi_la-allgatherv.lo
-  CC       src/mpi/coll/alltoallw/lib_libmpi_la-alltoallw.lo
-  CC       src/mpi/coll/barrier/lib_libmpi_la-barrier.lo
   CC       src/mpi/coll/bcast/lib_libmpi_la-bcast.lo
-  CC       src/mpi/coll/exscan/lib_libmpi_la-exscan.lo
+  CC       src/mpi/coll/barrier/lib_libmpi_la-barrier.lo
   CC       src/mpi/coll/gather/lib_libmpi_la-gather.lo
-  CC       src/mpi/coll/gatherv/lib_libmpi_la-gatherv.lo
-  CC       src/mpi/coll/reduce_scatter/lib_libmpi_la-reduce_scatter.lo
-  CC       src/mpi/coll/reduce/lib_libmpi_la-reduce.lo
-  CC       src/mpi/coll/reduce_scatter_block/lib_libmpi_la-reduce_scatter_block.lo
+  CC       src/mpi/coll/alltoallw/lib_libmpi_la-alltoallw.lo
   CC       src/mpi/coll/scan/lib_libmpi_la-scan.lo
-  CC       src/mpi/coll/scatter/lib_libmpi_la-scatter.lo
-  CC       src/mpi/coll/scatterv/lib_libmpi_la-scatterv.lo
-  CC       src/mpi/coll/neighbor_allgather/lib_libmpi_la-neighbor_allgather.lo
-  CC       src/mpi/coll/neighbor_allgatherv/lib_libmpi_la-neighbor_allgatherv.lo
-  CC       src/mpi/coll/neighbor_alltoall/lib_libmpi_la-neighbor_alltoall.lo
-  CC       src/mpi/coll/neighbor_alltoallw/lib_libmpi_la-neighbor_alltoallw.lo
   CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather.lo
-  CC       src/mpi/coll/neighbor_alltoallv/lib_libmpi_la-neighbor_alltoallv.lo
   CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv.lo
-  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce.lo
+  CC       src/mpi/coll/neighbor_alltoallw/lib_libmpi_la-neighbor_alltoallw.lo
   CC       src/mpi/coll/ialltoall/lib_libmpi_la-ialltoall.lo
   CC       src/mpi/coll/ialltoallv/lib_libmpi_la-ialltoallv.lo
-  CC       src/mpi/coll/ialltoallw/lib_libmpi_la-ialltoallw.lo
   CC       src/mpi/coll/ibarrier/lib_libmpi_la-ibarrier.lo
-  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast.lo
-  CC       src/mpi/coll/iexscan/lib_libmpi_la-iexscan.lo
+  CC       src/mpi/coll/exscan/lib_libmpi_la-exscan.lo
+  CC       src/mpi/coll/gatherv/lib_libmpi_la-gatherv.lo
+  CC       src/mpi/coll/reduce_scatter_block/lib_libmpi_la-reduce_scatter_block.lo
   CC       src/mpi/coll/igather/lib_libmpi_la-igather.lo
-  CC       src/mpi/coll/igatherv/lib_libmpi_la-igatherv.lo
-  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter.lo
+  CC       src/mpi/coll/reduce_scatter/lib_libmpi_la-reduce_scatter.lo
+  CC       src/mpi/coll/reduce/lib_libmpi_la-reduce.lo
+  CC       src/mpi/coll/scatterv/lib_libmpi_la-scatterv.lo
+  CC       src/mpi/coll/neighbor_allgather/lib_libmpi_la-neighbor_allgather.lo
+  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast.lo
+  CC       src/mpi/coll/neighbor_allgatherv/lib_libmpi_la-neighbor_allgatherv.lo
+  CC       src/mpi/coll/neighbor_alltoall/lib_libmpi_la-neighbor_alltoall.lo
+  CC       src/mpi/coll/neighbor_alltoallv/lib_libmpi_la-neighbor_alltoallv.lo
+  CC       src/mpi/coll/scatter/lib_libmpi_la-scatter.lo
+  CC       src/mpi/coll/iexscan/lib_libmpi_la-iexscan.lo
   CC       src/mpi/coll/ireduce_scatter_block/lib_libmpi_la-ireduce_scatter_block.lo
-  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce.lo
+  CC       src/mpi/coll/ialltoallw/lib_libmpi_la-ialltoallw.lo
+  CC       src/mpi/comm/lib_libmpi_la-comm_create.lo
   CC       src/mpi/coll/iscan/lib_libmpi_la-iscan.lo
+  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce.lo
   CC       src/mpi/coll/iscatter/lib_libmpi_la-iscatter.lo
+  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter.lo
   CC       src/mpi/coll/iscatterv/lib_libmpi_la-iscatterv.lo
   CC       src/mpi/coll/ineighbor_allgather/lib_libmpi_la-ineighbor_allgather.lo
-  CC       src/mpi/coll/ineighbor_allgatherv/lib_libmpi_la-ineighbor_allgatherv.lo
+  CC       src/mpi/coll/igatherv/lib_libmpi_la-igatherv.lo
   CC       src/mpi/coll/ineighbor_alltoall/lib_libmpi_la-ineighbor_alltoall.lo
   CC       src/mpi/coll/ineighbor_alltoallv/lib_libmpi_la-ineighbor_alltoallv.lo
   CC       src/mpi/coll/ineighbor_alltoallw/lib_libmpi_la-ineighbor_alltoallw.lo
-  CC       src/mpi/coll/op/lib_libmpi_la-op_free.lo
+  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce.lo
+  CC       src/mpi/coll/ineighbor_allgatherv/lib_libmpi_la-ineighbor_allgatherv.lo
   CC       src/mpi/coll/op/lib_libmpi_la-op_create.lo
+  CC       src/mpi/coll/op/lib_libmpi_la-op_free.lo
   CC       src/mpi/coll/op/lib_libmpi_la-op_commutative.lo
   CC       src/mpi/coll/reduce_local/lib_libmpi_la-reduce_local.lo
   CC       src/mpi/comm/lib_libmpi_la-comm_compare.lo
-  CC       src/mpi/comm/lib_libmpi_la-comm_create.lo
   CC       src/mpi/comm/lib_libmpi_la-comm_create_group.lo
   CC       src/mpi/comm/lib_libmpi_la-comm_dup.lo
   CC       src/mpi/comm/lib_libmpi_la-comm_dup_with_info.lo
-  CC       src/mpi/comm/lib_libmpi_la-comm_free.lo
   CC       src/mpi/comm/lib_libmpi_la-comm_get_name.lo
+  CC       src/mpi/comm/lib_libmpi_la-comm_free.lo
   CC       src/mpi/comm/lib_libmpi_la-comm_get_info.lo
   CC       src/mpi/comm/lib_libmpi_la-comm_set_info.lo
   CC       src/mpi/comm/lib_libmpi_la-comm_group.lo
@@ -540,8 +1276,8 @@ sed -e 's/^C/\!/g' -e '/EXTERNAL/d' \
   CC       src/mpi/comm/lib_libmpi_la-comm_failure_ack.lo
   CC       src/mpi/comm/lib_libmpi_la-comm_failure_get_acked.lo
   CC       src/mpi/comm/lib_libmpi_la-comm_revoke.lo
-  CC       src/mpi/comm/lib_libmpi_la-comm_agree.lo
   CC       src/mpi/comm/lib_libmpi_la-comm_shrink.lo
+  CC       src/mpi/comm/lib_libmpi_la-comm_agree.lo
   CC       src/mpi/datatype/lib_libmpi_la-address.lo
   CC       src/mpi/datatype/lib_libmpi_la-get_address.lo
   CC       src/mpi/datatype/lib_libmpi_la-get_count.lo
@@ -550,10 +1286,10 @@ sed -e 's/^C/\!/g' -e '/EXTERNAL/d' \
   CC       src/mpi/datatype/lib_libmpi_la-pack.lo
   CC       src/mpi/datatype/lib_libmpi_la-pack_external.lo
   CC       src/mpi/datatype/lib_libmpi_la-pack_external_size.lo
-  CC       src/mpi/datatype/lib_libmpi_la-pack_size.lo
-  CC       src/mpi/datatype/lib_libmpi_la-type_get_name.lo
   CC       src/mpi/datatype/lib_libmpi_la-status_set_elements.lo
+  CC       src/mpi/datatype/lib_libmpi_la-pack_size.lo
   CC       src/mpi/datatype/lib_libmpi_la-status_set_elements_x.lo
+  CC       src/mpi/datatype/lib_libmpi_la-type_get_name.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_set_name.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_size.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_size_x.lo
@@ -562,23 +1298,23 @@ sed -e 's/^C/\!/g' -e '/EXTERNAL/d' \
   CC       src/mpi/datatype/lib_libmpi_la-type_commit.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_indexed.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_hindexed.lo
-  CC       src/mpi/datatype/lib_libmpi_la-type_contiguous.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_struct.lo
+  CC       src/mpi/datatype/lib_libmpi_la-type_contiguous.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_free.lo
-  CC       src/mpi/datatype/lib_libmpi_la-type_dup.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_hvector.lo
+  CC       src/mpi/datatype/lib_libmpi_la-type_dup.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_get_envelope.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_get_contents.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_ub.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_lb.lo
-  CC       src/mpi/datatype/lib_libmpi_la-type_get_extent_x.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_get_extent.lo
+  CC       src/mpi/datatype/lib_libmpi_la-type_get_extent_x.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_get_true_extent.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_get_true_extent_x.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_match_size.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_create_struct.lo
-  CC       src/mpi/datatype/lib_libmpi_la-type_create_hvector.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_create_hindexed.lo
+  CC       src/mpi/datatype/lib_libmpi_la-type_create_hvector.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_create_indexed_block.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_create_hindexed_block.lo
   CC       src/mpi/datatype/lib_libmpi_la-type_create_resized.lo
@@ -592,18 +1328,18 @@ sed -e 's/^C/\!/g' -e '/EXTERNAL/d' \
   CC       src/mpi/errhan/lib_libmpi_la-comm_call_errhandler.lo
   CC       src/mpi/errhan/lib_libmpi_la-comm_create_errhandler.lo
   CC       src/mpi/errhan/lib_libmpi_la-comm_get_errhandler.lo
-  CC       src/mpi/errhan/lib_libmpi_la-comm_set_errhandler.lo
-  CC       src/mpi/errhan/lib_libmpi_la-errhandler_create.lo
   CC       src/mpi/errhan/lib_libmpi_la-errhandler_free.lo
+  CC       src/mpi/errhan/lib_libmpi_la-errhandler_create.lo
+  CC       src/mpi/errhan/lib_libmpi_la-comm_set_errhandler.lo
   CC       src/mpi/errhan/lib_libmpi_la-errhandler_get.lo
   CC       src/mpi/errhan/lib_libmpi_la-errhandler_set.lo
   CC       src/mpi/errhan/lib_libmpi_la-error_class.lo
   CC       src/mpi/errhan/lib_libmpi_la-error_string.lo
-  CC       src/mpi/errhan/lib_libmpi_la-file_create_errhandler.lo
   CC       src/mpi/errhan/lib_libmpi_la-file_get_errhandler.lo
   CC       src/mpi/errhan/lib_libmpi_la-file_set_errhandler.lo
-  CC       src/mpi/errhan/lib_libmpi_la-file_call_errhandler.lo
+  CC       src/mpi/errhan/lib_libmpi_la-file_create_errhandler.lo
   CC       src/mpi/errhan/lib_libmpi_la-win_create_errhandler.lo
+  CC       src/mpi/errhan/lib_libmpi_la-file_call_errhandler.lo
   CC       src/mpi/errhan/lib_libmpi_la-win_call_errhandler.lo
   CC       src/mpi/errhan/lib_libmpi_la-win_get_errhandler.lo
   CC       src/mpi/errhan/lib_libmpi_la-win_set_errhandler.lo
@@ -611,53 +1347,53 @@ sed -e 's/^C/\!/g' -e '/EXTERNAL/d' \
   CC       src/mpi/group/lib_libmpi_la-group_difference.lo
   CC       src/mpi/group/lib_libmpi_la-group_excl.lo
   CC       src/mpi/group/lib_libmpi_la-group_free.lo
-  CC       src/mpi/group/lib_libmpi_la-group_intersection.lo
   CC       src/mpi/group/lib_libmpi_la-group_incl.lo
+  CC       src/mpi/group/lib_libmpi_la-group_intersection.lo
   CC       src/mpi/group/lib_libmpi_la-group_range_excl.lo
   CC       src/mpi/group/lib_libmpi_la-group_range_incl.lo
   CC       src/mpi/group/lib_libmpi_la-group_rank.lo
-  CC       src/mpi/group/lib_libmpi_la-group_size.lo
   CC       src/mpi/group/lib_libmpi_la-group_translate_ranks.lo
+  CC       src/mpi/group/lib_libmpi_la-group_size.lo
   CC       src/mpi/group/lib_libmpi_la-group_union.lo
   CC       src/mpi/info/lib_libmpi_la-info_create.lo
   CC       src/mpi/info/lib_libmpi_la-info_delete.lo
   CC       src/mpi/info/lib_libmpi_la-info_dup.lo
   CC       src/mpi/info/lib_libmpi_la-info_free.lo
   CC       src/mpi/info/lib_libmpi_la-info_get.lo
-  CC       src/mpi/info/lib_libmpi_la-info_getnth.lo
   CC       src/mpi/info/lib_libmpi_la-info_getn.lo
-  CC       src/mpi/info/lib_libmpi_la-info_getvallen.lo
-  CC       src/mpi/info/lib_libmpi_la-info_set.lo
+  CC       src/mpi/info/lib_libmpi_la-info_getnth.lo
   CC       src/mpi/init/lib_libmpi_la-abort.lo
+  CC       src/mpi/info/lib_libmpi_la-info_getvallen.lo
+  CC       src/mpi/misc/lib_libmpi_la-version.lo
   CC       src/mpi/init/lib_libmpi_la-init.lo
+  CC       src/mpi/init/lib_libmpi_la-ismain.lo
+  CC       src/mpi/info/lib_libmpi_la-info_set.lo
+  CC       src/mpi/init/lib_libmpi_la-finalize.lo
   CC       src/mpi/init/lib_libmpi_la-initialized.lo
   CC       src/mpi/init/lib_libmpi_la-initthread.lo
-  CC       src/mpi/init/lib_libmpi_la-finalize.lo
-  CC       src/mpi/init/lib_libmpi_la-ismain.lo
   CC       src/mpi/init/lib_libmpi_la-finalized.lo
   CC       src/mpi/init/lib_libmpi_la-querythread.lo
-  CC       src/mpi/misc/lib_libmpi_la-version.lo
   CC       src/mpi/misc/lib_libmpi_la-getpname.lo
-  CC       src/mpi/misc/lib_libmpi_la-aint_add.lo
   CC       src/mpi/misc/lib_libmpi_la-pcontrol.lo
-  CC       src/mpi/misc/lib_libmpi_la-utils.lo
   CC       src/mpi/misc/lib_libmpi_la-library_version.lo
+  CC       src/mpi/misc/lib_libmpi_la-utils.lo
+  CC       src/mpi/misc/lib_libmpi_la-aint_add.lo
   CC       src/mpi/misc/lib_libmpi_la-aint_diff.lo
+  CC       src/mpi/pt2pt/lib_libmpi_la-bsend.lo
+  CC       src/mpi/pt2pt/lib_libmpi_la-isend.lo
+  CC       src/mpi/pt2pt/lib_libmpi_la-bsend_init.lo
   CC       src/mpi/pt2pt/lib_libmpi_la-bufattach.lo
+  CC       src/mpi/pt2pt/lib_libmpi_la-irsend.lo
   CC       src/mpi/pt2pt/lib_libmpi_la-buffree.lo
   CC       src/mpi/pt2pt/lib_libmpi_la-ibsend.lo
+  CC       src/mpi/pt2pt/lib_libmpi_la-irecv.lo
   CC       src/mpi/pt2pt/lib_libmpi_la-improbe.lo
   CC       src/mpi/pt2pt/lib_libmpi_la-imrecv.lo
   CC       src/mpi/pt2pt/lib_libmpi_la-iprobe.lo
-  CC       src/mpi/pt2pt/lib_libmpi_la-irecv.lo
-  CC       src/mpi/pt2pt/lib_libmpi_la-bsend.lo
-  CC       src/mpi/pt2pt/lib_libmpi_la-bsend_init.lo
-  CC       src/mpi/pt2pt/lib_libmpi_la-irsend.lo
-  CC       src/mpi/pt2pt/lib_libmpi_la-isend.lo
+  CC       src/mpi/pt2pt/lib_libmpi_la-probe.lo
   CC       src/mpi/pt2pt/lib_libmpi_la-issend.lo
   CC       src/mpi/pt2pt/lib_libmpi_la-mprobe.lo
   CC       src/mpi/pt2pt/lib_libmpi_la-mrecv.lo
-  CC       src/mpi/pt2pt/lib_libmpi_la-probe.lo
   CC       src/mpi/pt2pt/lib_libmpi_la-recv.lo
   CC       src/mpi/pt2pt/lib_libmpi_la-recv_init.lo
   CC       src/mpi/pt2pt/lib_libmpi_la-rsend.lo
@@ -667,868 +1403,117 @@ sed -e 's/^C/\!/g' -e '/EXTERNAL/d' \
   CC       src/mpi/pt2pt/lib_libmpi_la-sendrecv.lo
   CC       src/mpi/pt2pt/lib_libmpi_la-sendrecv_rep.lo
   CC       src/mpi/pt2pt/lib_libmpi_la-ssend.lo
-  CC       src/mpi/pt2pt/lib_libmpi_la-ssend_init.lo
   CC       src/mpi/request/lib_libmpi_la-cancel.lo
+  CC       src/mpi/pt2pt/lib_libmpi_la-ssend_init.lo
   CC       src/mpi/request/lib_libmpi_la-greq_start.lo
-  CC       src/mpi/request/lib_libmpi_la-request_free.lo
   CC       src/mpi/request/lib_libmpi_la-greq_complete.lo
+  CC       src/mpi/request/lib_libmpi_la-request_get_status.lo
+  CC       src/mpi/request/lib_libmpi_la-request_free.lo
   CC       src/mpi/request/lib_libmpi_la-status_set_cancelled.lo
   CC       src/mpi/request/lib_libmpi_la-start.lo
   CC       src/mpi/request/lib_libmpi_la-startall.lo
-  CC       src/mpi/request/lib_libmpi_la-request_get_status.lo
   CC       src/mpi/request/lib_libmpi_la-test.lo
   CC       src/mpi/request/lib_libmpi_la-test_cancelled.lo
   CC       src/mpi/request/lib_libmpi_la-testall.lo
   CC       src/mpi/request/lib_libmpi_la-testany.lo
-  CC       src/mpi/request/lib_libmpi_la-wait.lo
   CC       src/mpi/request/lib_libmpi_la-testsome.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-attr_getf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-op_freef.lo
-  CC       src/mpi/coll/reduce_scatter/lib_libmpi_la-reduce_scatter_allcomm_nb.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_comm_disconnect.lo
-  CC       src/mpi/coll/reduce_scatter_block/lib_libmpi_la-reduce_scatter_block_allcomm_nb.lo
-  CC       src/mpi/rma/lib_libmpi_la-rget_accumulate.lo
-  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_tree_knomial.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-attr_putf.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_handle_send_req.lo
-  CC       src/mpi/coll/igather/lib_libmpi_la-igather_intra_binomial.lo
-  CC       src/mpi/coll/ibarrier/lib_libmpi_la-ibarrier_intra_recexch.lo
-  CC       src/mpi_t/lib_libmpi_la-cat_get_info.lo
-  CC       src/mpid/ch3/channels/nemesis/netmod/none/lib_libmpi_la-none.lo
-  CC       src/mpi/coll/gatherv/lib_libmpi_la-gatherv_allcomm_linear.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-op_createf.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_unlock_all.lo
-  CC       src/mpi/coll/reduce_scatter/lib_libmpi_la-reduce_scatter_inter_remote_reduce_local_scatter.lo
-  CC       src/mpid/ch3/channels/nemesis/netmod/tcp/lib_libmpi_la-tcp_utility.lo
-  CC       src/mpi_t/lib_libmpi_la-pvar_get_index.lo
-  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter_intra_recursive_doubling.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_finalize.lo
-  CC       src/mpi_t/lib_libmpi_la-cat_get_cvars.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-reducef.lo
-  CC       src/mpi_t/lib_libmpi_la-pvar_session_create.lo
-  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_intra_scatter_ring_allgather.lo
-  CC       src/mpi/coll/igather/lib_libmpi_la-igather_gentran_algos.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_start.lo
-  CC       src/mpi/coll/reduce_scatter_block/lib_libmpi_la-reduce_scatter_block_intra_recursive_halving.lo
-  CC       src/mpid/ch3/channels/nemesis/netmod/tcp/lib_libmpi_la-tcp_send.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-exscanf.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_eagersync.lo
-  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter_intra_noncommutative.lo
-  CC       src/mpi/coll/reduce_scatter/lib_libmpi_la-reduce_scatter_intra_recursive_doubling.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_handle_recv_req.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cartdim_getf.lo
-  CC       src/mpi/topo/lib_libmpi_la-cart_rank.lo
-  CC       src/mpi/coll/bcast/lib_libmpi_la-bcast_intra_scatter_recursive_doubling_allgather.lo
-  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_intra_scatter_recursive_doubling_allgather.lo
-  CC       src/mpi/coll/bcast/lib_libmpi_la-bcast_utils.lo
-  CC       src/mpi/coll/reduce_scatter_block/lib_libmpi_la-reduce_scatter_block_inter_remote_reduce_local_scatter.lo
-  CC       src/mpid/ch3/channels/nemesis/netmod/tcp/lib_libmpi_la-tcp_init.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-alltoallwf.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_win_fns.lo
-  CC       src/mpi/coll/ireduce_scatter_block/lib_libmpi_la-ireduce_scatter_block_inter_remote_reduce_local_scatterv.lo
-  CC       src/mpi/attr/lib_libmpi_la-dup_fn.lo
-  CC       src/mpid/ch3/channels/nemesis/netmod/tcp/lib_libmpi_la-tcp_finalize.lo
-  CC       src/mpi/coll/reduce/lib_libmpi_la-reduce_allcomm_nb.lo
-  CC       src/mpi_t/lib_libmpi_la-cvar_get_index.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-alltoallvf.lo
-  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_intra_smp.lo
-  CC       src/mpi/coll/barrier/lib_libmpi_la-barrier_inter_bcast.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_dupf.lo
-  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter_inter_remote_reduce_local_scatterv.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_lmt_vmsplice.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-alltoallf.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_comm_get_all_failed_procs.lo
-  CC       src/mpi/coll/ireduce_scatter_block/lib_libmpi_la-ireduce_scatter_block_intra_recexch.lo
-  CC       src/mpi_t/lib_libmpi_la-pvar_start.lo
-  CC       src/mpi/coll/reduce/lib_libmpi_la-reduce_intra_binomial.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_flush_all.lo
-  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_inter_flat.lo
-  CC       src/mpi/coll/barrier/lib_libmpi_la-barrier_intra_dissemination.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_comparef.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_lmt_dma.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-allgathervf.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_comm_revoke.lo
-  CC       src/mpi/coll/reduce/lib_libmpi_la-reduce_inter_local_reduce_remote_send.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_comm_failure_ack.lo
-  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce_intra_binomial.lo
-  CC       src/mpi_t/lib_libmpi_la-pvar_write.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_net_array.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-allgatherf.lo
-  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_gentran_algos.lo
-  CC       src/mpi/coll/alltoallw/lib_libmpi_la-alltoallw_intra_pairwise_sendrecv_replace.lo
-  CC       src/mpi_t/lib_libmpi_la-cat_changed.lo
-  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_inter_remote_gather_local_bcast.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_allocate.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_eager.lo
-  CC       src/mpi_t/lib_libmpi_la-cat_get_index.lo
-  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce_intra_reduce_scatter_gather.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_lmt_shm.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-scatterf.lo
-  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_intra_tree.lo
-  CC       src/mpi/coll/alltoallv/lib_libmpi_la-alltoallv_inter_pairwise_exchange.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_getpname.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_test.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_lmt.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-graph_createf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cart_getf.lo
-  CC       src/mpi/rma/lib_libmpi_la-put.lo
-  CC       src/mpi/rma/lib_libmpi_la-compare_and_swap.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-gathervf.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_rndv.lo
-  CC       src/mpi/attr/lib_libmpi_la-attrutil.lo
-  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce_inter_local_reduce_remote_send.lo
-  CC       src/mpi/coll/ireduce_scatter_block/lib_libmpi_la-ireduce_scatter_block_intra_noncommutative.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_debug.lo
-  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_intra_ring.lo
-  CC       src/mpi/coll/alltoallv/lib_libmpi_la-alltoallv_intra_scattered.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-bcastf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-keyval_freef.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_allocate_shared.lo
-  CC       src/mpi/coll/allgather/lib_libmpi_la-allgather_allcomm_nb.lo
-  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_intra_brucks.lo
-  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce_gentran_algos.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_network.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_create_dynamic.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-barrierf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-icmergef.lo
-  CC       src/mpi/coll/iexscan/lib_libmpi_la-iexscan_intra_recursive_doubling.lo
-  CC       src/mpi/coll/alltoallv/lib_libmpi_la-alltoallv_intra_pairwise_sendrecv_replace.lo
-  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_intra_recursive_doubling.lo
-  CC       src/mpi/rma/lib_libmpi_la-rget.lo
-  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_intra_ring.lo
-  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce_intra_tree.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_unlock.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-pack_sizef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iccreatef.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_finalize.lo
-  CC       src/mpi_t/lib_libmpi_la-pvar_readreset.lo
-  CC       src/mpi/coll/alltoallv/lib_libmpi_la-alltoallv_allcomm_nb.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-packf.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_rma_pkthandler.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_mpich.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commrgroupf.lo
-  CC       src/mpi/coll/iscan/lib_libmpi_la-iscan_intra_recursive_doubling.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_shared_query.lo
-  CC       src/mpi/spawn/lib_libmpi_la-comm_spawn.lo
-  CC       src/mpi/topo/lib_libmpi_la-topoutil.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-get_elementsf.lo
-  CC       src/mpi/coll/alltoall/lib_libmpi_la-alltoall_inter_pairwise_exchange.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_init.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_splitf.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_rma_sync.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_set_info.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_freef.lo
-  CC       src/mpi/topo/lib_libmpi_la-graph_nbr.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3i_eagernoncontig.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_createf.lo
-  CC       src/mpi_t/lib_libmpi_la-cvar_handle_free.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_rma_reqops.lo
-  CC       src/mpi/coll/neighbor_alltoall/lib_libmpi_la-neighbor_alltoall_allcomm_nb.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_commitf.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3i_comm.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_rankf.lo
-  CC       src/mpi/topo/lib_libmpi_la-graphdimsget.lo
-  CC       src/mpi/rma/lib_libmpi_la-get.lo
-  CC       src/mpi/topo/lib_libmpi_la-graph_map.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_rma_ops.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_ubf.lo
-  CC       src/mpi/coll/neighbor_allgather/lib_libmpi_la-neighbor_allgather_allcomm_nb.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_win_fns.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_mprobe.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-scanf.lo
-  CC       src/mpi/topo/lib_libmpi_la-cartdim_get.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_lbf.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_rma_shm.lo
-  CC       src/mpi/topo/lib_libmpi_la-cart_sub.lo
-  CC       src/util/mem/lib_libmpi_la-handlemem.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_rma_progress.lo
-  CC       src/mpid/ch3/channels/nemesis/netmod/tcp/lib_libmpi_la-tcp_getip.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_flush_local_all.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_post.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_free.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_sizef.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_progress.lo
-  CC       src/mpi/coll/neighbor_allgatherv/lib_libmpi_la-neighbor_allgatherv_allcomm_nb.lo
-  CC       src/mpi_t/lib_libmpi_la-cat_get_pvars.lo
-  CC       src/mpid/ch3/channels/nemesis/netmod/tcp/lib_libmpi_la-socksm.lo
-  CC       src/mpi/topo/lib_libmpi_la-cart_create.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_request.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_extentf.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_lock_all.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_istartmsgv.lo
-  CC       src/mpi/coll/scatterv/lib_libmpi_la-scatterv_allcomm_linear.lo
-  CC       src/mpi/coll/igather/lib_libmpi_la-igather_intra_tree.lo
-  CC       src/mpi/topo/lib_libmpi_la-graphcreate.lo
-  CC       src/mpi/spawn/lib_libmpi_la-comm_accept.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_flush.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_hindexedf.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_isendv.lo
-  CC       src/mpi/topo/lib_libmpi_la-dist_gr_neighb_count.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_sync.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_lock.lo
-  CC       src/mpi/coll/reduce_scatter_block/lib_libmpi_la-reduce_scatter_block_intra_noncommutative.lo
-  CC       src/mpi/coll/igatherv/lib_libmpi_la-igatherv_allcomm_linear.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_comm.lo
-  CC       src/mpi/topo/lib_libmpi_la-topo_test.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_indexedf.lo
-  CC       src/mpi/spawn/lib_libmpi_la-unpublish_name.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_isend.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_rsend.lo
-  CC       src/mpi/coll/reduce_scatter_block/lib_libmpi_la-reduce_scatter_block_intra_pairwise.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_get_name.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_handle_connection.lo
-  CC       src/mpi/rma/lib_libmpi_la-raccumulate.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_hvectorf.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_finalize.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_set_name.lo
-  CC       src/mpi/coll/alltoall/lib_libmpi_la-alltoall_intra_scattered.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_send.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_get_info.lo
-  CC       src/mpi/topo/lib_libmpi_la-dist_gr_neighb.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_vectorf.lo
-  CC       src/glue/romio/lib_libmpi_la-glue_romio.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpidi_printf.lo
-  CC       src/mpi/coll/alltoall/lib_libmpi_la-alltoall_intra_brucks.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_ssend.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_get_group.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typecontigf.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpidi_isend_self.lo
-  CC       src/mpi_t/lib_libmpi_la-pvar_get_num.lo
-  CC       src/mpi/datatype/dataloop/lib_libmpi_la-darray_support.lo
-  CC       src/mpi/coll/alltoall/lib_libmpi_la-alltoall_intra_pairwise_sendrecv_replace.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_issend.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_startall.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-sendrecvf.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_aint.lo
-  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop_create_struct.lo
-  CC       src/mpi_t/lib_libmpi_la-cvar_get_info.lo
-  CC       src/mpi/coll/exscan/lib_libmpi_la-exscan_intra_recursive_doubling.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_comm_spawn_multiple.lo
-  CC       src/mpi/coll/alltoall/lib_libmpi_la-alltoall_allcomm_nb.lo
-  CC       src/mpi/datatype/lib_libmpi_la-type_blockindexed.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_handle_recv_pkt.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-startallf.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpidi_rma.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_vc.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_flush_local.lo
-  CC       src/mpi/datatype/dataloop/lib_libmpi_la-segment_count.lo
-  CC       src/mpi/datatype/lib_libmpi_la-looputil.lo
-  CC       src/mpi/errhan/lib_libmpi_la-errutil.lo
-  CC       src/mpi/coll/allreduce/lib_libmpi_la-allreduce_intra_concurrent.lo
-  CC       src/mpi_t/lib_libmpi_la-mpit_initthread.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_port.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_recv.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-startf.lo
-  CC       src/mpi/datatype/lib_libmpi_la-type_create_pairtype.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_rma.lo
-  CC       src/mpi/datatype/dataloop/lib_libmpi_la-segment_flatten.lo
-  CC       src/mpi/coll/allreduce/lib_libmpi_la-allreduce_inter_reduce_exchange_bcast.lo
-  CC       src/mpi/datatype/lib_libmpi_la-type_flatten.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_buffer.lo
-  CC       src/mpi/coll/exscan/lib_libmpi_la-exscan_allcomm_nb.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-recv_initf.lo
-  CC       src/mpi/coll/scan/lib_libmpi_la-scan_intra_recursive_doubling.lo
-  CC       src/mpi/datatype/lib_libmpi_la-type_debug.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-group_freef.lo
-  CC       src/mpi/coll/allreduce/lib_libmpi_la-allreduce_intra_reduce_scatter_allgather.lo
-  CC       src/mpi/spawn/lib_libmpi_la-comm_get_parent.lo
-  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_smp.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-rsend_initf.lo
-  CC       src/mpi_t/lib_libmpi_la-mpit_finalize.lo
-  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop.lo
-  CC       src/mpi_t/lib_libmpi_la-cat_get_categories.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-group_exclf.lo
-  CC       src/mpi/coll/allreduce/lib_libmpi_la-allreduce_intra_recursive_doubling.lo
-  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop_create_contig.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cart_rankf.lo
-  CC       src/mpi/topo/lib_libmpi_la-cart_get.lo
-  CC       src/mpi/coll/ialltoall/lib_libmpi_la-ialltoall_inter_pairwise_exchange.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ssend_initf.lo
-  CC       src/binding/fortran/use_mpi/lib_libmpi_la-create_f90_util.lo
-  CC       src/mpi/errhan/lib_libmpi_la-dynerrutil.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cart_coordsf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_connectf.lo
-  CC       src/mpi/topo/lib_libmpi_la-graph_get.lo
-  CC       src/mpi/coll/allgatherv/lib_libmpi_la-allgatherv_inter_remote_gather_local_bcast.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-groupdifff.lo
-  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop_create_vector.lo
-  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_reduce_scatter_allgather.lo
-  CC       src/mpi/coll/alltoall/lib_libmpi_la-alltoall_intra_pairwise.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-send_initf.lo
-  CC       src/mpi_t/lib_libmpi_la-enum_get_item.lo
-  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_intra_scatter_recexch_allgather.lo
-  CC       src/mpi/info/lib_libmpi_la-infoutil.lo
-  CC       src/mpi/coll/allgatherv/lib_libmpi_la-allgatherv_intra_ring.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-group_unionf.lo
-  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_recursive_doubling.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-testcancelf.lo
-  CC       src/mpi_t/lib_libmpi_la-cat_get_num.lo
-  CC       src/mpi/coll/op/lib_libmpi_la-opprod.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpi_la-setbot.lo
-  CC       src/mpi/coll/allgatherv/lib_libmpi_la-allgatherv_intra_brucks.lo
-  CC       src/mpi/rma/lib_libmpi_la-alloc_mem.lo
-  CC       src/mpi/init/lib_libmpi_la-initinfo.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_groupf.lo
-  CC       src/mpi/coll/ialltoall/lib_libmpi_la-ialltoall_intra_pairwise.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cancelf.lo
-  CC       src/mpi/coll/op/lib_libmpi_la-opminloc.lo
-  CC       src/mpi/coll/allgatherv/lib_libmpi_la-allgatherv_intra_recursive_doubling.lo
-  CC       src/mpi/rma/lib_libmpi_la-fetch_and_op.lo
-  CC       src/mpi/group/lib_libmpi_la-grouputil.lo
-  CC       src/mpi/coll/algorithms/treealgo/lib_libmpi_la-treealgo.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-group_comparef.lo
-  CC       src/mpi/spawn/lib_libmpi_la-lookup_name.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-probef.lo
-  CC       src/mpi/coll/op/lib_libmpi_la-opland.lo
-  CC       src/mpi/coll/allgatherv/lib_libmpi_la-allgatherv_allcomm_nb.lo
-  CC       src/mpi/coll/lib_libmpi_la-helper_fns.lo
-  CC       src/mpi/coll/iscatter/lib_libmpi_la-iscatter_inter_remote_send_local_scatter.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iprobef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-group_rankf.lo
-  CC       src/mpi/spawn/lib_libmpi_la-comm_spawn_multiple.lo
-  CC       src/mpi/coll/bcast/lib_libmpi_la-bcast_allcomm_nb.lo
-  CC       src/mpi/coll/allgather/lib_libmpi_la-allgather_inter_local_gather_remote_bcast.lo
-  CC       src/mpi/coll/iscatter/lib_libmpi_la-iscatter_intra_tree.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-testsomef.lo
-  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop_create.lo
-  CC       src/mpi/topo/lib_libmpi_la-dist_gr_create_adj.lo
-  CC       src/mpi/coll/op/lib_libmpi_la-oplor.lo
-  CC       src/mpi/coll/allgather/lib_libmpi_la-allgather_intra_ring.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_imrecv.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpi_la-fdebug.lo
-  CC       src/mpi/coll/gather/lib_libmpi_la-gather_allcomm_nb.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_ckpt.lo
-  CC       src/mpi/coll/ineighbor_allgather/lib_libmpi_la-ineighbor_allgather_allcomm_linear.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-waitsomef.lo
-  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_recexch_single_buffer.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_improbe.lo
-  CC       src/mpi/coll/allgather/lib_libmpi_la-allgather_intra_brucks.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_get_universe_size.lo
-  CC       src/mpi/spawn/lib_libmpi_la-open_port.lo
-  CC       src/mpi/spawn/lib_libmpi_la-comm_disconnect.lo
-  CC       src/mpi/coll/algorithms/recexchalgo/lib_libmpi_la-recexchalgo.lo
-  CC       src/mpi/coll/ineighbor_alltoall/lib_libmpi_la-ineighbor_alltoall_allcomm_linear.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-testallf.lo
-  CC       src/mpi/coll/alltoallw/lib_libmpi_la-alltoallw_allcomm_nb.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_probe.lo
-  CC       src/mpi/timer/lib_libmpi_la-wtick.lo
-  CC       src/mpi/coll/allgather/lib_libmpi_la-allgather_intra_recursive_doubling.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-grouprinclf.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_init.lo
-  CC       src/mpi/spawn/lib_libmpi_la-close_port.lo
-  CC       src/mpi/coll/igather/lib_libmpi_la-igather_inter_long.lo
-  CC       src/mpi/coll/ineighbor_alltoallv/lib_libmpi_la-ineighbor_alltoallv_allcomm_linear.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-waitallf.lo
-  CC       src/mpi/comm/lib_libmpi_la-commutil.lo
-  CC       src/mpi/coll/algorithms/stubalgo/lib_libmpi_la-stubalgo.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_sizef.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-mpid_nem_network_poll.lo
-  CC       src/mpi_t/lib_libmpi_la-enum_get_info.lo
-  CC       src/mpi/coll/op/lib_libmpi_la-opbor.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-testanyf.lo
-  CC       src/mpi/coll/op/lib_libmpi_la-opmaxloc.lo
-  CC       src/mpi/coll/op/lib_libmpi_la-opreplace.lo
-  CC       src/mpi/coll/igather/lib_libmpi_la-igather_inter_short.lo
-  CC       src/mpi/coll/lib_libmpi_la-nbcutil.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_freef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-unpackf.lo
-  CC       src/mpi_t/lib_libmpi_la-cvar_write.lo
-  CC       src/mpi/coll/ialltoall/lib_libmpi_la-ialltoall_intra_inplace.lo
-  CC       src/mpi/coll/ineighbor_alltoallw/lib_libmpi_la-ineighbor_alltoallw_allcomm_linear.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-waitanyf.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_irsend.lo
-  CC       src/mpi/coll/allreduce_group/lib_libmpi_la-allreduce_group.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commtesticf.lo
-  CC       src/mpi_t/lib_libmpi_la-cvar_read.lo
-  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop_create_indexed.lo
-  CC       src/mpi/coll/op/lib_libmpi_la-oplxor.lo
-  CC       src/util/assert/lib_libmpi_la-assert.lo
-  CC       src/mpi/coll/iscan/lib_libmpi_la-iscan_intra_smp.lo
-  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_inter_remote_reduce_local_bcast.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-testf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commrsizef.lo
-  CC       src/mpi_t/lib_libmpi_la-cvar_handle_alloc.lo
-  CC       src/mpi/coll/src/lib_libmpi_la-coll_impl.lo
-  CC       src/mpi/rma/lib_libmpi_la-accumulate.lo
-  CC       src/mpi/datatype/dataloop/lib_libmpi_la-segment.lo
-  CC       src/mpi/coll/op/lib_libmpi_la-opmax.lo
-  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_intra_gentran_brucks.lo
-  CC       src/mpi/coll/iscatter/lib_libmpi_la-iscatter_intra_binomial.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-waitf.lo
-  CC       src/mpi/coll/algorithms/treealgo/lib_libmpi_la-treeutil.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-grouprexclf.lo
-  CC       src/mpi_t/lib_libmpi_la-cvar_get_num.lo
-  CC       src/mpi/coll/op/lib_libmpi_la-opbxor.lo
-  CC       src/mpi/coll/alltoallw/lib_libmpi_la-alltoallw_intra_scattered.lo
-  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_intra_recexch_distance_halving.lo
-  CC       src/mpi/coll/op/lib_libmpi_la-opsum.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-irecvf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-group_inclf.lo
-  CC       src/mpi/coll/iscatter/lib_libmpi_la-iscatter_inter_linear.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_wait.lo
-  CC       src/mpi/coll/bcast/lib_libmpi_la-bcast_intra_smp.lo
-  CC       src/mpi/coll/alltoallw/lib_libmpi_la-alltoallw_inter_pairwise_exchange.lo
-  CC       src/mpi/coll/allreduce/lib_libmpi_la-allreduce_intra_smp.lo
-  CC       src/mpi/coll/barrier/lib_libmpi_la-barrier_intra_smp.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-irsendf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-groupinterf.lo
-  CC       src/mpi/coll/iscatterv/lib_libmpi_la-iscatterv_allcomm_linear.lo
-  CC       src/util/procmap/lib_libmpi_la-local_proc.lo
-  CC       src/mpi/datatype/lib_libmpi_la-ext32_datatype.lo
-  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_intra_recexch_distance_doubling.lo
-  CC       src/mpi/coll/barrier/lib_libmpi_la-barrier_allcomm_nb.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_handle_revoke_pkt.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-issendf.lo
-  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop_create_blockindexed.lo
-  CC       src/mpi/coll/op/lib_libmpi_la-opmin.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-grouptranksf.lo
-  CC       src/mpi/coll/gather/lib_libmpi_la-gather_inter_linear.lo
-  CC       src/mpi/request/lib_libmpi_la-waitany.lo
-  CC       src/util/mem/lib_libmpi_la-strerror.lo
-  CC       src/mpi/timer/lib_libmpi_la-wtime.lo
-  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_inter_local_gather_remote_bcast.lo
-  CC       src/mpi/topo/lib_libmpi_la-graphnbrcnt.lo
-  CC       src/mpi/coll/scan/lib_libmpi_la-scan_intra_smp.lo
-  CC       src/mpi/coll/bcast/lib_libmpi_la-bcast_inter_remote_send_local_bcast.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ibsendf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-group_sizef.lo
-  CC       src/mpi/datatype/dataloop/lib_libmpi_la-subarray_support.lo
-  CC       src/mpi/topo/lib_libmpi_la-cart_shift.lo
-  CC       src/mpi/coll/gather/lib_libmpi_la-gather_inter_local_gather_remote_send.lo
-  CC       src/binding/fortran/use_mpi/lib_libmpi_la-create_f90_int.lo
-  CC       src/mpi/rma/lib_libmpi_la-rmatypeutil.lo
-  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_intra_ring.lo
-  CC       src/mpi/topo/lib_libmpi_la-cart_map.lo
-  CC       src/mpi/topo/lib_libmpi_la-dist_gr_create.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-sndrcvrplf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-isendf.lo
-  CC       src/mpi/coll/reduce/lib_libmpi_la-reduce_intra_reduce_scatter_gather.lo
-  CC       src/mpi/request/lib_libmpi_la-waitsome.lo
-  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_intra_brucks.lo
-  CC       src/mpi/request/lib_libmpi_la-mpir_request.lo
-  CC       src/binding/fortran/use_mpi/lib_libmpi_la-create_f90_complex.lo
-  CC       src/mpi_t/lib_libmpi_la-pvar_get_info.lo
-  CC       src/binding/fortran/use_mpi/lib_libmpi_la-create_f90_real.lo
-  CC       src/mpi/coll/transports/gentran/lib_libmpi_la-gentran_impl.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-bufdetachf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_dup_with_infof.lo
-  CC       src/mpi/coll/reduce_scatter/lib_libmpi_la-reduce_scatter_intra_noncommutative.lo
-  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_intra_recursive_doubling.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_create.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-bufattachf.lo
-  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter_intra_recursive_halving.lo
-  CC       src/mpi/coll/transports/gentran/lib_libmpi_la-gentran_utils.lo
-  CC       src/mpi/coll/op/lib_libmpi_la-opno_op.lo
-  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce_intra_ring.lo
-  CC       src/mpi/datatype/dataloop/lib_libmpi_la-dataloop_create_pairtype.lo
-  CC       src/mpi/coll/neighbor_alltoallw/lib_libmpi_la-neighbor_alltoallw_allcomm_nb.lo
-  CC       src/mpi/coll/scatter/lib_libmpi_la-scatter_allcomm_nb.lo
-  CC       src/mpi_t/lib_libmpi_la-pvar_stop.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-rsendf.lo
-  CC       src/mpi/coll/ineighbor_allgatherv/lib_libmpi_la-ineighbor_allgatherv_allcomm_linear.lo
-  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter_intra_pairwise.lo
-  CC       src/mpi/spawn/lib_libmpi_la-comm_connect.lo
-  CC       src/mpi/coll/transports/gentran/lib_libmpi_la-tsp_gentran.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_cancel_send.lo
-  CC       src/mpi/coll/reduce/lib_libmpi_la-reduce_intra_smp.lo
-  CC       src/mpi/spawn/lib_libmpi_la-comm_join.lo
-  CC       src/mpi/coll/neighbor_alltoallv/lib_libmpi_la-neighbor_alltoallv_allcomm_nb.lo
-  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_intra_binomial.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ssendf.lo
-  CC       src/mpi/pt2pt/lib_libmpi_la-bsendutil.lo
-  CC       src/mpi/coll/reduce_scatter_block/lib_libmpi_la-reduce_scatter_block_intra_recursive_doubling.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-grfnbcountf.lo
-  CC       src/mpi/coll/transports/stubtran/lib_libmpi_la-tsp_stubtran.lo
-  CC       src/mpi/coll/scatterv/lib_libmpi_la-scatterv_allcomm_nb.lo
-  CC       src/mpi/topo/lib_libmpi_la-dims_create.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-bsendf.lo
-  CC       src/mpi/coll/ibarrier/lib_libmpi_la-ibarrier_inter_bcast.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpi_la-statusf2c.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_attach.lo
-  CC       src/mpi/rma/lib_libmpi_la-rput.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_isend.lo
-  CC       src/mpi/coll/transports/stubtran/lib_libmpi_la-stubtran_impl.lo
-  CC       src/mpi/coll/scatter/lib_libmpi_la-scatter_inter_linear.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_mrecv.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-fetch_and_opf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-get_countf.lo
-  CC       src/mpi/coll/iscatter/lib_libmpi_la-iscatter_gentran_algos.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_istartmsg.lo
-  CC       src/mpi/coll/ibcast/lib_libmpi_la-ibcast_utils.lo
-  CC       src/mpi/init/lib_libmpi_la-netloc_util.lo
-  CC       src/mpi/rma/lib_libmpi_la-winutil.lo
-  CC       src/mpi/coll/ireduce_scatter_block/lib_libmpi_la-ireduce_scatter_block_gentran_algos.lo
-  CC       src/mpi/coll/bcast/lib_libmpi_la-bcast_intra_scatter_ring_allgather.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-recvf.lo
-  CC       src/mpi/coll/gather/lib_libmpi_la-gather_intra_binomial.lo
-  CC       src/mpi/init/lib_libmpi_la-async.lo
-  CC       src/mpi/datatype/lib_libmpi_la-typeutil.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_handle_op_req.lo
-  CC       src/util/cvar/lib_libmpi_la-mpir_cvars.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-sendf.lo
-  CC       src/mpi/coll/ireduce/lib_libmpi_la-ireduce_intra_smp.lo
-  CC       src/mpi/rma/lib_libmpi_la-get_accumulate.lo
-  CC       src/mpi/coll/ialltoallw/lib_libmpi_la-ialltoallw_intra_blocked.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-allreducef.lo
-  CC       src/mpid/ch3/channels/nemesis/utils/replacements/lib_libmpi_la-mkstemp.lo
-  CC       src/pmi/simple/lib_libmpi_la-simple_pmi.lo
-  CC       src/mpi/topo/lib_libmpi_la-cart_coords.lo
-  CC       src/mpi/coll/iallgather/lib_libmpi_la-iallgather_gentran_algos.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-request_freef.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_abort.lo
-  CC       src/pmi/simple/lib_libmpi_la-simple_pmiutil.lo
-  CC       src/mpid/ch3/channels/nemesis/src/lib_libmpi_la-ch3_init.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-bsend_initf.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_port.lo
-  CC       src/mpi/coll/scatter/lib_libmpi_la-scatter_inter_remote_send_local_scatter.lo
-  CC       src/mpi/coll/op/lib_libmpi_la-opband.lo
-  CC       src/mpi/coll/bcast/lib_libmpi_la-bcast_intra_binomial.lo
-  CC       src/nameserv/pmi/lib_libmpi_la-pmi_nameserv.lo
-  CC       src/mpid/common/shm/lib_libmpi_la-mpidu_shm_alloc.lo
-  CC       src/mpi/coll/reduce_scatter/lib_libmpi_la-reduce_scatter_intra_recursive_halving.lo
-  CC       src/mpid/ch3/channels/nemesis/utils/monitor/lib_libmpi_la-papi_defs.lo
-  CC       src/mpi/coll/ialltoallw/lib_libmpi_la-ialltoallw_inter_pairwise_exchange.lo
-  CC       src/mpi_t/lib_libmpi_la-mpit.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpidi_pg.lo
-  CC       src/mpi/coll/reduce_scatter/lib_libmpi_la-reduce_scatter_intra_pairwise.lo
-  CC       src/mpi/coll/scan/lib_libmpi_la-scan_allcomm_nb.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_complete.lo
-  CC       src/mpid/common/shm/lib_libmpi_la-mpidu_shm_barrier.lo
-  CC       src/mpi/rma/lib_libmpi_la-free_mem.lo
-  CC       src/mpi/coll/allreduce/lib_libmpi_la-allreduce_allcomm_nb.lo
-  CC       src/mpid/ch3/channels/nemesis/netmod/tcp/lib_libmpi_la-tcp_ckpt.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_iprobe.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_comm_spawn_multiple.lo
-  CC       src/mpi/coll/scatter/lib_libmpi_la-scatter_intra_binomial.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_cancel_recv.lo
-  CC       src/mpi/comm/lib_libmpi_la-contextid.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cart_createf.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-ch3u_recvq.lo
-  CC       src/mpi/coll/ibarrier/lib_libmpi_la-ibarrier_intra_recursive_doubling.lo
-  CC       src/mpid/common/sched/lib_libmpi_la-mpidu_sched.lo
-  CC       src/mpi/spawn/lib_libmpi_la-publish_name.lo
-  CC       src/mpi/coll/ialltoallw/lib_libmpi_la-ialltoallw_intra_inplace.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-redscatf.lo
-  CC       src/mpi/coll/gatherv/lib_libmpi_la-gatherv_allcomm_nb.lo
-  CC       src/mpi/coll/ialltoallv/lib_libmpi_la-ialltoallv_inter_pairwise_exchange.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-gatherf.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_detach.lo
-  CC       src/mpid/ch3/src/lib_libmpi_la-mpid_irecv.lo
-  CC       src/mpi/coll/ialltoallv/lib_libmpi_la-ialltoallv_intra_blocked.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-attr_deletef.lo
-  CC       src/mpi/coll/ialltoallv/lib_libmpi_la-ialltoallv_intra_inplace.lo
-  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_naive.lo
-  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_intra_gentran_ring.lo
-  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_intra_recexch_distance_halving.lo
-  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_intra_recexch_distance_doubling.lo
-  CC       src/mpi/coll/iallgatherv/lib_libmpi_la-iallgatherv_gentran_algos.lo
-  CC       src/mpi_t/lib_libmpi_la-pvar_session_free.lo
-  CC       src/mpi_t/lib_libmpi_la-pvar_reset.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-topo_testf.lo
-  CC       src/mpi_t/lib_libmpi_la-pvar_read.lo
-  CC       src/mpi_t/lib_libmpi_la-pvar_handle_free.lo
-  CC       src/mpi_t/lib_libmpi_la-pvar_handle_alloc.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpi_la-statusc2f.lo
-  CC       src/mpi/rma/lib_libmpi_la-win_fence.lo
-  CC       src/glue/romio/lib_libmpi_la-all_romio_symbols.lo
-  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_gentran_algos.lo
-  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_recexch_multiple_buffer.lo
+  CC       src/mpi/request/lib_libmpi_la-wait.lo
   CC       src/mpi/request/lib_libmpi_la-waitall.lo
-  CC       src/mpi/coll/ialltoall/lib_libmpi_la-ialltoall_intra_brucks.lo
-  CC       src/mpi/coll/iallreduce/lib_libmpi_la-iallreduce_intra_tree_kary.lo
-  CC       src/mpi/coll/ialltoall/lib_libmpi_la-ialltoall_intra_permuted_sendrecv.lo
-  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter_gentran_algos.lo
-  CC       src/mpi/coll/ireduce_scatter/lib_libmpi_la-ireduce_scatter_intra_recexch.lo
-  CC       src/mpi/coll/ireduce_scatter_block/lib_libmpi_la-ireduce_scatter_block_intra_recursive_halving.lo
-  CC       src/mpi/coll/ireduce_scatter_block/lib_libmpi_la-ireduce_scatter_block_intra_pairwise.lo
-  CC       src/mpi/coll/ireduce_scatter_block/lib_libmpi_la-ireduce_scatter_block_intra_recursive_doubling.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_structf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-scattervf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dims_createf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-graphdims_getf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-grfnbrsf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-graph_getf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cart_shiftf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cart_subf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-cart_mapf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-graph_mapf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-get_versionf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-getpnamef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-get_library_versionf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-errhcreatef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-errhsetf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_flush_local_allf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-errhgetf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-error_stringf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-finalizef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-errhfreef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-error_classf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-abortf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-initializedf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-close_portf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_acceptf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commdiscf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commparentf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_joinf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_spawnf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-publish_namef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-lookup_namef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-spawnmultf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-open_portf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-getf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-unpubnamef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_set_infof.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_get_infof.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-putf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-accumulatef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_get_groupf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_completef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_createf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_lockf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_postf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_fencef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_freef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_startf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_testf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_unlockf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_waitf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_shared_queryf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_allocatef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_allocate_sharedf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_create_dynamicf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_attachf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_detachf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_get_infof.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_set_infof.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-get_accumulatef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-compare_and_swapf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-rputf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_unlock_allf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-rgetf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-raccumulatef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-rget_accumulatef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_lock_allf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_flushf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_flush_allf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_flush_localf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_syncf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-adderrcodef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-adderrclassf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-adderrstringf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commnewkeyf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_get_attrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commfreekeyf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commcallerrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commgetnamf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commdelattrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_set_attrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-greqcompletef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-filecallerrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-isthrmainf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_set_namef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-greqstartf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-statsetelf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typedelattrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-query_threadf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typenewkeyf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-statgetclf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_dupf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typefreekeyf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typegetcntsf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typegetenvf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typesetattrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_get_attrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_match_sizef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typesetnamef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-wincallerrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-winnewkeyf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-windelattrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-winfreekeyf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_get_namef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_get_attrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_set_attrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-win_set_namef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commcreerrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-alloc_memf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commgeterrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-filecreerrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typegnamef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-commseterrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-finalizedf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-filegeterrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-fileseterrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-free_memf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-infognkf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ialltoallf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-igathervf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-mrecvf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ireducef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ialltoallwf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-pack_externalf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iexscanf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iscattervf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ibcastf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-infognthkf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-reqgetstatf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-mprobef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-infovallenf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typechvecf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ialltoallvf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-packesizef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iscatterf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ireduce_scatterf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typedarrayf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iallgathervf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-info_createf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-info_freef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_idupf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ibarrierf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_create_hindexed_blockf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-info_dupf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ireduce_scatter_blockf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-info_getf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ineighbor_alltoallvf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-reduce_scatter_blockf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-wincreerrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typecindbf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typechindf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iallgatherf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-reduce_localf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-info_deletef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typecresizef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dist_graph_neighbors_countf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-info_setf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-winseterrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typecstructf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_all_endf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dist_graph_create_adjacentf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typecsubarrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-neighbor_allgatherf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ineighbor_allgathervf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typegetextentf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iscanf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-wingeterrf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dist_graph_createf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dist_graph_neighborsf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-unpackextf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-iallreducef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-igatherf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-neighbor_allgathervf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-neighbor_alltoallf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-improbef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-imrecvf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ineighbor_allgatherf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-typegtextf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-op_commutativef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ineighbor_alltoallwf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-ineighbor_alltoallf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-neighbor_alltoallvf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-neighbor_alltoallwf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-status_set_elements_xf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-get_elements_xf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_split_typef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_get_extent_xf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_get_true_extent_xf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-type_size_xf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_create_groupf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_failure_get_ackedf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_revokef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_failure_ackf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_shrinkf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_atf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-comm_agreef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_closef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_openf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_set_sizef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_preallocatef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_sizef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_groupf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_deletef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_amodef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_set_infof.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_infof.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_set_viewf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_viewf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_atf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_at_allf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_at_allf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iread_atf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iwrite_atf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_readf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_allf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_allf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_ireadf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_ordered_beginf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_seekf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_writef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iwritef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_positionf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_byte_offsetf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_sharedf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_sharedf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_orderedf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iread_sharedf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_orderedf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iwrite_sharedf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_seek_sharedf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_position_sharedf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_at_all_beginf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_at_all_beginf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_at_all_endf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_all_endf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_all_beginf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_ordered_endf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_type_extentf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_all_beginf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_at_all_endf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_read_ordered_endf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_write_ordered_beginf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-register_datarepf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_set_atomicityf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_get_atomicityf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_syncf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iread_at_allf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-initf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iwrite_at_allf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iwrite_allf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-file_iread_allf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-initthreadf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-pcontrolf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-addressf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-wtimef.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-wtickf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-getaddressf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-aint_addf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-aint_difff.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-keyval_createf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dup_fnf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_del_fnf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_copy_fnf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_win_del_fnf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_comm_copy_fnf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dup_win_fnf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dup_comm_fnf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_comm_del_fnf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_win_copy_fnf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-dup_type_fnf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_type_del_fnf.lo
-  CC       src/binding/fortran/use_mpi/lib_libmpifort_la-typef90cmplxf.lo
-  CC       src/binding/fortran/mpif_h/lib_libmpifort_la-null_type_copy_fnf.lo
-  CC       src/binding/fortran/use_mpi/lib_libmpifort_la-typef90realf.lo
-  CC       src/binding/fortran/use_mpi/lib_libmpifort_la-typef90intf.lo
-  CXX      src/binding/cxx/initcxx.lo
-  CC       src/env/mpichversion.o
+  CC       src/mpi/request/lib_libmpi_la-waitany.lo
+  CC       src/mpi/request/lib_libmpi_la-waitsome.lo
+  CC       src/mpi/rma/lib_libmpi_la-accumulate.lo
+  CC       src/mpi/rma/lib_libmpi_la-alloc_mem.lo
+  CC       src/mpi/rma/lib_libmpi_la-compare_and_swap.lo
+  CC       src/mpi/rma/lib_libmpi_la-fetch_and_op.lo
+  CC       src/mpi/rma/lib_libmpi_la-free_mem.lo
+  CC       src/mpi/rma/lib_libmpi_la-get.lo
+  CC       src/mpi/rma/lib_libmpi_la-get_accumulate.lo
+  CC       src/mpi/rma/lib_libmpi_la-put.lo
+  CC       src/mpi/rma/lib_libmpi_la-raccumulate.lo
+  CC       src/mpi/rma/lib_libmpi_la-rget.lo
+  CC       src/mpi/rma/lib_libmpi_la-rget_accumulate.lo
+  CC       src/mpi/rma/lib_libmpi_la-rput.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_allocate.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_allocate_shared.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_attach.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_complete.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_create.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_create_dynamic.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_detach.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_fence.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_flush.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_flush_all.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_flush_local.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_flush_local_all.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_free.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_get_group.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_get_info.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_get_name.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_lock.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_lock_all.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_post.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_set_info.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_set_name.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_shared_query.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_start.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_sync.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_test.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_unlock.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_unlock_all.lo
+  CC       src/mpi/rma/lib_libmpi_la-win_wait.lo
+  CC       src/mpi/spawn/lib_libmpi_la-comm_disconnect.lo
+  CC       src/mpi/spawn/lib_libmpi_la-comm_get_parent.lo
+  CC       src/mpi/spawn/lib_libmpi_la-comm_join.lo
+  CC       src/mpi/spawn/lib_libmpi_la-comm_spawn.lo
+  CC       src/mpi/spawn/lib_libmpi_la-lookup_name.lo
+  CC       src/mpi/spawn/lib_libmpi_la-comm_spawn_multiple.lo
+  CC       src/mpi/spawn/lib_libmpi_la-publish_name.lo
+  CC       src/mpi/spawn/lib_libmpi_la-unpublish_name.lo
+  CC       src/mpi/spawn/lib_libmpi_la-open_port.lo
+  CC       src/mpi/spawn/lib_libmpi_la-close_port.lo
+  CC       src/mpi/spawn/lib_libmpi_la-comm_connect.lo
+  CC       src/mpi/spawn/lib_libmpi_la-comm_accept.lo
+  CC       src/mpi/timer/lib_libmpi_la-wtime.lo
+  CC       src/mpi/topo/lib_libmpi_la-cart_coords.lo
+  CC       src/mpi/timer/lib_libmpi_la-wtick.lo
+  CC       src/mpi/topo/lib_libmpi_la-cart_create.lo
+  CC       src/mpi/topo/lib_libmpi_la-cart_map.lo
+  CC       src/mpi/topo/lib_libmpi_la-cart_rank.lo
+  CC       src/mpi/topo/lib_libmpi_la-cart_get.lo
+  CC       src/mpi/topo/lib_libmpi_la-cart_shift.lo
+  CC       src/mpi/topo/lib_libmpi_la-cart_sub.lo
+  CC       src/mpi/topo/lib_libmpi_la-dims_create.lo
+  CC       src/mpi/topo/lib_libmpi_la-graph_map.lo
+  CC       src/mpi/topo/lib_libmpi_la-graph_get.lo
+  CC       src/mpi/topo/lib_libmpi_la-graph_nbr.lo
+  CC       src/mpi/topo/lib_libmpi_la-graphcreate.lo
+  CC       src/mpi/topo/lib_libmpi_la-graphdimsget.lo
+  CC       src/mpi/topo/lib_libmpi_la-graphnbrcnt.lo
+  CC       src/mpi/topo/lib_libmpi_la-cartdim_get.lo
+  CC       src/mpi/topo/lib_libmpi_la-topo_test.lo
+  CC       src/mpi/topo/lib_libmpi_la-dist_gr_create_adj.lo
+  CC       src/mpi/topo/lib_libmpi_la-dist_gr_create.lo
+  CC       src/mpi/topo/lib_libmpi_la-dist_gr_neighb_count.lo
+  CC       src/mpi/topo/lib_libmpi_la-dist_gr_neighb.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpi_la-statusf2c.lo
+  CC       src/binding/fortran/mpif_h/lib_libmpi_la-statusc2f.lo
+  CC       src/binding/fortran/use_mpi/lib_libmpi_la-create_f90_int.lo
+  CC       src/binding/fortran/use_mpi/lib_libmpi_la-create_f90_real.lo
+  CC       src/binding/fortran/use_mpi/lib_libmpi_la-create_f90_complex.lo
+  CC       src/glue/romio/lib_libmpi_la-all_romio_symbols.lo
+  MOD      src/binding/fortran/use_mpi/mpi_constants.mod-stamp
+  MOD      src/binding/fortran/use_mpi/mpi_sizeofs.mod-stamp
+  GEN      lib/libmpi.la
   MOD      src/binding/fortran/use_mpi/mpi_base.mod-stamp
   MOD      src/binding/fortran/use_mpi/mpi.mod-stamp
-  GEN      lib/libmpi.la
   CXXLD    lib/libmpicxx.la
-  GEN      lib/libmpifort.la
   CCLD     src/env/mpichversion
   CCLD     src/env/mpivars
-make[2]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3'
+  GEN      lib/libmpifort.la
+make[2]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3'
 Making all in examples
-make[2]: Entering directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/examples'
+make[2]: Entering directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/examples'
   CC       cpi.o
   CCLD     cpi
-make[2]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/examples'
-make[1]: Leaving directory `/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3'
+make[2]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/examples'
+make[1]: Leaving directory `/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3'

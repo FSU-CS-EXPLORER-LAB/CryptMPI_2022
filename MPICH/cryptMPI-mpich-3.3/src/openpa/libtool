@@ -1,6 +1,6 @@
 #! /bin/sh
 # Generated automatically by config.status (openpa) 1.0.3
-# Libtool was configured on host inv35:
+# Libtool was configured on host inv32:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.
@@ -97,7 +97,7 @@ NM="/usr/bin/nm -B"
 LN_S="ln -s"
 
 # What is the maximum length of a command?
-max_cmd_len=1572864
+max_cmd_len=3458764513820540925
 
 # Object file suffix (normally "o").
 objext=o
@@ -285,7 +285,7 @@ hardcode_into_libs=yes
 sys_lib_search_path_spec="/usr/lib/gcc/x86_64-redhat-linux/4.8.5 /usr/lib64 /lib64 /usr/lib /lib "
 
 # Detected run-time system search path for libraries.
-sys_lib_dlsearch_path_spec="/lib /usr/lib /opt/beegfs/lib /usr/lib64/dyninst /usr/lib64/iscsi /usr/lib64/mysql "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /opt/beegfs/lib /usr/lib64/dyninst /usr/lib64/mysql "
 
 # Explicit LT_SYS_LIBRARY_PATH set during ./configure time.
 configure_time_lt_sys_library_path=""

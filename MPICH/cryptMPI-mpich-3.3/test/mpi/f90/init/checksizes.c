@@ -1,3 +1,4 @@
+/* This file created from f77/init/checksizes.c with f77tof90 */
 #include "mpi.h"
 #include <stdio.h>
 int main( int argc, char **argv )

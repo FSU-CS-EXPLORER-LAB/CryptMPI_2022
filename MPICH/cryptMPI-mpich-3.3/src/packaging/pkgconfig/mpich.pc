@@ -1,5 +1,5 @@
 # this gives access to the mpich header files
-prefix=/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/mpich_install
+prefix=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/Install_mpich
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

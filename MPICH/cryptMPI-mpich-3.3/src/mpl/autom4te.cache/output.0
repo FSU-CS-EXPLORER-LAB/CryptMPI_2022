@@ -8674,6 +8674,10 @@ lt_prog_compiler_static=
 	lt_prog_compiler_pic='-qpic'
 	lt_prog_compiler_static='-qstaticlink'
 	;;
+      armclang* | armclang++* | armflang*)
+        # ARM LLVM C/C++/Fortran
+        lt_prog_compiler_wl='-Wl,'
+        ;;
       *)
 	case `$CC -V 2>&1 | sed 5q` in
 	*Sun\ Ceres\ Fortran* | *Sun*Fortran*\ [1-7].* | *Sun*Fortran*\ 8.[0-3]*)
@@ -8682,7 +8686,7 @@ lt_prog_compiler_static=
 	  lt_prog_compiler_static='-Bstatic'
 	  lt_prog_compiler_wl=''
 	  ;;
-	*Sun\ F* | *Sun*Fortran*)
+	*Sun\ F* | *Sun*Fortran* | *Studio*Fortran*)
 	  lt_prog_compiler_pic='-KPIC'
 	  lt_prog_compiler_static='-Bstatic'
 	  lt_prog_compiler_wl='-Qoption ld '
@@ -9829,7 +9833,10 @@ fi
   link_all_deplibs=yes
   allow_undefined_flag=$_lt_dar_allow_undefined
   case $cc_basename in
-     ifort*|nagfor*) _lt_dar_can_shared=yes ;;
+     ifort*|nagfor*)
+        lt_prog_compiler_wl='-Wl,'
+        _lt_dar_can_shared=yes
+      ;;
      *) _lt_dar_can_shared=$GCC ;;
   esac
   if test yes = "$_lt_dar_can_shared"; then

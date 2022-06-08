@@ -1,8 +1,8 @@
 CC          = gcc -std=gnu99
 AR          = ar
 RANLIB      = ranlib
-LIBNAME     = /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/lib/libmpi.a
-srcdir      = /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio/mpi2-other/array/fortran
+LIBNAME     = /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/lib/libmpi.a
+srcdir      = /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio/mpi2-other/array/fortran
 
 INCLUDE_DIR = -I. -I../../../include -I${srcdir}/../../../mpi-io -I${srcdir}/../../../adio/include -I../../../adio/include
 CFLAGS      =    -O2  -DFORTRANUNDERSCORE -DHAVE_ROMIOCONF_H $(MPIOPROFILE) $(INCLUDE_DIR)

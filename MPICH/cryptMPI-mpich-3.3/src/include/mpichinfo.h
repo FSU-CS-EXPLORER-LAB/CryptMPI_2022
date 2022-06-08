@@ -13,7 +13,7 @@
 #ifndef MPICHINFO_H_INCLUDED
 #define MPICHINFO_H_INCLUDED
 
-#define MPICH_CONFIGURE_ARGS_CLEAN "--prefix=/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/mpich_install/"
+#define MPICH_CONFIGURE_ARGS_CLEAN "--prefix=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/Install_mpich/ --no-create --no-recursion"
 #define MPICH_VERSION_DATE "Fri Nov  9 08:53:12 CST 2018"
 #define MPICH_DEVICE "ch3:nemesis"
 #define MPICH_COMPILER_CC "gcc -std=gnu99    -O2"

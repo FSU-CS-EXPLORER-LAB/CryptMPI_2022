@@ -199,9 +199,39 @@ int MPIR_Alltoall_impl(const void *sendbuf, int sendcount, MPI_Datatype sendtype
                        void *recvbuf, int recvcount, MPI_Datatype recvtype,
                        MPIR_Comm * comm_ptr, MPIR_Errflag_t * errflag)
 {
+#if ALLTOALL_PRINT_FUN
+   if (PRINT_FUN_NAME){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[AlltoAll rank = %d host = %s count = %d  Alltoall_tuning=%d  security_approach=%d] Func: MPIR_Alltoall_impl\n", comm_ptr->rank,hostname,recvcount,inter_alltoall_tuning,security_approach);fflush(stdout);
+	}
+#endif
     int mpi_errno = MPI_SUCCESS;
+    
+    if (security_approach == 1002 && init_phase==0)  {            
+                mpi_errno = 
+                    MPIR_Naive_Sec_Alltoall(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm_ptr, errflag); // Naive
 
-    if (comm_ptr->comm_kind == MPIR_COMM_KIND__INTRACOMM) {
+    } else if (inter_alltoall_tuning>=0 && init_phase==0){
+        switch (inter_alltoall_tuning) {
+            case 0:
+                mpi_errno =
+                    MPIR_Alltoall_bruck_MV2(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm_ptr, errflag); // OBruck
+                break;
+            case 2:
+                mpi_errno =
+                    MPIR_Alltoall_Scatter_dest_MV2(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm_ptr, errflag); // OSD
+                break;
+            case 5:
+                mpi_errno =
+                    MPIR_Alltoall_Conc_ShMem_MV2(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm_ptr, errflag); // CHS(unset SA), Naive-CHS(SA=2002), O-CHS(SA=2001)
+                break;
+            default:
+                mpi_errno =
+                    MPIR_Alltoall_bruck_MV2(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm_ptr, errflag); 
+                break;
+        }
+    } else if (comm_ptr->comm_kind == MPIR_COMM_KIND__INTRACOMM) {
         /* intracommunicator */
         switch (MPIR_Alltoall_intra_algo_choice) {
             case MPIR_ALLTOALL_INTRA_ALGO_BRUCKS:
@@ -277,6 +307,13 @@ int MPIR_Alltoall(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
                   void *recvbuf, int recvcount, MPI_Datatype recvtype,
                   MPIR_Comm * comm_ptr, MPIR_Errflag_t * errflag)
 {
+#if ALLTOALL_PRINT_FUN
+   if (0 && PRINT_FUN_NAME){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[AlltoAll rank = %d host = %s count = %d  Alltoall_tuning=%d  security_approach=%d] Func: MPIR_Alltoall\n", comm_ptr->rank,hostname,recvcount,inter_alltoall_tuning,security_approach);fflush(stdout);
+	}
+#endif      
     int mpi_errno = MPI_SUCCESS;
 
     if (MPIR_CVAR_ALLTOALL_DEVICE_COLLECTIVE && MPIR_CVAR_DEVICE_COLLECTIVES) {
@@ -323,8 +360,19 @@ Output Parameters:
 int MPI_Alltoall(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
                  void *recvbuf, int recvcount, MPI_Datatype recvtype, MPI_Comm comm)
 {
-    int mpi_errno = MPI_SUCCESS;
+    /* Convert MPI object handles to object pointers */
     MPIR_Comm *comm_ptr = NULL;
+    MPIR_Comm_get_ptr(comm, comm_ptr);
+
+#if ALLTOALL_PRINT_FUN
+   if (0 && PRINT_FUN_NAME){
+		char hostname[100];
+		gethostname(hostname, MAX_HOSTNAME_LEN);
+		printf("[AlltoAll rank = %d host = %s count = %d  Alltoall_tuning=%d  security_approach=%d] Func: MPI_Alltoall\n", comm_ptr->rank,hostname,recvcount,inter_alltoall_tuning,security_approach);fflush(stdout);
+	}
+#endif          
+    int mpi_errno = MPI_SUCCESS;
+    
     MPIR_Errflag_t errflag = MPIR_ERR_NONE;
     MPIR_FUNC_TERSE_STATE_DECL(MPID_STATE_MPI_ALLTOALL);
 
@@ -344,8 +392,6 @@ int MPI_Alltoall(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
     }
 #endif /* HAVE_ERROR_CHECKING */
 
-    /* Convert MPI object handles to object pointers */
-    MPIR_Comm_get_ptr(comm, comm_ptr);
 
     /* Validate parameters and objects (post conversion) */
 #ifdef HAVE_ERROR_CHECKING
@@ -428,3 +474,4 @@ int MPI_Alltoall(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
     goto fn_exit;
     /* --END ERROR HANDLING-- */
 }
+

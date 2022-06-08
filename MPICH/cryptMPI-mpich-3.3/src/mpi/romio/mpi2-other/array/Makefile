@@ -1,15 +1,15 @@
 CC          = gcc -std=gnu99
 AR          = ar
-LIBNAME     = /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/lib/libmpi.a
+LIBNAME     = /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/lib/libmpi.a
 RANLIB      = ranlib
-srcdir      = /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio/mpi2-other/array
+srcdir      = /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio/mpi2-other/array
 CC_SHL      = 
-SHLIBNAME   = /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/lib/libmpi
+SHLIBNAME   = /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/lib/libmpi
 
 INCLUDE_DIR = -I. -I../../include -I${srcdir}/../../mpi-io -I${srcdir}/../../adio/include -I../../adio/include
-CFLAGS      =   -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src -D_REENTRANT -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio/include    -O2  -DFORTRANUNDERSCORE -DHAVE_ROMIOCONF_H $(MPIOPROFILE) $(INCLUDE_DIR)
+CFLAGS      =   -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src -D_REENTRANT -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio/include    -O2  -DFORTRANUNDERSCORE -DHAVE_ROMIOCONF_H $(MPIOPROFILE) $(INCLUDE_DIR)
 
-top_builddir  = /home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3
+top_builddir  = /home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3
 LIBTOOL       = $(SHELL) $(top_builddir)/libtool
 C_COMPILE_SHL = $(CC_SHL)
 

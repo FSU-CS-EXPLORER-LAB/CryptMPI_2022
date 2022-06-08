@@ -755,13 +755,13 @@
 #define HYDRA_AVAILABLE_TOPOLIBS "hwloc"
 
 /* C compiler */
-#define HYDRA_CC "gcc -std=gnu99    "
+#define HYDRA_CC "gcc -std=gnu99   -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src -D_REENTRANT -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio/include    -O2   "
 
 /* Configure arguments */
-#define HYDRA_CONFIGURE_ARGS_CLEAN "'--disable-option-checking' '--prefix=/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/mpich_install' '--cache-file=/dev/null' '--srcdir=.' 'CC=gcc -std=gnu99' 'CFLAGS= -O2' 'LDFLAGS=' 'LIBS=' 'CPPFLAGS= -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src -D_REENTRANT -I/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio/include' 'MPLLIBNAME=mpl'"
+#define HYDRA_CONFIGURE_ARGS_CLEAN "'--disable-option-checking' '--prefix=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/Install_mpich' '--cache-file=/dev/null' '--srcdir=.' 'CC=gcc -std=gnu99' 'CFLAGS= -O2' 'LDFLAGS=' 'LIBS=' 'CPPFLAGS= -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpl/include -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/openpa/src -D_REENTRANT -I/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio/include' 'MPLLIBNAME=mpl'"
 
 /* C++ compiler */
-#define HYDRA_CXX "g++    "
+#define HYDRA_CXX ""
 
 /* Default checkpointing library */
 /* #undef HYDRA_DEFAULT_CKPOINTLIB */
@@ -779,10 +779,10 @@
 #define HYDRA_DEFAULT_TOPOLIB "hwloc"
 
 /* Fortran 77 compiler */
-#define HYDRA_F77 "gfortran   "
+#define HYDRA_F77 ""
 
 /* Fortran 90 compiler */
-#define HYDRA_F90 "gfortran   "
+#define HYDRA_F90 ""
 
 /* Hydra PMI proxy executable */
 #define HYDRA_PMI_PROXY "hydra_pmi_proxy"

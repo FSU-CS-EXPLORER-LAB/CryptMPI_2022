@@ -1,5 +1,5 @@
 #! /bin/sh
-prefix=/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/mpich_install
+prefix=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/Install_mpich
 exec_prefix=${prefix}
 bindir=${exec_prefix}/bin
 mpirun="${bindir}/mpiexec"
@@ -11,7 +11,7 @@ makeeach=0
 check_at_once=1
 quiet=0
 MAKE="make"
-srcdir=/home/gavahi/ics-2020/cryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio/test
+srcdir=/home/gavahi/CryptMPI_2022/MPICH/cryptMPI-mpich-3.3/src/mpi/romio/test
 check_canrun=0
 subset_only=0
 FILENAME=test
