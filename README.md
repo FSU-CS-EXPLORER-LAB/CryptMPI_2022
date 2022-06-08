@@ -1,7 +1,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3758775.svg)](https://doi.org/10.5281/zenodo.3758775)
 # CryptMPI: A Fast Encrypted MPI Library
 CryptMPI provides secure inter-node communication in the HPC cluster and cloud environment.
-We implemented two prototypes in MPICH-3.4.2 (for Ethernet) and MVAPICH2-2.3.3(for Infiniband), both using AES-
+We implemented two prototypes in MPICH-3.3 (for Ethernet) and MVAPICH2-2.3.3(for Infiniband), both using AES-
 GCM from the [BoringSSL library](https://boringssl.googlesource.com/boringssl/).
 
 Up to now, we implemented secure approach for following routines: 
@@ -80,7 +80,7 @@ export LD_LIBRARY_PATH=/MPICH_INSTALL_DIR/install/lib:/YOUR_PATH_TO_MPICH/mpich-
 ## Performance measurement
 The performance was measured on 100Gb/s Infiniband and 10Gb/s Ethernet network. Benchmark program used:
 - Ping-Pong program
-- OSU micro-benchmark 5.6.2
+- OSU micro-benchmark 5.8
 - NAS parallel benchmarks 3.3.1 
 - 2D-Stencil
 
@@ -145,16 +145,6 @@ export MV2_SECURITY_APPROACH=200
 export MV2_INTER_SCATTER_TUNING=12
 echo "MPIR_Scatter_MV2_Direct [Scatter_MV2_Direct]"
 ```
-
-
-#### Scatterv
-
-
-```bash
-export MV2_SECURITY_APPROACH=200
-echo "MPIR_ENC_Scatterv"
-```
-
 
 #### AlltoAll
 
@@ -241,30 +231,6 @@ export MV2_SECURITY_APPROACH=2001
 echo "O-CHS"
 ```
 
-
-
-
-#### probe.c/iprobe.c
-
-(TODO: add explanation for this option)
-
-```bash
-export MV2_SECURITY_APPROACH=602
-```
-
-
-#### send.c/recv.c/irecv.c/isend.c/wait/waitall
-
-(TODO: Describe what is the role of each option)
-
-```bash
-export MV2_SECURITY_APPROACH=600
-export MV2_SECURITY_APPROACH=601
-export MV2_SECURITY_APPROACH=602
-export MV2_SECURITY_APPROACH=700
-export MV2_SECURITY_APPROACH=701
-export MV2_SECURITY_APPROACH=702
-```
 
 #### Allgather
 
