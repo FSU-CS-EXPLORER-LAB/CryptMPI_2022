@@ -65,15 +65,11 @@ export LD_LIBRARY_PATH=/MVAPICH_INSTALL_DIR/install/lib:/YOUR_PATH_TO_MVAPICH/mv
 export MV2_ENABLE_AFFINITY=1
 export MV2_CPU_BINDING_POLICY=hybrid
 export MV2_HYBRID_BINDING_POLICY=spread 
-/MVAPICH_INSTALL_DIR/install/mpiexec -n 2 -f host ./pingpong
-/MVAPICH_INSTALL_DIR/install/mpiexec -n 64 -f host ./stencil 8 8 128 128 2 1000 0
 ```
 
 #### CryptMPI-MPICH (Ethernet)
 ```bash
 export LD_LIBRARY_PATH=/MPICH_INSTALL_DIR/install/lib:/YOUR_PATH_TO_MPICH/mpich-3.4.2/boringssl-master/build/crypto
-/MPICH_INSTALL_DIR/install/mpiexec -n 2 -f host ./pingpong
-/MPICH_INSTALL_DIR/install/mpiexec -n 64 -f host ./stencil 8 8 128 128 2 1000 0
 ```
 
 
