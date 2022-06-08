@@ -1,0 +1,20 @@
+# this gives access to the mvapich2 header files
+prefix=/home/sadeghil/Installed_Tools/CryptMPI
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: mvapich2
+Description: High Performance and portable MPI
+Version: 2.3.3
+URL: http://mvapich.cse.ohio-state.edu
+Requires:
+Libs: -Wl,-rpath -Wl,${exec_prefix}/lib  -L${libdir} -lmpi    -libmad -lrdmacm -libumad -libverbs -ldl -lrt -lm -lpthread 
+Cflags:   -I${includedir}
+
+# pkg-config does not understand Cxxflags, etc. So we allow users to
+# query them using the --variable option
+
+cxxflags=  -I${includedir}
+fflags= -I${includedir}
+fcflags= -I${includedir}

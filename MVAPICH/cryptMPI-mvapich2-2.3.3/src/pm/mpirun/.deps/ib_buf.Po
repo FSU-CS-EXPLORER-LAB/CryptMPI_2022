@@ -1,0 +1,10 @@
+src/pm/mpirun/ib_buf.o: src/pm/mpirun/ib_buf.c /usr/include/stdc-predef.h \
+ src/include/mpichconf.h src/include/nopackage.h src/include/mvapich.h
+
+/usr/include/stdc-predef.h:
+
+src/include/mpichconf.h:
+
+src/include/nopackage.h:
+
+src/include/mvapich.h:

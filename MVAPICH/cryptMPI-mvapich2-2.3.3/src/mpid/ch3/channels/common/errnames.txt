@@ -1,0 +1,9 @@
+**rdmacmmaxport:MV2_RDMA_CM_MAX_PORT out of range.
+**rdmacmmaxport %d %d %d:MV2_RDMA_CM_MAX_PORT value of %d is out of range (%d - %d).
+**rdmacmminport:MV2_RDMA_CM_MIN_PORT out of range.
+**rdmacmminport %d %d %d:MV2_RDMA_CM_MIN_PORT value of %d is out of range (%d - %d).
+**rdmacminvalidport:Invalid port number.
+**rdmacminvalidport %d:Invalid port number (%d).
+**rdmacmportrange:Invalid port range.
+**rdmacmportrange %d %d:Invalid port range of %d. The required range is %d.
+

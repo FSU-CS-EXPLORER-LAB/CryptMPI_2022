@@ -1,0 +1,26 @@
+
+This file lists people who have contributed code to MVICH. Their
+names are here to give them credit -- please don't ask them for
+support. All questions/comments/bug fixes/etc. should go to 
+via@nersc.gov.  
+
+
+Bill Saphir
+(No longer at Berkeley Lab)
+wcs@saphir.org
+Original design and implementation. Fromer project leader. 
+
+Michael Welcome
+Lawrence Berkeley National Lab
+mlwelcome@lbl.gov
+Current primary developer. 
+
+Sam Fineberg
+Tandem Labs/Compaq
+sam.fineberg@compaq.com
+RGET support; miscellaneous bug fixes
+
+Yong Chen
+Seagate
+Yong.C.Chen@seagate.com
+Bug reports and fixes in memory registration.

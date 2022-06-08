@@ -1,0 +1,11 @@
+src/pm/mpirun/crfs_wa.o: src/pm/mpirun/crfs_wa.c \
+ /usr/include/stdc-predef.h src/include/mpichconf.h \
+ src/include/nopackage.h src/include/mvapich.h
+
+/usr/include/stdc-predef.h:
+
+src/include/mpichconf.h:
+
+src/include/nopackage.h:
+
+src/include/mvapich.h:

@@ -1,0 +1,18 @@
+**psmsendcancel: psm does not support send cancel. Aborting program.
+**psm_wait:psm_wait failed
+**psm_wait %s:psm_wait failed (%s)
+**psmepopen:psm_ep_open failed
+**epid_getfailed: kvs get of epid failed
+**epid_putcommit: kvs commit of epid failed
+**epid_putfailed: kvs put of epid failed
+**ahtype_getfailed: kvs get of ahtype failed
+**ahtype_putcommit: kvs commit of ahtype failed
+**ahtype_putfailed: kvs put of ahtype failed
+**pmicommituuid: uuid kvs commit failed
+**pmigetuuid: uuid kvs get failed
+**pmiputuuid: uuid kvs put failed
+**psm_mqinitfailed: mq initialization failed
+**psmconnectfailed: psm connect function failed
+**psminit: psm init function failed
+**psmnomem: psm out of memory error
+

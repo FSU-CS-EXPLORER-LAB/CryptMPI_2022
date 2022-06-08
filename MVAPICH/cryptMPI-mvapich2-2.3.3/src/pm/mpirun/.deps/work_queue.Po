@@ -1,0 +1,11 @@
+src/pm/mpirun/work_queue.o: src/pm/mpirun/work_queue.c \
+ /usr/include/stdc-predef.h src/include/mpichconf.h \
+ src/include/nopackage.h src/include/mvapich.h
+
+/usr/include/stdc-predef.h:
+
+src/include/mpichconf.h:
+
+src/include/nopackage.h:
+
+src/include/mvapich.h:

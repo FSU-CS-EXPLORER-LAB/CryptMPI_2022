@@ -1,0 +1,10 @@
+src/pm/mpirun/bitmap.o: src/pm/mpirun/bitmap.c /usr/include/stdc-predef.h \
+ src/include/mpichconf.h src/include/nopackage.h src/include/mvapich.h
+
+/usr/include/stdc-predef.h:
+
+src/include/mpichconf.h:
+
+src/include/nopackage.h:
+
+src/include/mvapich.h:

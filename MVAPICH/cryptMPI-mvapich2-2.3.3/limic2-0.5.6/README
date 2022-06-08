@@ -1,0 +1,111 @@
+LiMIC2: Linux kernel module for MPI Intra-node Communication
+
+
+[Table of Contents]
+1. Introduction
+2. References
+3. Installation
+4. Contact
+
+
+[1. Introduction]
+
+LiMIC is the Linux kernel module developed by System Software Laboratory 
+(SSLab) of Konkuk University. It enables high-performance MPI intra-node 
+communication over multi-core systems. LiMIC achieves very good 
+performance since it no longer requires MPI libraries to copy messages 
+in and out of shared memory regions for intra-node communication. Rather, 
+LiMIC enables messages to be copied directly from sending process' 
+memory to the receiver process. Thus, LiMIC eliminates unnecessary 
+message copies and enhances cache utilization. LiMIC has two different 
+designs called LiMIC1(LiMIC 1st Generation) and LiMIC2(LiMIC 2nd 
+Generation). 
+
+LiMIC1 is a stand-alone communication module with generalized 
+kernel-access interfaces. The module manages send, receive, and 
+completion queues internally so that, once the MPI library decides to 
+use intra-node communication channel, simply calls the interface and 
+let the communication module handle the message transportation between 
+intra-node processes. However, having the separate message queues from 
+the MPI library brings on many tricky issues, which may result in low 
+scalability in many-core systems.
+
+To overcome the limitations of LiMIC1, LiMIC2 provides lightweight 
+primitives to perform the memory mapping between different processes. 
+The kernel module exposes the interface for memory mapping and data 
+copy to the MPI library. The lightweight primitives do not need to have 
+any internal queues and data structures shared between intra-node 
+processes. Therefore, the lightweight primitives can avoid the 
+synchronization and MPI message matching, which can result in lower 
+overhead and increase the parallelism of local MPI processes. LiMIC2 
+has the potential of achieving better performance than LiMIC1.
+LiMIC2 consists of a runtime loadable kernel module and user library. 
+The kernel module implements the kernel-level memory mapping between 
+different processes without any kernel modification. The user library 
+provides the interface to the kernel module functions for the MPI library.
+Currently only LiMIC2 is supported and distributed from SSLab homepage,
+http://sslab.konkuk.ac.kr, under BSD license.
+
+LiMIC2 has been adopted into MVAPICH/MVAPICH2 developed by Network-Based 
+Computing Laboratory (NBCL) of the Ohio State University. MVAPICH/MVAPICH2 
+is the open-source implementation of MPI/MPI2 library for InfiniBand and 
+iWARP clusters. This sofware is being used by more than 800 organizations 
+world-wide. You can download the software at the MVAPICH website (http://
+mvapich.cse.ohio-state.edu).
+
+
+[2. References]
+
+H.-W. Jin, S. Sur, L. Chai, and D. K. Panda, "Lightweight Kernel-Level 
+Primitives for High-Performance MPI Intra-Node Communication over 
+Multi-Core Systems," In Proc. of IEEE Cluster 2007, pp. 446-451, 
+September 2007.
+
+L. Chai, D. Nagaraj, P. Lai, H.-W. Jin, and D. K. Panda, "Designing An 
+Efficient Kernel-level and User-level Hybrid Approach for MPI Intra-node 
+Communication on Multi-core Systems," In Proc. of ICPP-08, pp. 222-229, 
+September 2008.
+
+H.-W. Jin, S. Sur, L. Chai, and D. K. Panda, "LiMIC: Support for 
+High-Performance MPI Intra-Node Communication on Linux Cluster," In Proc. 
+of ICPP-05, pp. 184-191, June 2005.
+
+L. Chai, S. Sur, H.-W. Jin, and D. K. Panda, "Analysis of Design 
+Considerations for Optimizing Multi-Channel MPI over InfiniBand," In Proc. 
+of CAC 2005, April 2005.
+
+
+[3. Installation]
+
+3.1 Software Download
+	http://sslab.konkuk.ac.kr for LiMIC2 only
+	http://mvapich.cse.ohio-state.edu for MVAPICH2+LiMIC2 package
+
+3.2 Compiling LiMIC2 Library + Kernel Module
+	./configure --enable-module --prefix=/usr --sysconfdir=/etc
+	make 
+
+3.3 Installation
+	make install
+
+3.4 Uninstall
+	make uninstall
+
+3.5 Package specific options
+  --enable-module         Build Limic2 kernel module.
+  --with-kernel=RELEASE   Specify kernel release to use for building LiMIC2
+                          kernel module. Defaults to currently running kernel.
+  --with-kernel-mod=DIR   Path to install LiMIC2 kernel module. Defaults to
+                          external module location for the kernel the module
+                          is built against.
+
+
+[4. Contact]
+
+Hyun-Wook (Jin) Jin
+Department of Computer Science & Engineering
+Konkuk University
+1, Hwayang-dong, Kwangjin-ku
+Seoul 143-701, Korea
+jinh@konkuk.ac.kr
+home.konkuk.ac.kr/~jinh
