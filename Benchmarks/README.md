@@ -25,11 +25,8 @@ For running this application, we added 1000 bodies with their initial x and y po
 
 ## Running
 
-This is a templete to show how run this application. You can change number of procosses and host file based on your need.
+A sample input file (initial_state.txt) is provided. One needs to fix the size of the input and use the provided script (batch.sh) inside the nbody.tar archive to reproduce the results of NBody in our paper.
 
-```bash
-/MPI_INSTALL_DIR/bin/mpiexec -n 16 -f host ./nbody
-```
 
 
 
