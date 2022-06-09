@@ -1,3 +1,25 @@
+# Docker Cluster Results
+For our container-based clusters that use one container per node. The image for our container can be found on Docker hub: sadeghil/cryptmpich:onbuild-coll-v15 
+https://hub.docker.com/r/sadeghil/cryptmpich/tags (Its tag is onbuild-coll-v15)
+
+
+To manage Docker Swarm cluster, we have used following git repo: 
+https://github.com/NLKNguyen/alpine-mpich (In master branch and without any tag)
+
+To reproduce the Docker Cluster results, one needs to log into one of the containers, and then set "LD_LIBRARY_PATH" with the following command:
+
+```export LD_LIBRARY_PATH=/home/mpi/boringssl/build/crypto:/project/cryptMPI-mpich-3.3/Install_MPICH/lib/```
+
+Then, one run the full benchmarks with the provided script under the following directory:
+
+```cluster/project/benchmarks```
+
+We have also provided the batch scripts containing the instructions to run OSU benchmarks in MPICH_Bench_Script.tar.gz.
+
+# Noleland results
+
+We have provided all of the scripts for running the OSU benchmarks on the Noleland cluster at MVAPICH-Scripts.tar. 
+
 # N-Body-Using-MPI
 
 In physics an N-body is a simulation of a dynamical system of particles, usually under the influence of physical forces, such as gravity.
@@ -5,7 +27,7 @@ In physics an N-body is a simulation of a dynamical system of particles, usually
 For more details about n-body simulations on Wikipedia: https://en.wikipedia.org/wiki/N-body_simulation
 
 This Benchmark originally developed by this git repo: https://github.com/prashantmishra/n_body_mpi/blob/master/simulation.c
-
+We have provided the modified code that measures the communication time too.
 
 ## Installation
 To install modify MPI_INSTALLITION_DIR in Makefile and make it.
