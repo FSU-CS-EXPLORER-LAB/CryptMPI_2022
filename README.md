@@ -31,6 +31,35 @@ export PATH=/HOME_DIR/automake/bin:$PATH
 export LD_LIBRARY_PATH=/HOME_DIR/automake/lib:$LD_LIBRARY_PATH
 ```
 
+
+#### Installation for BoringSSL
+
+Download and unzip it:
+```bash
+wget https://github.com/google/boringssl/archive/master.zip
+unzip
+```
+
+BoringSSL needs GO package. So, install GO in this way:
+
+```bash
+cd BORINGSSL-DIR/
+wget https://golang.org/dl/go1.16.2.linux-amd64.tar.gz 
+tar xzf go1.16.2.linux-amd64.tar.gz
+export GOROOT=/BORINGSSL-DIR/go
+export GOPATH=/BORINGSSL-DIR/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+```
+
+After installing GO, countine BoringSSL installagtion:
+
+```bash
+mkdir build
+cd build
+cmake -DBUILD_SHARED_LIBS=1 ..
+make
+```
+
 #### Installation for CryptMPI-MPICH (Ethernet) and  CryptMPI-MVAPICH (Infiniband)
 Steps:
 ```bash
