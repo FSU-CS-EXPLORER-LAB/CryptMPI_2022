@@ -54,7 +54,7 @@ int MPIR_Bcast_intra_binomial(void *buffer,
     if (comm_size == 1)
         goto fn_exit;
 
-    if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 01 c=%d\n",init_rank,rank,count);
+    // if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 01 c=%d\n",init_rank,rank,count);
 	if (HANDLE_GET_KIND(datatype) == HANDLE_KIND_BUILTIN)
         is_contig = 1;
     else {
@@ -66,15 +66,15 @@ int MPIR_Bcast_intra_binomial(void *buffer,
     nbytes = type_size * count;
     if (nbytes == 0)
         goto fn_exit;   /* nothing to do */
-if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 02 c=%d\n",init_rank,rank,count);
+// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 02 c=%d\n",init_rank,rank,count);
     if (!is_contig) {
-		if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 03 c=%d\n",init_rank,rank,count);
+		// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 03 c=%d\n",init_rank,rank,count);
         MPIR_CHKLMEM_MALLOC(tmp_buf, void *, nbytes, mpi_errno, "tmp_buf", MPL_MEM_BUFFER);
 
         /* TODO: Pipeline the packing and communication */
         position = 0;
         if (rank == root) {
-			if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 03-1 c=%d\n",init_rank,rank,count);
+			// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 03-1 c=%d\n",init_rank,rank,count);
             mpi_errno = MPIR_Pack_impl(buffer, count, datatype, tmp_buf, nbytes, &position);
             if (mpi_errno)
                 MPIR_ERR_POP(mpi_errno);
@@ -82,7 +82,7 @@ if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 02 c=%d\n",init_rank,ra
     }
 
     relative_rank = (rank >= root) ? rank - root : rank - root + comm_size;
-if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 04  c=%d  root=%d  relative_rank=%d\n",init_rank,rank,count,root,relative_rank);
+// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 04  c=%d  root=%d  relative_rank=%d\n",init_rank,rank,count,root,relative_rank);
     /* Use short message algorithm, namely, binomial tree */
 
     /* Algorithm:
@@ -110,20 +110,20 @@ if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 04  c=%d  root=%d  rela
 
     mask = 0x1;
     while (mask < comm_size) {
-		if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 05 root=%d  relative_rank=%d  c=%d\n",init_rank,rank,root,relative_rank,count);
+		// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 05 root=%d  relative_rank=%d  c=%d\n",init_rank,rank,root,relative_rank,count);
         if (relative_rank & mask) {
 			//if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 06 c=%d\n",init_rank,rank,count);
             src = rank - mask;
             if (src < 0)
                 src += comm_size;
             if (!is_contig){
-				if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 07 c=%d src=%d [%d]\n",init_rank,rank,count,src,mask);
+				// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 07 c=%d src=%d [%d]\n",init_rank,rank,count,src,mask);
                 mpi_errno = MPIC_Recv(tmp_buf, nbytes, MPI_BYTE, src,
                                       MPIR_BCAST_TAG, comm_ptr, &status, errflag);
 									  
 			}
             else{
-				if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 08 c=%d src=%d [%d]\n",init_rank,rank,count,src,mask);
+				// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 08 c=%d src=%d [%d]\n",init_rank,rank,count,src,mask);
                 mpi_errno = MPIC_Recv(buffer, count, datatype, src,
                                       MPIR_BCAST_TAG, comm_ptr, &status, errflag);
             
@@ -137,12 +137,12 @@ if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 04  c=%d  root=%d  rela
                 MPIR_ERR_SET(mpi_errno, *errflag, "**fail");
                 MPIR_ERR_ADD(mpi_errno_ret, mpi_errno);
             }
-			if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 09 c=%d\n",init_rank,rank,count);
+			// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 09 c=%d\n",init_rank,rank,count);
 
             /* check that we received as much as we expected */
             MPIR_Get_count_impl(&status, MPI_BYTE, &recvd_size);
             if (recvd_size != nbytes) {
-				if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 10 c=%d\n",init_rank,rank,count);
+				// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 10 c=%d\n",init_rank,rank,count);
                 if (*errflag == MPIR_ERR_NONE)
                     *errflag = MPIR_ERR_OTHER;
                 MPIR_ERR_SET2(mpi_errno, MPI_ERR_OTHER,
@@ -150,7 +150,7 @@ if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 04  c=%d  root=%d  rela
                               "**collective_size_mismatch %d %d", recvd_size, nbytes);
                 MPIR_ERR_ADD(mpi_errno_ret, mpi_errno);
             }
-			if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 11 c=%d\n",init_rank,rank,count);
+			// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 11 c=%d\n",init_rank,rank,count);
             break;
         }
         mask <<= 1;
@@ -168,27 +168,27 @@ if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 04  c=%d  root=%d  rela
      * be needed).  */
 
     mask >>= 1;
-	if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 12 c=%d\n",init_rank,rank,count);
+	// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 12 c=%d\n",init_rank,rank,count);
     while (mask > 0) {
-		if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 13 mask=%d  relative_rank=%d  c=%d\n",init_rank,rank,mask,relative_rank,count);
+		// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 13 mask=%d  relative_rank=%d  c=%d\n",init_rank,rank,mask,relative_rank,count);
         if (relative_rank + mask < comm_size) {
-			if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 14 c=%d\n",init_rank,rank,count);
+			// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 14 c=%d\n",init_rank,rank,count);
             dst = rank + mask;
             if (dst >= comm_size)
                 dst -= comm_size;
             if (!is_contig){
-				if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 15 dst=%d c=%d [%d]\n",init_rank,rank,dst,count,mask);
+				// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 15 dst=%d c=%d [%d]\n",init_rank,rank,dst,count,mask);
                 mpi_errno = MPIC_Send(tmp_buf, nbytes, MPI_BYTE, dst,
                                       MPIR_BCAST_TAG, comm_ptr, errflag);
 			
 			}
             else{
-					if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 16 dst=%d [%d]\n",init_rank,rank,dst,count,mask);
+					// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 16 dst=%d [%d]\n",init_rank,rank,dst,count,mask);
                 mpi_errno = MPIC_Send(buffer, count, datatype, dst,
                                       MPIR_BCAST_TAG, comm_ptr, errflag);
 		
 			}
-			if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 17 c=%d\n",init_rank,rank,count);
+			// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 17 c=%d\n",init_rank,rank,count);
             if (mpi_errno) {
                 /* for communication errors, just record the error but continue */
                 *errflag =
@@ -198,12 +198,12 @@ if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 04  c=%d  root=%d  rela
                 MPIR_ERR_ADD(mpi_errno_ret, mpi_errno);
             }
         }
-		if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 18 c=%d\n",init_rank,rank,count);
+		// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 18 c=%d\n",init_rank,rank,count);
         mask >>= 1;
     }
-if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 19 c=%d\n",init_rank,rank,count);
+// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 19 c=%d\n",init_rank,rank,count);
     if (!is_contig) {
-		if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 20 c=%d\n",init_rank,rank,count);
+		// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 20 c=%d\n",init_rank,rank,count);
         if (rank != root) {
             position = 0;
             mpi_errno = MPIR_Unpack_impl(tmp_buf, nbytes, &position, buffer, count, datatype);
@@ -212,7 +212,7 @@ if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 19 c=%d\n",init_rank,ra
 
         }
     }
-	if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 21 c=%d\n",init_rank,rank,count);
+	// if (DEBUG_INIT_FILE) fprintf(stderr,"[%d] [%d] BCast-Bio 21 c=%d\n",init_rank,rank,count);
 
   fn_exit:
     MPIR_CHKLMEM_FREEALL();
