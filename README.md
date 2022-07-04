@@ -121,19 +121,21 @@ The flags are discussed in this section, work in both MIPICH and MVAPICH.
 
 ```bash
 export MV2_SECURITY_APPROACH=600
-echo "MPI_SEC_Multi_Thread_Send_OpenMP" 
+echo "MPI_SEC_Multi_Thread_Send_OpenMP  --  OPENMP_MULTI_THREAD_ONLY" 
 
 
 export MV2_SECURITY_APPROACH=602
-echo "MPI_SEC_MThreads_PipeLine_OpenMP_Send__largeSegment" 
+echo "MPI_SEC_MThreads_PipeLine_OpenMP_Send__largeSegment  --  OPENMP_PIPE_LINE" 
 
 
 export MV2_SECURITY_APPROACH=700
-echo "MPI_SEC_BaseCounter_Pipeline_Send" 
+CRYPTMPI_COUNTER_MODE=1
+echo "MPI_SEC_BaseCounter_Pipeline_Send  --  BASE_COUNTER_MODE" 
 
 
 export MV2_SECURITY_APPROACH=702
-echo "MPI_SEC_PreComputeCounter_Send" 
+CRYPTMPI_COUNTER_MODE=1
+echo "MPI_SEC_PreComputeCounter_Send  --  PRE_COMPUTE_COUNTER_MODE" 
 ```
 
 
