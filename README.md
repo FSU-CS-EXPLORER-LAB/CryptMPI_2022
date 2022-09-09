@@ -214,6 +214,18 @@ export MV2_SECURITY_APPROACH=1002
 echo "Naive"
 
 
+export MV2_SECURITY_APPROACH=1003
+echo "Naive OCB"
+
+
+export MV2_SECURITY_APPROACH=1004
+echo "Naive OCB 2 Unrolling"
+
+
+export MV2_SECURITY_APPROACH=1005
+echo "Naive OCB 4 Unrolling"
+
+
 export MV2_ALLTOALL_TUNING=0
 export MV2_SECURITY_APPROACH=2001
 echo "OBruck"
@@ -495,6 +507,10 @@ unset MV2_CONCURRENT_BCAST
 unset MV2_INTER_BCAST_TUNING
 export MV2_SECURITY_APPROACH=1
 echo "Naive"
+
+
+export MV2_SECURITY_APPROACH=2
+echo "Naive OCB"
 
 
 export MV2_CONCURRENT_COMM=1
