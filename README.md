@@ -144,6 +144,7 @@ echo "MPI_SEC_PreComputeCounter_Send  --  PRE_COMPUTE_COUNTER_MODE"
 
 #### Gather
 
+- MVAPICH
 
 ```bash
 export MV2_SECURITY_APPROACH=301
@@ -163,6 +164,24 @@ export MV2_CONCURRENT_COMM=1
 echo "CHS [Gather_MV2_Direct_CHS]" 
 ```
 
+- MVPICH
+
+```bash
+export MV2_SECURITY_APPROACH=301
+export MV2_INTER_GATHER_TUNING=1
+echo "Naive GCM [MPIR_Naive_Sec_Gather]" 
+
+
+export MV2_SECURITY_APPROACH=302
+export MV2_INTER_GATHER_TUNING=3 
+echo "Opportunistic Binomial Gather (Direct - No Shared-Mem) [Gather_intra]" 
+
+
+export MV2_SECURITY_APPROACH=302
+export MV2_INTER_GATHER_TUNING=4
+export MV2_CONCURRENT_COMM=1
+echo "CHS [Gather_MV2_Direct_CHS]" 
+```
 
 #### Scatter
 
