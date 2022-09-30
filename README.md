@@ -168,6 +168,23 @@ echo "CHS [Gather_MV2_Direct_CHS]"
 
 
 ```bash
+unset MV2_INTER_SCATTER_TUNING
+export MV2_SECURITY_APPROACH=221
+echo "Naive GCM"
+
+
+export MV2_SECURITY_APPROACH=222
+echo "Naive OCB"
+
+
+export MV2_SECURITY_APPROACH=223
+echo "Naive OCB 2 Unrolling"
+
+
+export MV2_SECURITY_APPROACH=224
+echo "Naive OCB 4 Unrolling"
+
+
 export MV2_SECURITY_APPROACH=200
 export MV2_INTER_SCATTER_TUNING=6
 export MV2_CONCURRENT_COMM=1
@@ -213,7 +230,7 @@ echo "Default"
 
 
 export MV2_SECURITY_APPROACH=1002
-echo "Naive"
+echo "Naive GCM"
 
 
 export MV2_SECURITY_APPROACH=1003
@@ -226,6 +243,30 @@ echo "Naive OCB 2 Unrolling"
 
 export MV2_SECURITY_APPROACH=1005
 echo "Naive OCB 4 Unrolling"
+
+
+export MV2_SECURITY_APPROACH=1006
+echo "Naive GCM Counter-mode"
+
+
+export MV2_SECURITY_APPROACH=1102
+echo "Naive OCB Performance (no-Communication)"
+
+
+export MV2_SECURITY_APPROACH=1103
+echo "Naive OCB Performance (no-Communication)"
+
+
+export MV2_SECURITY_APPROACH=1104
+echo "Naive OCB 2 Unrolling Performance (no-Communication)"
+
+
+export MV2_SECURITY_APPROACH=1105
+echo "Naive OCB 4 Unrolling Performance (no-Communication)"
+
+
+export MV2_SECURITY_APPROACH=1106
+echo "Naive GCM Counter-mode Performance (no-Communication)"
 
 
 export MV2_ALLTOALL_TUNING=0
@@ -269,6 +310,18 @@ echo "Default"
 
 export MV2_SECURITY_APPROACH=1002
 echo "Naive"
+
+
+export MV2_SECURITY_APPROACH=1003
+echo "Naive OCB"
+
+
+export MV2_SECURITY_APPROACH=1004
+echo "Naive OCB 2 Unrolling"
+
+
+export MV2_SECURITY_APPROACH=1005
+echo "Naive OCB 4 Unrolling"
 
 
 export MV2_ALLTOALL_TUNING=0
@@ -373,6 +426,21 @@ echo "Testing Encrypted CHS"
 export MV2_INTER_ALLGATHER_TUNING=1
 export MV2_SECURITY_APPROACH=1001
 echo "MPIR_Naive_Sec_Allgather"
+
+
+export MV2_INTER_ALLGATHER_TUNING=2
+export MV2_SECURITY_APPROACH=1001
+echo "Naive OCB"
+
+
+export MV2_INTER_ALLGATHER_TUNING=3
+export MV2_SECURITY_APPROACH=1001
+echo "Naive OCB 2 Unrolling"
+
+
+export MV2_INTER_ALLGATHER_TUNING=4
+export MV2_SECURITY_APPROACH=1001
+echo "Naive OCB 4 Unrolling"
 
 
 export MV2_INTER_ALLGATHER_TUNING=8 
@@ -534,6 +602,10 @@ echo "Encrypted CHS (Multileader + Shared Memory)"
 ```bash
 export MV2_SECURITY_APPROACH=1
 echo "Naive"
+
+
+export MV2_SECURITY_APPROACH=2
+echo "Naive OCB"
 
 
 export MV2_CONCURRENT_BCAST=1
