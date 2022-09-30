@@ -4,16 +4,16 @@ CryptMPI provides secure inter-node communication in the HPC cluster and cloud e
 We implemented two prototypes in MPICH-3.3 (for Ethernet) and MVAPICH2-2.3.3(for Infiniband), both using AES-
 GCM from the [BoringSSL library](https://boringssl.googlesource.com/boringssl/).
 
-Up to [now](#allgather), we implemented secure approach for following [routines](https://github.com/FSU-CS-EXPLORER-LAB/CryptMPI_2022/blob/main/README.md#allgather): 
+Up to now, we implemented secure approach for following routines: 
 
 | Pont-to-point routines|  Collective routines   |
 |:---------------------:|:----------------------:|
-| MPI_Send          	| MPI_Allgather		     |
-| MPI_Recv    	 		| MPI_Allreduce     	 |
-| MPI_Isend     	    | MPI_Bcast		      	 |
-| MPI_Irecv         	| MPI_Gather          	 |
-| MPI_Wait          	| MPI_Scatter            |
-| MPI_Waitall       	| MPI_Alltoall            |
+| MPI_Send          	| [MPI_Allgather](#allgather)		     |
+| MPI_Recv    	 		| MPI_Allreduce(#allreduce)     	 |
+| MPI_Isend     	    | MPI_Bcast(#bcast)		      	 |
+| MPI_Irecv         	| MPI_Gather(#gather)          	 |
+| MPI_Wait          	| MPI_Scatter(#scatter)            |
+| MPI_Waitall       	| MPI_Alltoall(#alltoall)            |
 
 ## Installation
 To install cryptMPI for the Infiniband and Ethernet network please follow following steps:
