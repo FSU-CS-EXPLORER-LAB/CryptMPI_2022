@@ -8,12 +8,13 @@ Up to now, we implemented secure approach for following routines:
 
 | Pont-to-point routines|  Collective routines   |
 |:---------------------:|:----------------------:|
-| MPI_Send          	| [MPI_Allgather](#allgather)		     |
-| MPI_Recv    	 		| [MPI_Allreduce](#allreduce)     	 |
-| MPI_Isend     	    | MPI_Bcast(#bcast)		      	 |
-| MPI_Irecv         	| MPI_Gather(#gather)          	 |
-| MPI_Wait          	| MPI_Scatter(#scatter)            |
-| MPI_Waitall       	| MPI_Alltoall(#alltoall)            |
+| [MPI_Send](#send.c/recv.c/irecv.c/isend.c/wait/waitall)         	| [MPI_Gather](#gather)          	 |
+| MPI_Recv          	| [MPI_Scatter](#scatter)        |
+| MPI_Wait       	| [MPI_Alltoall](#alltoall)          |
+| MPI_Waitall          	| [MPI_Allgather](#allgather)    |
+| MPI_Isend    	 		| [MPI_Allreduce](#allreduce)  	 |
+| MPI_Irecv     	    | [MPI_Bcast](#bcast)		   	 |
+
 
 ## Installation
 To install cryptMPI for the Infiniband and Ethernet network please follow following steps:
