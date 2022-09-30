@@ -164,7 +164,7 @@ export MV2_CONCURRENT_COMM=1
 echo "CHS [Gather_MV2_Direct_CHS]" 
 ```
 
-- MVPICH
+- MPICH
 
 ```bash
 export MV2_SECURITY_APPROACH=301
