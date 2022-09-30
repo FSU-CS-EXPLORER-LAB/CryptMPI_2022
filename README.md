@@ -8,7 +8,7 @@ Up to now, we implemented secure approach for following routines:
 
 | Pont-to-point routines|  Collective routines   |
 |:---------------------:|:----------------------:|
-| [MPI_Send](#send.c/recv.c/irecv.c/isend.c/wait/waitall)         	| [MPI_Gather](#gather)          	 |
+| [MPI_Send](#point-to-point)         	| [MPI_Gather](#gather)          	 |
 | MPI_Recv          	| [MPI_Scatter](#scatter)        |
 | MPI_Wait       	| [MPI_Alltoall](#alltoall)          |
 | MPI_Waitall          	| [MPI_Allgather](#allgather)    |
@@ -116,7 +116,8 @@ The flags are discussed in this section, work in both MIPICH and MVAPICH.
 
 
 
-#### send.c/recv.c/irecv.c/isend.c/wait/waitall
+#### Point-to-Point
+It includes send.c/recv.c/irecv.c/isend.c/wait/waitall communcations:
 
 (TODO: Describe what is the role of each option)
 
