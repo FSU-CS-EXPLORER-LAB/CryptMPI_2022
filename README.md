@@ -4,11 +4,11 @@ CryptMPI provides secure inter-node communication in the HPC cluster and cloud e
 We implemented two prototypes in MPICH-3.3 (for Ethernet) and MVAPICH2-2.3.3(for Infiniband), both using AES-
 GCM from the [BoringSSL library](https://boringssl.googlesource.com/boringssl/).
 
-Up to now, we implemented secure approach for following routines: 
+Up to now(#-allgather), we implemented secure approach for following routines(####-allgather): 
 
 | Pont-to-point routines|  Collective routines   |
 |:---------------------:|:----------------------:|
-| MPI_Send          	| MPI_Allgather(####-allgather)		     |
+| MPI_Send          	| MPI_Allgather		     |
 | MPI_Recv    	 		| MPI_Allreduce     	 |
 | MPI_Isend     	    | MPI_Bcast		      	 |
 | MPI_Irecv         	| MPI_Gather          	 |
