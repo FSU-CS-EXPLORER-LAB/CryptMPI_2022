@@ -9,7 +9,7 @@ Up to now, we implemented secure approach for following routines:
 | Pont-to-point routines|  Collective routines   |
 |:---------------------:|:----------------------:|
 | MPI_Send          	| [MPI_Allgather](#allgather)		     |
-| MPI_Recv    	 		| MPI_Allreduce(#allreduce)     	 |
+| MPI_Recv    	 		| [MPI_Allreduce](#allreduce)     	 |
 | MPI_Isend     	    | MPI_Bcast(#bcast)		      	 |
 | MPI_Irecv         	| MPI_Gather(#gather)          	 |
 | MPI_Wait          	| MPI_Scatter(#scatter)            |
