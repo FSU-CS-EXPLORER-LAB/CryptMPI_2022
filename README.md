@@ -168,8 +168,19 @@ echo "CHS [Gather_MV2_Direct_CHS]"
 
 ```bash
 export MV2_SECURITY_APPROACH=301
-export MV2_INTER_GATHER_TUNING=1
-echo "Naive GCM [MPIR_Naive_Sec_Gather]" 
+echo "Naive GCM"
+
+
+export MV2_SECURITY_APPROACH=311
+echo "Naive OCB"
+
+
+export MV2_SECURITY_APPROACH=312
+echo "Naive OCB 2 Unrolling"
+
+
+export MV2_SECURITY_APPROACH=313
+echo "Naive OCB 4 Unrolling"
 
 
 export MV2_SECURITY_APPROACH=302
