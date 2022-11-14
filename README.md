@@ -119,7 +119,19 @@ The flags are discussed in this section, work in both MIPICH and MVAPICH.
 #### Point-to-Point
 It includes send.c/recv.c/irecv.c/isend.c/wait/waitall communcations:
 
-(TODO: Describe what is the role of each option)
+In current version, we only provided the naive modes of GCM and OCB using following flags:
+```bash
+export MV2_SECURITY_APPROACH=401
+echo "Naive GCM"
+
+
+export MV2_SECURITY_APPROACH=402
+echo "Naive OCB"
+```
+
+There are more advanced modes, in which besides GCM, Counter mode shceme also has been utilized to accelerate the encryption operation for small message sizes in trade of less security level.
+Moreover, we used Multithreading, Pipeline, and Pre-computation modes  to gain more performance.
+This version has been not published yet.
 
 ```bash
 export MV2_SECURITY_APPROACH=600
