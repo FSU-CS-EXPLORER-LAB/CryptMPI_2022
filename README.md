@@ -129,8 +129,10 @@ export MV2_SECURITY_APPROACH=402
 echo "Naive OCB"
 ```
 
-There are more advanced modes, in which besides GCM, Counter mode shceme also has been utilized to accelerate the encryption operation for small message sizes in trade of less security level.
+There are more advanced modes, in which besides GCM, Counter mode shceme also has been utilized to accelerate the encryption operation for small message sizes to trade off less security level for more performance.
+
 Moreover, we used Multithreading, Pipeline, and Pre-computation modes  to gain more performance.
+
 This version has been not published yet.
 
 ```bash
